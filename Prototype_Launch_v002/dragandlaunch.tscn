@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://d31mx10s2305v"]
+
+[ext_resource type="Script" uid="uid://cvafnoelk2rdu" path="res://cat.gd" id="1_l0b7a"]
+[ext_resource type="Texture2D" uid="uid://d3t5yricdylue" path="res://Screenshot_2026-10-03_at_5.06.33_PM-removebg-preview.png" id="2_rtsss"]
+[ext_resource type="PackedScene" uid="uid://v6hkfarbrg8f" path="res://branch_1.tscn" id="3_a8u4a"]
+[ext_resource type="Texture2D" uid="uid://cue0wnuvocs7w" path="res://Screenshot_2026-10-03_at_5.42.01_PM-removebg-preview.png" id="3_rtsss"]
+[ext_resource type="PackedScene" uid="uid://de1m3ao8lf1oe" path="res://branch_2.tscn" id="4_5hl24"]
+[ext_resource type="PackedScene" uid="uid://bxcwb6b36g1q3" path="res://static_body_2d_3.tscn" id="4_dea21"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kgfpx"]
+radius = 65.03076
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dea21"]
+size = Vector2(407, 21.5)
+
+[node name="Node2D" type="Node2D" unique_id=1394157143]
+
+[node name="Cat" type="RigidBody2D" parent="." unique_id=1125975602]
+gravity_scale = 1.5
+lock_rotation = true
+script = ExtResource("1_l0b7a")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cat" unique_id=1855487280]
+z_index = -1
+position = Vector2(535.0625, 581.1875)
+scale = Vector2(0.41630813, 0.3924824)
+texture = ExtResource("2_rtsss")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cat" unique_id=1133920106]
+position = Vector2(530, 582)
+shape = SubResource("CircleShape2D_kgfpx")
+
+[node name="Camera2D" type="Camera2D" parent="Cat" unique_id=1184348642]
+position = Vector2(580, 380)
+zoom = Vector2(0.5, 0.5)
+limit_left = -150
+limit_top = -2300
+limit_right = 3000
+limit_bottom = 800
+position_smoothing_enabled = true
+
+[node name="LinesNode" type="Node2D" parent="Cat" unique_id=1731807025]
+
+[node name="Branch1" parent="." unique_id=1219924473 instance=ExtResource("3_a8u4a")]
+position = Vector2(75, 138)
+
+[node name="Branch2" parent="." unique_id=589004160 instance=ExtResource("4_5hl24")]
+position = Vector2(75, 138)
+
+[node name="Branch3" type="StaticBody2D" parent="." unique_id=548935424]
+position = Vector2(-39, -241)
+
+[node name="Sprite2D" type="Sprite2D" parent="Branch3" unique_id=343356009]
+position = Vector2(132, 170)
+scale = Vector2(0.7960064, 0.57201046)
+texture = ExtResource("3_rtsss")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch3" unique_id=1251564968]
+position = Vector2(130, 197)
+shape = SubResource("RectangleShape2D_dea21")
+
+[node name="StaticBody2D3" parent="." unique_id=1099579288 instance=ExtResource("4_dea21")]
+position = Vector2(1465, 688)
+scale = Vector2(150, 5)
+
+[node name="StaticBody2D8" parent="." unique_id=705053466 instance=ExtResource("4_dea21")]
+position = Vector2(1428, -2196)
+scale = Vector2(150, 5)
+
+[node name="StaticBody2D6" parent="." unique_id=1395762892 instance=ExtResource("4_dea21")]
+position = Vector2(887.9999, -1063.0001)
+scale = Vector2(100, 5)
+
+[node name="StaticBody2D4" parent="." unique_id=823149707 instance=ExtResource("4_dea21")]
+position = Vector2(-66, -736)
+scale = Vector2(5, 150)
+
+[node name="StaticBody2D7" parent="." unique_id=1250587272 instance=ExtResource("4_dea21")]
+position = Vector2(2927, -731)
+scale = Vector2(5, 150)
+
+[node name="StaticBody2D5" parent="." unique_id=537936960 instance=ExtResource("4_dea21")]
+position = Vector2(1203, 170.00006)
+scale = Vector2(5, 50)
+
+[node name="StaticBody2D9" parent="." unique_id=1662505058 instance=ExtResource("4_dea21")]
+position = Vector2(1881, -1085)
+scale = Vector2(5, 50)
+
+[node name="Branch4" parent="." unique_id=2032044077 instance=ExtResource("3_a8u4a")]
+position = Vector2(2003, -899)
+
+[node name="Branch5" parent="." unique_id=1776724858 instance=ExtResource("3_a8u4a")]
+position = Vector2(809, -1828)
+
+[node name="Branch6" parent="." unique_id=1227171507 instance=ExtResource("3_a8u4a")]
+position = Vector2(809, -2103)
+
+[node name="Branch7" parent="." unique_id=1767384557 instance=ExtResource("3_a8u4a")]
+position = Vector2(800, -1558)
+
+[node name="Branch8" parent="." unique_id=1874893544 instance=ExtResource("4_5hl24")]
+position = Vector2(2044, -16)
+
+[node name="Branch9" parent="." unique_id=885712994 instance=ExtResource("4_5hl24")]
+position = Vector2(1770, 501)
+
+[node name="Branch10" parent="." unique_id=1244500028 instance=ExtResource("4_5hl24")]
+position = Vector2(1793, -1222)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1112019312]
+offset_left = -3.0
+offset_top = -1788.0
+offset_right = 324.0
+offset_bottom = -1117.0
+color = Color(0, 1, 0, 0.1882353)
