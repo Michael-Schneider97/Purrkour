@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b5v0vevyfx3me"]
+
+[ext_resource type="Script" uid="uid://by0ndmx5cvk6j" path="res://win_trigger.gd" id="1_geope"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_126ht"]
+size = Vector2(36.7079, 38.521435)
+
+[node name="winTrigger" type="Area2D" unique_id=899574160]
+scale = Vector2(3.4017785, 3.4098947)
+script = ExtResource("1_geope")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1762081919]
+position = Vector2(19.822266, 20.200264)
+shape = SubResource("RectangleShape2D_126ht")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=409397345]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.3254902, 1, 0.41960785, 0.43529412)

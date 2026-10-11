@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://de1m3ao8lf1oe" path="res://branch_2.tscn" id="4_5hl24"]
 [ext_resource type="PackedScene" uid="uid://bxcwb6b36g1q3" path="res://static_body_2d_3.tscn" id="4_dea21"]
 [ext_resource type="PackedScene" uid="uid://beimu7rgdhtg5" path="res://lost_pet.tscn" id="7_5hl24"]
+[ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://win_screen.tscn" id="7_5lan0"]
+[ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://winTrigger.tscn" id="8_5lan0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dea21"]
 size = Vector2(407, 21.5)
@@ -81,13 +83,6 @@ position = Vector2(1770, 501)
 [node name="Branch10" parent="." unique_id=1244500028 instance=ExtResource("4_5hl24")]
 position = Vector2(1793, -1222)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1112019312]
-offset_left = -3.0
-offset_top = -1788.0
-offset_right = 324.0
-offset_bottom = -1117.0
-color = Color(0, 1, 0, 0.1882353)
-
 [node name="LostPet" parent="." unique_id=1864814914 instance=ExtResource("7_5hl24")]
 position = Vector2(876.99994, 556)
 
@@ -99,3 +94,11 @@ position = Vector2(2769, -209)
 
 [node name="LostPet4" parent="." unique_id=1074932636 instance=ExtResource("7_5hl24")]
 position = Vector2(1864, -1683)
+
+[node name="WinScreen" parent="." unique_id=1651720381 instance=ExtResource("7_5lan0")]
+
+[node name="winTrigger" parent="." unique_id=899574160 instance=ExtResource("8_5lan0")]
+position = Vector2(-25, -1387)
+scale = Vector2(6.6078243, 6.8011847)
+
+[connection signal="body_entered" from="winTrigger" to="winTrigger" method="_on_body_entered"]
