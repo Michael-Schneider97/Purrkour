@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://beimu7rgdhtg5"]
+
+[ext_resource type="Script" uid="uid://cyv5crui6eix5" path="res://lost_pet.gd" id="1_r16de"]
+[ext_resource type="Texture2D" uid="uid://ctjahdcyffiso" path="res://IMG_2457.png" id="2_2tkpd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_126ht"]
+radius = 301.02658
+
+[node name="LostPet" type="Area2D" unique_id=1864814914]
+scale = Vector2(0.47999948, 0.40000018)
+collision_layer = 0
+script = ExtResource("1_r16de")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1550631176]
+texture = ExtResource("2_2tkpd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1745981391]
+position = Vector2(4, 3)
+shape = SubResource("CircleShape2D_126ht")

@@ -1,45 +1,18 @@
 [gd_scene format=3 uid="uid://d31mx10s2305v"]
 
-[ext_resource type="Script" uid="uid://cvafnoelk2rdu" path="res://cat.gd" id="1_l0b7a"]
-[ext_resource type="Texture2D" uid="uid://d3t5yricdylue" path="res://Screenshot_2026-10-03_at_5.06.33_PM-removebg-preview.png" id="2_rtsss"]
+[ext_resource type="PackedScene" uid="uid://c8dx22gvfd1sj" path="res://cat.tscn" id="1_a8u4a"]
 [ext_resource type="PackedScene" uid="uid://v6hkfarbrg8f" path="res://branch_1.tscn" id="3_a8u4a"]
 [ext_resource type="Texture2D" uid="uid://cue0wnuvocs7w" path="res://Screenshot_2026-10-03_at_5.42.01_PM-removebg-preview.png" id="3_rtsss"]
 [ext_resource type="PackedScene" uid="uid://de1m3ao8lf1oe" path="res://branch_2.tscn" id="4_5hl24"]
 [ext_resource type="PackedScene" uid="uid://bxcwb6b36g1q3" path="res://static_body_2d_3.tscn" id="4_dea21"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_kgfpx"]
-radius = 65.03076
+[ext_resource type="PackedScene" uid="uid://beimu7rgdhtg5" path="res://lost_pet.tscn" id="7_5hl24"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dea21"]
 size = Vector2(407, 21.5)
 
 [node name="Node2D" type="Node2D" unique_id=1394157143]
 
-[node name="Cat" type="RigidBody2D" parent="." unique_id=1125975602]
-gravity_scale = 1.5
-lock_rotation = true
-script = ExtResource("1_l0b7a")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cat" unique_id=1855487280]
-z_index = -1
-position = Vector2(535.0625, 581.1875)
-scale = Vector2(0.41630813, 0.3924824)
-texture = ExtResource("2_rtsss")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cat" unique_id=1133920106]
-position = Vector2(530, 582)
-shape = SubResource("CircleShape2D_kgfpx")
-
-[node name="Camera2D" type="Camera2D" parent="Cat" unique_id=1184348642]
-position = Vector2(580, 380)
-zoom = Vector2(0.5, 0.5)
-limit_left = -150
-limit_top = -2300
-limit_right = 3000
-limit_bottom = 800
-position_smoothing_enabled = true
-
-[node name="LinesNode" type="Node2D" parent="Cat" unique_id=1731807025]
+[node name="Cat" parent="." unique_id=708037495 groups=["Player"] instance=ExtResource("1_a8u4a")]
 
 [node name="Branch1" parent="." unique_id=1219924473 instance=ExtResource("3_a8u4a")]
 position = Vector2(75, 138)
@@ -114,3 +87,15 @@ offset_top = -1788.0
 offset_right = 324.0
 offset_bottom = -1117.0
 color = Color(0, 1, 0, 0.1882353)
+
+[node name="LostPet" parent="." unique_id=1864814914 instance=ExtResource("7_5hl24")]
+position = Vector2(876.99994, 556)
+
+[node name="LostPet2" parent="." unique_id=68529696 instance=ExtResource("7_5hl24")]
+position = Vector2(217, -188)
+
+[node name="LostPet3" parent="." unique_id=532381907 instance=ExtResource("7_5hl24")]
+position = Vector2(2769, -209)
+
+[node name="LostPet4" parent="." unique_id=1074932636 instance=ExtResource("7_5hl24")]
+position = Vector2(1864, -1683)
