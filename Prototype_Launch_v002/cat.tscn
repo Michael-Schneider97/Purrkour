@@ -31,3 +31,5 @@ limit_bottom = 800
 position_smoothing_enabled = true
 
 [node name="LinesNode" type="Node2D" parent="." unique_id=1708123110]
+
+[node name="TrajectoryLine" type="Line2D" parent="." unique_id=1517577330]

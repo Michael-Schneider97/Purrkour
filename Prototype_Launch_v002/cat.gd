@@ -3,9 +3,18 @@ extends RigidBody2D
 @export var launch_power: float = 12.0
 @export var max_drag_distance: float = 150.0
 
+# trajectory line stuff
+@export var max_points = 40
+@export var time_step = .05
+
+@onready var trajectory_line = $TrajectoryLine
+
 var dragging := false
 var drag_current := Vector2.ZERO
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _ready() -> void:
+	trajectory_line.hide()
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -16,10 +25,12 @@ func _input(event):
 				drag_current = get_global_mouse_position()
 
 				freeze = true
+				trajectory_line.show()
 				queue_redraw()
 
 			else:
 				if dragging:
+					trajectory_line.hide()
 					launch()
 
 
@@ -38,8 +49,8 @@ func _input(event):
 
 		drag_current = mouse_pos
 
+		_update_trajectory()
 		queue_redraw()
-
 
 func launch():
 
@@ -49,12 +60,32 @@ func launch():
 
 	dragging = false
 	freeze = false
-
+	
+	
 	apply_central_impulse(launch_vector * launch_power)
 
 	queue_redraw()
 
-
+func _update_trajectory() -> void:
+	trajectory_line.clear_points()
+	var cat_position = $Sprite2D.global_position
+	var launch_vect = cat_position - drag_current
+	
+	var initial_velocity = (launch_vect * launch_power) / mass
+	
+	var grav_fixed = gravity * gravity_scale
+	
+	for i in range(max_points):
+		var t = i * time_step
+		var dx = initial_velocity.x * t
+		var dy = (initial_velocity.y * t) + (.5 * grav_fixed * t * t)
+		var point_offset = Vector2(dx, dy)
+		
+		var global_point_pos = cat_position + point_offset
+		var local_point_pos = trajectory_line.to_local(global_point_pos)
+		
+		trajectory_line.add_point(local_point_pos)
+	
 func _draw():
 
 	if dragging:
