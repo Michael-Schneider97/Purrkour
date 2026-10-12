@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c8dx22gvfd1sj"]
 
 [ext_resource type="Script" uid="uid://cvafnoelk2rdu" path="res://cat.gd" id="1_52fj1"]
-[ext_resource type="Texture2D" uid="uid://d3t5yricdylue" path="res://Screenshot_2026-10-03_at_5.06.33_PM-removebg-preview.png" id="2_6fl1u"]
+[ext_resource type="Texture2D" uid="uid://dn34i3hubay6x" path="res://blob cat 3.png" id="2_52fj1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kgfpx"]
 radius = 65.03076
@@ -13,9 +13,9 @@ script = ExtResource("1_52fj1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1650045169]
 z_index = -1
-position = Vector2(535.0625, 581.1875)
-scale = Vector2(0.41630813, 0.3924824)
-texture = ExtResource("2_6fl1u")
+position = Vector2(531, 581.00006)
+scale = Vector2(5.478098, 4.735816)
+texture = ExtResource("2_52fj1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1162749775]
 position = Vector2(530, 582)
@@ -32,4 +32,4 @@ position_smoothing_enabled = true
 
 [node name="LinesNode" type="Node2D" parent="." unique_id=1708123110]
 
-[node name="TrajectoryLine" type="Line2D" parent="." unique_id=1517577330]
+[node name="TrajectoryLine" type="Line2D" parent="." unique_id=836515155]
