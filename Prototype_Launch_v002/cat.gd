@@ -13,8 +13,21 @@ var dragging := false
 var drag_current := Vector2.ZERO
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+
+# Setup line visual style
 func _ready() -> void:
+	var img = preload("res://dot.png")
 	trajectory_line.hide()
+	trajectory_line.width = 20.0
+	trajectory_line.default_color = Color.YELLOW
+	trajectory_line.texture_mode = Line2D.LINE_TEXTURE_TILE
+	trajectory_line.texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
+	trajectory_line.texture = img
+	var line_gradient = Gradient.new()
+	line_gradient.set_color(0, Color(1, 0.92, 0.01, 1.0))
+	line_gradient.set_color(1, Color(1, 0.92, 0.01, 0.0))
+	trajectory_line.gradient = line_gradient
+	
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -60,12 +73,11 @@ func launch():
 
 	dragging = false
 	freeze = false
-	
-	
 	apply_central_impulse(launch_vector * launch_power)
 
 	queue_redraw()
 
+# Use kinematics to get curved line
 func _update_trajectory() -> void:
 	trajectory_line.clear_points()
 	var cat_position = $Sprite2D.global_position
@@ -106,9 +118,9 @@ func _draw():
 		
 		
 		# how far you're pulling
-		draw_line(
-			cat_local,
-			cat_local + (cat_local - mouse_local) * 6,
-			Color.YELLOW,
-			4.0
-		)
+		#draw_line(
+		#	cat_local,
+		#	cat_local + (cat_local - mouse_local) * 6,
+		#	Color.YELLOW,
+		#	4.0
+		#)
