@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://d31mx10s2305v"]
 
 [ext_resource type="PackedScene" uid="uid://c8dx22gvfd1sj" path="res://cat.tscn" id="1_a8u4a"]
-[ext_resource type="Texture2D" uid="uid://bnqw3tjmdj0c8" path="res://branch 3 cats long.png" id="2_a8u4a"]
+[ext_resource type="Texture2D" uid="uid://bnqw3tjmdj0c8" path="res://assets/branch 3 cats long.png" id="2_a8u4a"]
 [ext_resource type="PackedScene" uid="uid://bxcwb6b36g1q3" path="res://static_body_2d_3.tscn" id="4_dea21"]
-[ext_resource type="Texture2D" uid="uid://bgf0urpvkw8cb" path="res://inf151_concept_background.png" id="7_0shoj"]
+[ext_resource type="Texture2D" uid="uid://bgf0urpvkw8cb" path="res://assets/inf151_concept_background.png" id="7_0shoj"]
 [ext_resource type="PackedScene" uid="uid://beimu7rgdhtg5" path="res://lost_pet.tscn" id="7_5hl24"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://win_screen.tscn" id="7_5lan0"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://winTrigger.tscn" id="8_5lan0"]

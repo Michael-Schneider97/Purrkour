@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o3age8ok5dmf"
-path="res://.godot/imported/dot.png-c009b1c4c85719f89f80768b0ad78763.ctex"
+uid="uid://b2nvcp6ds1gdl"
+path="res://.godot/imported/branch-removebg-preview.png-ce20425ad9052370d069a28571818b73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dot.png"
-dest_files=["res://.godot/imported/dot.png-c009b1c4c85719f89f80768b0ad78763.ctex"]
+source_file="res://assets/branch-removebg-preview.png"
+dest_files=["res://.godot/imported/branch-removebg-preview.png-ce20425ad9052370d069a28571818b73.ctex"]
 
 [params]
 

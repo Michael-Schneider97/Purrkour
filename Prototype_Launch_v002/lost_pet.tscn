@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://beimu7rgdhtg5"]
 
-[ext_resource type="Script" uid="uid://cyv5crui6eix5" path="res://lost_pet.gd" id="1_r16de"]
-[ext_resource type="Texture2D" uid="uid://dfa7ctmp23xec" path="res://blob dog distressed.png" id="2_r16de"]
+[ext_resource type="Script" uid="uid://cyv5crui6eix5" path="res://scripts/lost_pet.gd" id="1_r16de"]
+[ext_resource type="Texture2D" uid="uid://dfa7ctmp23xec" path="res://assets/blob dog distressed.png" id="2_r16de"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_126ht"]
 radius = 301.02658

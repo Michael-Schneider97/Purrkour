@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b5v0vevyfx3me"]
 
-[ext_resource type="Script" uid="uid://by0ndmx5cvk6j" path="res://win_trigger.gd" id="1_geope"]
+[ext_resource type="Script" uid="uid://by0ndmx5cvk6j" path="res://scripts/win_trigger.gd" id="1_geope"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_126ht"]
 size = Vector2(36.7079, 38.521435)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c07ajwccl5ovy"
-path="res://.godot/imported/blob dog.png-5300ac734ba1208b49a42edebcfd4e05.ctex"
+uid="uid://cue0wnuvocs7w"
+path="res://.godot/imported/Screenshot_2026-10-03_at_5.42.01_PM-removebg-preview.png-473d806b41c63663e942fd39c1b525ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blob dog.png"
-dest_files=["res://.godot/imported/blob dog.png-5300ac734ba1208b49a42edebcfd4e05.ctex"]
+source_file="res://assets/Screenshot_2026-10-03_at_5.42.01_PM-removebg-preview.png"
+dest_files=["res://.godot/imported/Screenshot_2026-10-03_at_5.42.01_PM-removebg-preview.png-473d806b41c63663e942fd39c1b525ec.ctex"]
 
 [params]
 

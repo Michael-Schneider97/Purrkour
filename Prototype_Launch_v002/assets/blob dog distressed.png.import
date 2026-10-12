@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfa7ctmp23xec"
-path="res://.godot/imported/blob dog distressed.png-a0bfdbadb14475f5dff6f680be1089a1.ctex"
+path="res://.godot/imported/blob dog distressed.png-dc69ff74bee7ec396d5a1901d131852e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blob dog distressed.png"
-dest_files=["res://.godot/imported/blob dog distressed.png-a0bfdbadb14475f5dff6f680be1089a1.ctex"]
+source_file="res://assets/blob dog distressed.png"
+dest_files=["res://.godot/imported/blob dog distressed.png-dc69ff74bee7ec396d5a1901d131852e.ctex"]
 
 [params]
 
