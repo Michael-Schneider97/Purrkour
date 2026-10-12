@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://winTrigger.tscn" id="8_5lan0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dea21"]
-size = Vector2(407, 21.5)
+size = Vector2(497.5, 48.75)
 
 [node name="Node2D" type="Node2D" unique_id=1394157143]
 
@@ -206,7 +206,7 @@ scale = Vector2(5.24433, 4.99858)
 texture = ExtResource("2_a8u4a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Branch13" unique_id=1038970714]
-position = Vector2(130, 197)
+position = Vector2(175.25, 210.625)
 shape = SubResource("RectangleShape2D_dea21")
 
 [node name="LostPet5" parent="." unique_id=451098024 instance=ExtResource("7_5hl24")]

@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Jump"
+config/name="Purrkour"
 run/main_scene="res://dragandlaunch.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://d3t5yricdylue"
 
 [display]
 
@@ -30,3 +30,4 @@ project/assembly_name="Jump"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
