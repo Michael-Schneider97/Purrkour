@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bgf0urpvkw8cb" path="res://assets/inf151_concept_background.png" id="7_0shoj"]
 [ext_resource type="PackedScene" uid="uid://beimu7rgdhtg5" path="res://lost_pet.tscn" id="7_5hl24"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://win_screen.tscn" id="7_5lan0"]
+[ext_resource type="PackedScene" uid="uid://v6hkfarbrg8f" path="res://branch_1.tscn" id="8_0shoj"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://winTrigger.tscn" id="8_5lan0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dea21"]
@@ -15,44 +16,31 @@ size = Vector2(497.5, 48.75)
 
 [node name="Cat" parent="." unique_id=708037495 groups=["Player"] instance=ExtResource("1_a8u4a")]
 
-[node name="Branch3" type="StaticBody2D" parent="." unique_id=548935424]
-position = Vector2(-39, -241)
-
-[node name="Sprite2D" type="Sprite2D" parent="Branch3" unique_id=343356009]
-position = Vector2(261.22784, 226.30156)
-rotation = 3.1415927
-scale = Vector2(5.24433, 4.99858)
-texture = ExtResource("2_a8u4a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch3" unique_id=1251564968]
-position = Vector2(130, 197)
-shape = SubResource("RectangleShape2D_dea21")
-
-[node name="StaticBody2D3" parent="." unique_id=1099579288 instance=ExtResource("4_dea21")]
+[node name="Floor" parent="." unique_id=1099579288 instance=ExtResource("4_dea21")]
 position = Vector2(1465, 688)
 scale = Vector2(150, 5)
 
-[node name="StaticBody2D8" parent="." unique_id=705053466 instance=ExtResource("4_dea21")]
+[node name="Ceiling" parent="." unique_id=705053466 instance=ExtResource("4_dea21")]
 position = Vector2(1428, -2196)
 scale = Vector2(150, 5)
 
-[node name="StaticBody2D6" parent="." unique_id=1395762892 instance=ExtResource("4_dea21")]
+[node name="Floor2" parent="." unique_id=1395762892 instance=ExtResource("4_dea21")]
 position = Vector2(887.9999, -1063.0001)
 scale = Vector2(100, 5)
 
-[node name="StaticBody2D4" parent="." unique_id=823149707 instance=ExtResource("4_dea21")]
+[node name="LeftWall" parent="." unique_id=823149707 instance=ExtResource("4_dea21")]
 position = Vector2(-66, -736)
 scale = Vector2(5, 150)
 
-[node name="StaticBody2D7" parent="." unique_id=1250587272 instance=ExtResource("4_dea21")]
+[node name="RightWall" parent="." unique_id=1250587272 instance=ExtResource("4_dea21")]
 position = Vector2(2927, -731)
 scale = Vector2(5, 150)
 
-[node name="StaticBody2D5" parent="." unique_id=537936960 instance=ExtResource("4_dea21")]
+[node name="MiddWall" parent="." unique_id=537936960 instance=ExtResource("4_dea21")]
 position = Vector2(1203, 170.00006)
 scale = Vector2(5, 50)
 
-[node name="StaticBody2D9" parent="." unique_id=1662505058 instance=ExtResource("4_dea21")]
+[node name="TopMidWall" parent="." unique_id=1662505058 instance=ExtResource("4_dea21")]
 position = Vector2(1881, -1085)
 scale = Vector2(5, 50)
 
@@ -74,73 +62,6 @@ position = Vector2(1902, -1659)
 position = Vector2(-25, -1387)
 scale = Vector2(6.6078243, 6.8011847)
 
-[node name="Branch4" type="StaticBody2D" parent="." unique_id=322417935]
-position = Vector2(-20, 160)
-
-[node name="Sprite2D" type="Sprite2D" parent="Branch4" unique_id=1939183590]
-position = Vector2(255, 226.302)
-rotation = 3.1415927
-scale = Vector2(5.24433, 4.99858)
-texture = ExtResource("2_a8u4a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch4" unique_id=922161223]
-position = Vector2(130, 197)
-shape = SubResource("RectangleShape2D_dea21")
-
-[node name="Branch5" type="StaticBody2D" parent="." unique_id=1843530412]
-position = Vector2(1198, 376)
-rotation = 3.1415927
-
-[node name="Sprite2D" type="Sprite2D" parent="Branch5" unique_id=48805121]
-position = Vector2(261.22784, 226.30156)
-rotation = 3.1415927
-scale = Vector2(5.24433, 4.99858)
-texture = ExtResource("2_a8u4a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch5" unique_id=1789026479]
-position = Vector2(130, 197)
-shape = SubResource("RectangleShape2D_dea21")
-
-[node name="Branch6" type="StaticBody2D" parent="." unique_id=2003042895]
-position = Vector2(1818, -1790)
-
-[node name="Sprite2D" type="Sprite2D" parent="Branch6" unique_id=814429561]
-position = Vector2(261.22784, 226.30156)
-rotation = 3.1415927
-scale = Vector2(5.24433, 4.99858)
-texture = ExtResource("2_a8u4a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch6" unique_id=1013421981]
-position = Vector2(130, 197)
-shape = SubResource("RectangleShape2D_dea21")
-
-[node name="Branch7" type="StaticBody2D" parent="." unique_id=1835064056]
-position = Vector2(1915, -833)
-
-[node name="Sprite2D" type="Sprite2D" parent="Branch7" unique_id=1743529455]
-position = Vector2(261.22784, 226.30156)
-rotation = 3.1415927
-scale = Vector2(5.24433, 4.99858)
-texture = ExtResource("2_a8u4a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch7" unique_id=936151861]
-position = Vector2(130, 197)
-shape = SubResource("RectangleShape2D_dea21")
-
-[node name="Branch8" type="StaticBody2D" parent="." unique_id=1979393543]
-position = Vector2(2899, 242)
-rotation = 3.1415927
-
-[node name="Sprite2D" type="Sprite2D" parent="Branch8" unique_id=1831042773]
-position = Vector2(261.228, 200)
-rotation = 3.1415927
-scale = Vector2(5.24433, 4.99858)
-texture = ExtResource("2_a8u4a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch8" unique_id=2116858032]
-position = Vector2(130, 197)
-shape = SubResource("RectangleShape2D_dea21")
-
 [node name="Branch9" type="StaticBody2D" parent="." unique_id=2041006645]
 position = Vector2(1273, -75)
 rotation = 3.1415927
@@ -152,19 +73,6 @@ scale = Vector2(5.24433, 4.99858)
 texture = ExtResource("2_a8u4a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Branch9" unique_id=533179788]
-position = Vector2(130, 197)
-shape = SubResource("RectangleShape2D_dea21")
-
-[node name="Branch10" type="StaticBody2D" parent="." unique_id=192179411]
-position = Vector2(1242, 44)
-
-[node name="Sprite2D" type="Sprite2D" parent="Branch10" unique_id=1627834444]
-position = Vector2(261.22784, 226.30156)
-rotation = 3.1415927
-scale = Vector2(5.24433, 4.99858)
-texture = ExtResource("2_a8u4a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch10" unique_id=978863521]
 position = Vector2(130, 197)
 shape = SubResource("RectangleShape2D_dea21")
 
@@ -205,10 +113,6 @@ rotation = 3.1415927
 scale = Vector2(5.24433, 4.99858)
 texture = ExtResource("2_a8u4a")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch13" unique_id=1038970714]
-position = Vector2(175.25, 210.625)
-shape = SubResource("RectangleShape2D_dea21")
-
 [node name="LostPet5" parent="." unique_id=451098024 instance=ExtResource("7_5hl24")]
 position = Vector2(146.00012, -1791)
 
@@ -217,5 +121,33 @@ z_index = -100
 position = Vector2(931.49976, -749.5)
 scale = Vector2(2.3786457, 2.8249998)
 texture = ExtResource("7_0shoj")
+
+[node name="Branches" type="Node" parent="." unique_id=1459094198]
+
+[node name="Branch5" parent="Branches" unique_id=1219924473 instance=ExtResource("8_0shoj")]
+position = Vector2(2202.9998, -1411.9999)
+rotation = -0.02922871
+scale = Vector2(-1.1083069, 2.6068358)
+skew = 0.017881155
+
+[node name="Branch1" parent="Branches" unique_id=1107031445 instance=ExtResource("8_0shoj")]
+position = Vector2(821, -244.00009)
+scale = Vector2(1.3455971, 1.44)
+
+[node name="Branch3" parent="Branches" unique_id=1279191805 instance=ExtResource("8_0shoj")]
+position = Vector2(2584.0002, -471)
+rotation = 3.1415925
+scale = Vector2(-1.3176744, -1.7499874)
+
+[node name="Branch2" parent="Branches" unique_id=1841133634 instance=ExtResource("8_0shoj")]
+position = Vector2(282.00003, -333)
+rotation = -3.1415927
+scale = Vector2(1.1599988, -1.2)
+
+[node name="Branch4" parent="Branches" unique_id=924601864 instance=ExtResource("8_0shoj")]
+position = Vector2(1573, 864.99976)
+rotation = 3.1297126
+scale = Vector2(1.4169266, 2.069484)
+skew = 0.0051443577
 
 [connection signal="body_entered" from="winTrigger" to="winTrigger" method="_on_body_entered"]

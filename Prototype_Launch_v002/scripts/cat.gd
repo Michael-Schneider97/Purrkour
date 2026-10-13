@@ -16,7 +16,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # Setup line visual style
 func _ready() -> void:
-	var img = preload("res://dot.png")
+	var img = preload("res://assets/dot.png")
 	trajectory_line.hide()
 	trajectory_line.width = 20.0
 	trajectory_line.default_color = Color.YELLOW
