@@ -62,57 +62,6 @@ position = Vector2(1902, -1659)
 position = Vector2(-25, -1387)
 scale = Vector2(6.6078243, 6.8011847)
 
-[node name="Branch9" type="StaticBody2D" parent="." unique_id=2041006645]
-position = Vector2(1273, -75)
-rotation = 3.1415927
-
-[node name="Sprite2D" type="Sprite2D" parent="Branch9" unique_id=172067721]
-position = Vector2(261.22784, 226.30156)
-rotation = 3.1415927
-scale = Vector2(5.24433, 4.99858)
-texture = ExtResource("2_a8u4a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch9" unique_id=533179788]
-position = Vector2(130, 197)
-shape = SubResource("RectangleShape2D_dea21")
-
-[node name="Branch11" type="StaticBody2D" parent="." unique_id=2129683782]
-position = Vector2(1853, -1170)
-rotation = 3.1415927
-
-[node name="Sprite2D" type="Sprite2D" parent="Branch11" unique_id=205115957]
-position = Vector2(261.22784, 226.30156)
-rotation = 3.1415927
-scale = Vector2(5.24433, 4.99858)
-texture = ExtResource("2_a8u4a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch11" unique_id=1341292928]
-position = Vector2(130, 197)
-shape = SubResource("RectangleShape2D_dea21")
-
-[node name="Branch12" type="StaticBody2D" parent="." unique_id=1550964427]
-position = Vector2(-39, -1944)
-
-[node name="Sprite2D" type="Sprite2D" parent="Branch12" unique_id=420391088]
-position = Vector2(261.22784, 226.30156)
-rotation = 3.1415927
-scale = Vector2(5.24433, 4.99858)
-texture = ExtResource("2_a8u4a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch12" unique_id=1056734425]
-position = Vector2(130, 197)
-shape = SubResource("RectangleShape2D_dea21")
-
-[node name="Branch13" type="StaticBody2D" parent="." unique_id=1748079384]
-position = Vector2(2912, -907)
-rotation = 3.1415927
-
-[node name="Sprite2D" type="Sprite2D" parent="Branch13" unique_id=2113391763]
-position = Vector2(261.22784, 226.30156)
-rotation = 3.1415927
-scale = Vector2(5.24433, 4.99858)
-texture = ExtResource("2_a8u4a")
-
 [node name="LostPet5" parent="." unique_id=451098024 instance=ExtResource("7_5hl24")]
 position = Vector2(146.00012, -1791)
 
@@ -123,6 +72,43 @@ scale = Vector2(2.3786457, 2.8249998)
 texture = ExtResource("7_0shoj")
 
 [node name="Branches" type="Node" parent="." unique_id=1459094198]
+
+[node name="Branch13" type="StaticBody2D" parent="Branches" unique_id=1748079384]
+position = Vector2(2912, -907)
+rotation = -3.1415925
+
+[node name="Sprite2D" type="Sprite2D" parent="Branches/Branch13" unique_id=2113391763]
+position = Vector2(261.22784, 226.30156)
+rotation = 3.1415927
+scale = Vector2(5.24433, 4.99858)
+texture = ExtResource("2_a8u4a")
+
+[node name="Branch12" type="StaticBody2D" parent="Branches" unique_id=1550964427]
+position = Vector2(-39, -1944)
+
+[node name="Sprite2D" type="Sprite2D" parent="Branches/Branch12" unique_id=420391088]
+position = Vector2(261.22784, 226.30156)
+rotation = 3.1415927
+scale = Vector2(5.24433, 4.99858)
+texture = ExtResource("2_a8u4a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Branches/Branch12" unique_id=1056734425]
+position = Vector2(130, 197)
+shape = SubResource("RectangleShape2D_dea21")
+
+[node name="Branch9" type="StaticBody2D" parent="Branches" unique_id=2041006645]
+position = Vector2(1273.0001, -74.99994)
+rotation = -3.1415925
+
+[node name="Sprite2D" type="Sprite2D" parent="Branches/Branch9" unique_id=172067721]
+position = Vector2(261.22784, 226.30156)
+rotation = 3.1415927
+scale = Vector2(5.24433, 4.99858)
+texture = ExtResource("2_a8u4a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Branches/Branch9" unique_id=533179788]
+position = Vector2(130, 197)
+shape = SubResource("RectangleShape2D_dea21")
 
 [node name="Branch5" parent="Branches" unique_id=1219924473 instance=ExtResource("8_0shoj")]
 position = Vector2(2202.9998, -1411.9999)
@@ -149,5 +135,19 @@ position = Vector2(1573, 864.99976)
 rotation = 3.1297126
 scale = Vector2(1.4169266, 2.069484)
 skew = 0.0051443577
+
+[node name="Branch11" type="StaticBody2D" parent="Branches" unique_id=2129683782]
+position = Vector2(1853, -1170)
+rotation = -3.1415925
+
+[node name="Sprite2D" type="Sprite2D" parent="Branches/Branch11" unique_id=205115957]
+position = Vector2(261.22784, 226.30156)
+rotation = 3.1415927
+scale = Vector2(5.24433, 4.99858)
+texture = ExtResource("2_a8u4a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Branches/Branch11" unique_id=1341292928]
+position = Vector2(130, 197)
+shape = SubResource("RectangleShape2D_dea21")
 
 [connection signal="body_entered" from="winTrigger" to="winTrigger" method="_on_body_entered"]

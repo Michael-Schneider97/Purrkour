@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dbkodd6qw1akp"]
+
+[ext_resource type="Texture2D" uid="uid://c152nl4dlkwl4" path="res://landscape_purrkourbck.png" id="1_gpckw"]
+
+[node name="Node2D" type="Node2D" unique_id=834354683]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1669568410]
+offset_left = -26.0
+offset_top = -6.0
+offset_right = 1205.0
+offset_bottom = 652.0
+texture = ExtResource("1_gpckw")
+
+[node name="Control" type="Control" parent="TextureRect" unique_id=1340326939]
+anchors_preset = 0
+offset_left = 26.0
+offset_top = 4.0
+offset_right = 66.0
+offset_bottom = 44.0
+
+[node name="Button2" type="Button" parent="TextureRect/Control" unique_id=1418419889]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 338.0
+offset_right = 1021.0
+offset_bottom = 412.0
+
+[node name="Button" type="Button" parent="TextureRect/Control" unique_id=310988479]
+layout_mode = 0
+offset_left = 796.0
+offset_top = 238.0
+offset_right = 1021.0
+offset_bottom = 314.0
