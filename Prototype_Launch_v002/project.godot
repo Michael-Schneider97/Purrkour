@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Purrkour"
-run/main_scene="res://dragandlaunch.tscn"
+run/main_scene="uid://dbkodd6qw1akp"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://d3t5yricdylue"
 
