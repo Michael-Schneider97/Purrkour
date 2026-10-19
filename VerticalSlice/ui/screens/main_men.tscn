@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dbkodd6qw1akp"]
+
+[ext_resource type="Texture2D" uid="uid://d0gdwa5pafq70" path="res://ui/screens/landscape_purrkourbck.png" id="1_gpckw"]
+[ext_resource type="Script" uid="uid://brc5p74c62qmy" path="res://ui/screens/button.gd" id="3_1dbst"]
+[ext_resource type="Texture2D" uid="uid://cbk4d0xpw517b" path="res://ui/screens/playbutton (1).png" id="3_031ii"]
+[ext_resource type="Texture2D" uid="uid://cuk0mr6oiaujg" path="res://ui/screens/quitbutton (1).png" id="4_1dbst"]
+[ext_resource type="Script" uid="uid://cawvtscnfnn6f" path="res://ui/screens/button_2.gd" id="5_t1vwk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oxpsm"]
+texture = ExtResource("3_031ii")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_esgg6"]
+texture = ExtResource("3_031ii")
+modulate_color = Color(0.6313726, 0.3372549, 0.27058825, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1vgnc"]
+texture = ExtResource("3_031ii")
+modulate_color = Color(0.86180174, 0.60715145, 0.48683047, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_60swb"]
+texture = ExtResource("4_1dbst")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ryvbe"]
+texture = ExtResource("4_1dbst")
+modulate_color = Color(0.62987167, 0.33831453, 0.26870796, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_utr3m"]
+texture = ExtResource("4_1dbst")
+modulate_color = Color(0.8627451, 0.60784316, 0.4862745, 1)
+
+[node name="Node2D" type="Node2D" unique_id=834354683]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1669568410]
+offset_left = -33.0
+offset_top = -8.0
+offset_right = 1242.0
+offset_bottom = 666.0
+texture = ExtResource("1_gpckw")
+
+[node name="Control" type="Control" parent="TextureRect" unique_id=1340326939]
+layout_mode = 1
+anchor_right = 0.14
+anchor_bottom = 0.25100002
+offset_left = 52.0
+offset_top = 42.0
+offset_right = 0.27999878
+offset_bottom = -2.2420197
+
+[node name="Button" type="Button" parent="TextureRect/Control" unique_id=1243375743]
+layout_mode = 0
+offset_left = 747.0
+offset_top = 137.0
+offset_right = 1022.0
+offset_bottom = 389.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_oxpsm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_esgg6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1vgnc")
+script = ExtResource("3_1dbst")
+
+[node name="Button2" type="Button" parent="TextureRect/Control" unique_id=1418419889]
+layout_mode = 0
+offset_left = 676.0
+offset_top = 298.0
+offset_right = 1091.0
+offset_bottom = 550.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_60swb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ryvbe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_utr3m")
+script = ExtResource("5_t1vwk")
+
+[connection signal="pressed" from="TextureRect/Control/Button" to="TextureRect/Control/Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Control/Button2" to="TextureRect/Control/Button" method="_on_button_2_pressed"]

@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://blggbgvx603mf"]
+
+[ext_resource type="Script" uid="uid://c6jbkmcjq2c4a" path="res://world/entities/pet.gd" id="1_cfnt1"]
+[ext_resource type="Texture2D" uid="uid://bgbrkkdcrodwv" path="res://world/entities/pet.png" id="2_7yu28"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s6i07"]
+radius = 22.0
+height = 44.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_cfnt1"]
+b = Vector2(-8, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jjqce"]
+b = Vector2(-8, 0)
+
+[node name="Pet" type="RigidBody2D" unique_id=1264480536]
+lock_rotation = true
+script = ExtResource("1_cfnt1")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=1251813329]
+shape = SubResource("CapsuleShape2D_s6i07")
+
+[node name="HopTimer" type="Timer" parent="." unique_id=151681034]
+wait_time = 2.0
+autostart = true
+
+[node name="RightDetector" type="Area2D" parent="." unique_id=2117015517]
+
+[node name="RightShape" type="CollisionShape2D" parent="RightDetector" unique_id=1756859087]
+position = Vector2(30, 0)
+shape = SubResource("SegmentShape2D_cfnt1")
+
+[node name="LeftDetector" type="Area2D" parent="." unique_id=571161897]
+
+[node name="LeftShape" type="CollisionShape2D" parent="LeftDetector" unique_id=1810426685]
+position = Vector2(-22, 0)
+shape = SubResource("SegmentShape2D_jjqce")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=96735489]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" unique_id=945054886]
+scale = Vector2(1.2, 1.2)
+shape = SubResource("CapsuleShape2D_s6i07")
+
+[node name="Pet" type="Sprite2D" parent="." unique_id=506356607]
+texture_filter = 1
+position = Vector2(0, -4)
+scale = Vector2(2, 2)
+texture = ExtResource("2_7yu28")
+
+[connection signal="timeout" from="HopTimer" to="." method="_on_hop_timer_timeout"]
+[connection signal="body_entered" from="RightDetector" to="." method="_on_right_detector_2_body_entered"]
+[connection signal="body_entered" from="LeftDetector" to="." method="_on_left_detector_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

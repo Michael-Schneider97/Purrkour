@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://wh63687phncq"]
+
+[ext_resource type="Script" uid="uid://b4lubmhhapdxl" path="res://world/entities/player.gd" id="1_4dfyj"]
+[ext_resource type="Texture2D" uid="uid://b2tdq6iwnh310" path="res://world/entities/player.png" id="2_40emc"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b5ex2"]
+bounce = 0.2
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b5ex2"]
+radius = 22.0
+height = 44.0
+
+[node name="Player" type="RigidBody2D" unique_id=1489148362]
+physics_material_override = SubResource("PhysicsMaterial_b5ex2")
+lock_rotation = true
+script = ExtResource("1_4dfyj")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=804036889]
+shape = SubResource("CapsuleShape2D_b5ex2")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=2144765731]
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1739662661]
+texture_filter = 1
+position = Vector2(0, -2)
+scale = Vector2(2, 2)
+texture = ExtResource("2_40emc")
+
+[node name="TrajectoryLine" type="Line2D" parent="." unique_id=1055988625]
+width = 5.0
