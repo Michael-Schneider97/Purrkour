@@ -1,10 +1,23 @@
 [gd_scene format=3 uid="uid://dbkodd6qw1akp"]
 
 [ext_resource type="Texture2D" uid="uid://d0gdwa5pafq70" path="res://ui/screens/landscape_purrkourbck.png" id="1_gpckw"]
+[ext_resource type="Texture2D" uid="uid://dm8l27hsd583j" path="res://ui/screens/levelbutton.png" id="2_6tyuv"]
 [ext_resource type="Script" uid="uid://brc5p74c62qmy" path="res://ui/screens/button.gd" id="3_1dbst"]
 [ext_resource type="Texture2D" uid="uid://cbk4d0xpw517b" path="res://ui/screens/playbutton (1).png" id="3_031ii"]
+[ext_resource type="Script" uid="uid://dxwpwgs042pis" path="res://ui/screens/button_3.gd" id="3_cf4mh"]
 [ext_resource type="Texture2D" uid="uid://cuk0mr6oiaujg" path="res://ui/screens/quitbutton (1).png" id="4_1dbst"]
 [ext_resource type="Script" uid="uid://cawvtscnfnn6f" path="res://ui/screens/button_2.gd" id="5_t1vwk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tt62d"]
+texture = ExtResource("2_6tyuv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xh143"]
+texture = ExtResource("2_6tyuv")
+modulate_color = Color(0.6313726, 0.3372549, 0.27058825, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebor1"]
+texture = ExtResource("2_6tyuv")
+modulate_color = Color(0.8627451, 0.60784316, 0.4862745, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oxpsm"]
 texture = ExtResource("3_031ii")
@@ -41,17 +54,28 @@ texture = ExtResource("1_gpckw")
 layout_mode = 1
 anchor_right = 0.14
 anchor_bottom = 0.25100002
-offset_left = 52.0
-offset_top = 42.0
-offset_right = 0.27999878
-offset_bottom = -2.2420197
+offset_left = 67.0
+offset_top = 31.0
+offset_right = -2.5
+offset_bottom = -13.24202
+
+[node name="Button3" type="Button" parent="TextureRect/Control" unique_id=2084429408]
+layout_mode = 0
+offset_left = 717.0
+offset_top = 197.0
+offset_right = 1053.0
+offset_bottom = 348.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_tt62d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xh143")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ebor1")
+script = ExtResource("3_cf4mh")
 
 [node name="Button" type="Button" parent="TextureRect/Control" unique_id=1243375743]
 layout_mode = 0
-offset_left = 747.0
-offset_top = 137.0
-offset_right = 1022.0
-offset_bottom = 389.0
+offset_left = 723.0
+offset_top = 52.0
+offset_right = 1036.0
+offset_bottom = 204.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_oxpsm")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_esgg6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1vgnc")
@@ -59,14 +83,15 @@ script = ExtResource("3_1dbst")
 
 [node name="Button2" type="Button" parent="TextureRect/Control" unique_id=1418419889]
 layout_mode = 0
-offset_left = 676.0
-offset_top = 298.0
-offset_right = 1091.0
-offset_bottom = 550.0
+offset_left = 710.0
+offset_top = 331.0
+offset_right = 1052.0
+offset_bottom = 481.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_60swb")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ryvbe")
 theme_override_styles/hover = SubResource("StyleBoxTexture_utr3m")
 script = ExtResource("5_t1vwk")
 
+[connection signal="pressed" from="TextureRect/Control/Button3" to="TextureRect/Control/Button3" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Control/Button" to="TextureRect/Control/Button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Control/Button2" to="TextureRect/Control/Button" method="_on_button_2_pressed"]
