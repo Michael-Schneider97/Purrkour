@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dmft2jutlrqcm"]
+
+[ext_resource type="Script" uid="uid://c2y7bhwvitd5i" path="res://button.gd" id="1_r04n3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_126ht"]
+size = Vector2(3, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2rsb"]
+size = Vector2(5, 20)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_d2rsb"]
+
+[node name="Node2D" type="Node2D" unique_id=324109575]
+script = ExtResource("1_r04n3")
+
+[node name="ButtonTrigger" type="Area2D" parent="." unique_id=543447841]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonTrigger" unique_id=500190454]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_126ht")
+
+[node name="ButtonSurface" type="StaticBody2D" parent="." unique_id=1132684986]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonSurface" unique_id=1076251156]
+position = Vector2(-7.5, 0)
+shape = SubResource("RectangleShape2D_d2rsb")
+
+[node name="Sprite2D" type="Sprite2D" parent="ButtonSurface" unique_id=1688462885]
+scale = Vector2(7.4399967, 19.64)
+texture = SubResource("PlaceholderTexture2D_d2rsb")
