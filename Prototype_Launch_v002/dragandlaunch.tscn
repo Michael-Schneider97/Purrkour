@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://win_screen.tscn" id="7_5lan0"]
 [ext_resource type="PackedScene" uid="uid://v6hkfarbrg8f" path="res://branch_1.tscn" id="8_0shoj"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://winTrigger.tscn" id="8_5lan0"]
-[ext_resource type="Script" uid="uid://dhnad0fmoh56h" path="res://scripts/pet_counter.gd" id="9_0shoj"]
+[ext_resource type="Script" uid="uid://dtc2xub3fp8lq" path="res://scripts/pet_counter.gd" id="9_0shoj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dea21"]
 size = Vector2(497.5, 48.75)
@@ -105,7 +105,7 @@ scale = Vector2(5.24433, 4.99858)
 texture = ExtResource("2_a8u4a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Branches/Branch12" unique_id=1056734425]
-position = Vector2(130, 197)
+position = Vector2(234, 243)
 shape = SubResource("RectangleShape2D_dea21")
 
 [node name="Branch9" type="StaticBody2D" parent="Branches" unique_id=2041006645]
@@ -119,31 +119,31 @@ scale = Vector2(5.24433, 4.99858)
 texture = ExtResource("2_a8u4a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Branches/Branch9" unique_id=533179788]
-position = Vector2(130, 197)
+position = Vector2(224.00012, 235.00005)
 shape = SubResource("RectangleShape2D_dea21")
 
 [node name="Branch5" parent="Branches" unique_id=1219924473 instance=ExtResource("8_0shoj")]
-position = Vector2(2202.9998, -1411.9999)
+position = Vector2(2148.0002, -699.00006)
 rotation = -0.02922871
 scale = Vector2(-1.1083069, 2.6068358)
 skew = 0.017881155
 
 [node name="Branch1" parent="Branches" unique_id=1107031445 instance=ExtResource("8_0shoj")]
-position = Vector2(821, -244.00009)
+position = Vector2(930, 246.99997)
 scale = Vector2(1.3455971, 1.44)
 
 [node name="Branch3" parent="Branches" unique_id=1279191805 instance=ExtResource("8_0shoj")]
-position = Vector2(2584.0002, -471)
+position = Vector2(2641.0002, 35)
 rotation = 3.1415925
 scale = Vector2(-1.3176744, -1.7499874)
 
 [node name="Branch2" parent="Branches" unique_id=1841133634 instance=ExtResource("8_0shoj")]
-position = Vector2(282.00003, -333)
+position = Vector2(206.00003, 24)
 rotation = -3.1415927
 scale = Vector2(1.1599988, -1.2)
 
 [node name="Branch4" parent="Branches" unique_id=924601864 instance=ExtResource("8_0shoj")]
-position = Vector2(1573, 864.99976)
+position = Vector2(1499.9999, -1)
 rotation = 3.1297126
 scale = Vector2(1.4169266, 2.069484)
 skew = 0.0051443577

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8p18700trib4"
-path="res://.godot/imported/playbutton (1).png-7b2f0614c7a2adabeb5fa979dc9d7a48.ctex"
+uid="uid://c152nl4dlkwl4"
+path="res://.godot/imported/landscape_purrkourbck.png-467826df56b8ad853f4fef164b2edf02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://playbutton (1).png"
-dest_files=["res://.godot/imported/playbutton (1).png-7b2f0614c7a2adabeb5fa979dc9d7a48.ctex"]
+source_file="res://assets/landscape_purrkourbck.png"
+dest_files=["res://.godot/imported/landscape_purrkourbck.png-467826df56b8ad853f4fef164b2edf02.ctex"]
 
 [params]
 

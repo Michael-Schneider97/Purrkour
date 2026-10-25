@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c152nl4dlkwl4"
-path="res://.godot/imported/landscape_purrkourbck.png-4c3d3fa664e1b472e59849b4bf0be311.ctex"
+uid="uid://b0xngdmrv6lmu"
+path="res://.godot/imported/quitbutton (1).png-59bfb414d02a78c5bd045f6e47f46046.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://landscape_purrkourbck.png"
-dest_files=["res://.godot/imported/landscape_purrkourbck.png-4c3d3fa664e1b472e59849b4bf0be311.ctex"]
+source_file="res://assets/quitbutton (1).png"
+dest_files=["res://.godot/imported/quitbutton (1).png-59bfb414d02a78c5bd045f6e47f46046.ctex"]
 
 [params]
 

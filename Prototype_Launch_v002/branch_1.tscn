@@ -8,10 +8,10 @@ size = Vector2(407, 21.5)
 [node name="Branch1" type="StaticBody2D" unique_id=1219924473]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1112887513]
-position = Vector2(45, 290)
+position = Vector2(-15.1979065, 11.57608)
 scale = Vector2(4.6417103, 4.098505)
 texture = ExtResource("1_5oa8f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=284578608]
-position = Vector2(69, 273)
+position = Vector2(8.8020935, -5.4239197)
 shape = SubResource("RectangleShape2D_dea21")

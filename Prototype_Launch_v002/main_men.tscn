@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dbkodd6qw1akp"]
 
-[ext_resource type="Texture2D" uid="uid://c152nl4dlkwl4" path="res://landscape_purrkourbck.png" id="1_gpckw"]
-[ext_resource type="Script" uid="uid://ct8y1ng2wiuah" path="res://button.gd" id="3_1dbst"]
-[ext_resource type="Texture2D" uid="uid://b8p18700trib4" path="res://playbutton (1).png" id="3_031ii"]
-[ext_resource type="Texture2D" uid="uid://b0xngdmrv6lmu" path="res://quitbutton (1).png" id="4_1dbst"]
-[ext_resource type="Script" uid="uid://dmmr2bnt3bm4s" path="res://button_2.gd" id="5_t1vwk"]
+[ext_resource type="Texture2D" uid="uid://c152nl4dlkwl4" path="res://assets/landscape_purrkourbck.png" id="1_gpckw"]
+[ext_resource type="Script" uid="uid://ct8y1ng2wiuah" path="res://scripts/button.gd" id="3_1dbst"]
+[ext_resource type="Texture2D" uid="uid://b8p18700trib4" path="res://assets/playbutton (1).png" id="3_031ii"]
+[ext_resource type="Texture2D" uid="uid://b0xngdmrv6lmu" path="res://assets/quitbutton (1).png" id="4_1dbst"]
+[ext_resource type="Script" uid="uid://dmmr2bnt3bm4s" path="res://scripts/button_2.gd" id="5_t1vwk"]
+
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oxpsm"]
 texture = ExtResource("3_031ii")
