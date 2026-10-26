@@ -11,11 +11,11 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tt62d"]
 texture = ExtResource("2_6tyuv")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xh143"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6tyuv"]
 texture = ExtResource("2_6tyuv")
 modulate_color = Color(0.6313726, 0.3372549, 0.27058825, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebor1"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cf4mh"]
 texture = ExtResource("2_6tyuv")
 modulate_color = Color(0.8627451, 0.60784316, 0.4862745, 1)
 
@@ -43,39 +43,40 @@ modulate_color = Color(0.8627451, 0.60784316, 0.4862745, 1)
 
 [node name="Node2D" type="Node2D" unique_id=834354683]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1669568410]
-offset_left = -33.0
-offset_top = -8.0
-offset_right = 1242.0
-offset_bottom = 666.0
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1741628585]
+offset_left = -7.0
+offset_top = -2.0
+offset_right = 1311.0
+offset_bottom = 650.0
 texture = ExtResource("1_gpckw")
+expand_mode = 1
 
 [node name="Control" type="Control" parent="TextureRect" unique_id=1340326939]
 layout_mode = 1
 anchor_right = 0.14
 anchor_bottom = 0.25100002
-offset_left = 67.0
-offset_top = 31.0
-offset_right = -2.5
-offset_bottom = -13.24202
+offset_left = 41.0
+offset_top = 25.0
+offset_right = 19.479996
+offset_bottom = -40.652008
 
 [node name="Button3" type="Button" parent="TextureRect/Control" unique_id=2084429408]
 layout_mode = 0
-offset_left = 717.0
-offset_top = 197.0
-offset_right = 1053.0
-offset_bottom = 348.0
+offset_left = 721.0
+offset_top = 301.0
+offset_right = 1006.0
+offset_bottom = 423.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_tt62d")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_xh143")
-theme_override_styles/hover = SubResource("StyleBoxTexture_ebor1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6tyuv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cf4mh")
 script = ExtResource("3_cf4mh")
 
 [node name="Button" type="Button" parent="TextureRect/Control" unique_id=1243375743]
 layout_mode = 0
-offset_left = 723.0
-offset_top = 52.0
-offset_right = 1036.0
-offset_bottom = 204.0
+offset_left = 724.0
+offset_top = 196.0
+offset_right = 1001.0
+offset_bottom = 310.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_oxpsm")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_esgg6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1vgnc")
@@ -83,10 +84,10 @@ script = ExtResource("3_1dbst")
 
 [node name="Button2" type="Button" parent="TextureRect/Control" unique_id=1418419889]
 layout_mode = 0
-offset_left = 710.0
-offset_top = 331.0
-offset_right = 1052.0
-offset_bottom = 481.0
+offset_left = 713.0
+offset_top = 412.0
+offset_right = 1006.0
+offset_bottom = 526.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_60swb")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ryvbe")
 theme_override_styles/hover = SubResource("StyleBoxTexture_utr3m")
