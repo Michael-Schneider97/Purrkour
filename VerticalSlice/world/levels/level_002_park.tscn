@@ -6,10 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://vo3eedj6gv52" path="res://ui/components/pet_counter.tscn" id="2_mi7dg"]
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet.tscn" id="2_muxgv"]
 [ext_resource type="AudioStream" uid="uid://gt4a85ktidlw" path="res://world/levels/main_menu_pattern1(1).wav" id="2_otbel"]
-[ext_resource type="Texture2D" uid="uid://btm5wh543if5f" path="res://world/levels/level_002_park_sketch.png" id="3_b1i0w"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/levels/winTrigger.tscn" id="3_xpv2q"]
-[ext_resource type="Texture2D" uid="uid://cg5krxx3qs2gv" path="res://world/levels/level_002_park_tmp_bkg.png" id="7_2hr3g"]
-[ext_resource type="PackedScene" uid="uid://dgk7c85lpohg2" path="res://world/entities/abandonedFactoryButton.tscn" id="10_ng02c"]
+[ext_resource type="Texture2D" uid="uid://cgscqan7okqly" path="res://world/levels/level_002_park_bkg.png" id="10_51hfd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bixpq"]
 size = Vector2(2222, 1469.25)
@@ -71,9 +69,6 @@ size = Vector2(354.6875, 30.3125)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n541v"]
 size = Vector2(30, 250.57813)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvxnh"]
-size = Vector2(30, 69.578125)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ng02c"]
 size = Vector2(476, 1350.625)
 
@@ -113,33 +108,21 @@ size = Vector2(27, 324.75)
 [node name="Level002Park" type="Node2D" unique_id=139444864]
 script = ExtResource("1_an3lw")
 
+[node name="Background" type="Sprite2D" parent="." unique_id=184613226]
+position = Vector2(2983, 18)
+scale = Vector2(2.103219, 2.1032193)
+texture = ExtResource("10_51hfd")
+
 [node name="MainMenuPattern1(1)" type="AudioStreamPlayer" parent="." unique_id=1616716077]
 stream = ExtResource("2_otbel")
 autoplay = true
-
-[node name="Level002ParkTmpBkg" type="Sprite2D" parent="." unique_id=1168054493]
-texture_filter = 1
-position = Vector2(1143, -126.000015)
-scale = Vector2(1.4833333, 1.4833333)
-texture = ExtResource("7_2hr3g")
-
-[node name="Level002ParkTmpBkg2" type="Sprite2D" parent="." unique_id=914724658]
-texture_filter = 1
-position = Vector2(3967, -126.00001)
-scale = Vector2(1.4833333, 1.4833333)
-texture = ExtResource("7_2hr3g")
-
-[node name="Level002ParkTmpBkg3" type="Sprite2D" parent="." unique_id=1743580171]
-texture_filter = 1
-position = Vector2(6767, -120)
-scale = Vector2(1.4833333, 1.4833333)
-texture = ExtResource("7_2hr3g")
 
 [node name="PetCounter" parent="." unique_id=1593960988 instance=ExtResource("2_mi7dg")]
 
 [node name="WinScreen" parent="." unique_id=1651720381 instance=ExtResource("1_oeigx")]
 
 [node name="Greybox" type="StaticBody2D" parent="." unique_id=986752118]
+texture_filter = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Greybox" unique_id=1290588576]
 position = Vector2(888, 1307.375)
@@ -249,11 +232,6 @@ position = Vector2(3831, -619.28906)
 shape = SubResource("RectangleShape2D_n541v")
 debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
 
-[node name="CollisionShape2D29" type="CollisionShape2D" parent="Greybox" unique_id=959415734]
-position = Vector2(3954, 553)
-shape = SubResource("RectangleShape2D_uvxnh")
-debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
-
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Greybox" unique_id=2015018474]
 position = Vector2(2235, 1315.6875)
 shape = SubResource("RectangleShape2D_ng02c")
@@ -356,12 +334,3 @@ position = Vector2(4974, 864)
 
 [node name="winTrigger" parent="." unique_id=899574160 instance=ExtResource("3_xpv2q")]
 position = Vector2(5454.9995, 318)
-
-[node name="Level002ParkSketch" type="Sprite2D" parent="." unique_id=2098609510]
-texture_filter = 1
-position = Vector2(2979.0002, 18)
-scale = Vector2(4.2104197, 4.2104197)
-texture = ExtResource("3_b1i0w")
-
-[node name="abandonedFactoryButton" parent="." unique_id=167274323 instance=ExtResource("10_ng02c")]
-position = Vector2(4204.562, 577.7602)
