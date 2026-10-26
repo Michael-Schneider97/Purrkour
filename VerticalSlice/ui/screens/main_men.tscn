@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d0gdwa5pafq70" path="res://ui/screens/landscape_purrkourbck.png" id="1_gpckw"]
 [ext_resource type="Texture2D" uid="uid://dm8l27hsd583j" path="res://ui/screens/levelbutton.png" id="2_6tyuv"]
+[ext_resource type="Texture2D" uid="uid://w0x2f182syyl" path="res://ui/screens/ixel-removebg-preview.png" id="2_cf4mh"]
 [ext_resource type="Script" uid="uid://brc5p74c62qmy" path="res://ui/screens/button.gd" id="3_1dbst"]
 [ext_resource type="Texture2D" uid="uid://cbk4d0xpw517b" path="res://ui/screens/playbutton (1).png" id="3_031ii"]
 [ext_resource type="Script" uid="uid://dxwpwgs042pis" path="res://ui/screens/button_3.gd" id="3_cf4mh"]
@@ -50,6 +51,14 @@ offset_right = 1311.0
 offset_bottom = 650.0
 texture = ExtResource("1_gpckw")
 expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect" unique_id=685914752]
+layout_mode = 0
+offset_left = 518.0
+offset_top = -97.0
+offset_right = 1336.0
+offset_bottom = 403.0
+texture = ExtResource("2_cf4mh")
 
 [node name="Control" type="Control" parent="TextureRect" unique_id=1340326939]
 layout_mode = 1
