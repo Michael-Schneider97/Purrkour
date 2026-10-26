@@ -1,9 +1,9 @@
-extends Button
+extends Area2D
 
 @export var isActivated = false
 var playerInRange = false
 var player: Node2D = null
-var useCollision = false
+var useCollision = true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,7 +11,7 @@ func _ready() -> void:
 	pass
 
 func _input(event: InputEvent) -> void:
-	if playerInRange and !is_pressed and !useCollision:
+	if playerInRange and !isActivated and !useCollision:
 		if event.is_action_pressed("interact"):
 			press_button()
 
@@ -32,6 +32,7 @@ func press_button() -> void:
 		return
 		
 	isActivated = true
+	print("Button Pressed")
 	
 
 
