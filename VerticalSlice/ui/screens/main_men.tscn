@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dbkodd6qw1akp"]
 
+[ext_resource type="AudioStream" uid="uid://bcxy3y6ufuna3" path="res://ui/screens/mainmenu_looped_22x_0.0s_to_5.5s.mp3" id="1_818ns"]
 [ext_resource type="Texture2D" uid="uid://d0gdwa5pafq70" path="res://ui/screens/landscape_purrkourbck.png" id="1_gpckw"]
 [ext_resource type="Texture2D" uid="uid://dm8l27hsd583j" path="res://ui/screens/levelbutton.png" id="2_6tyuv"]
 [ext_resource type="Texture2D" uid="uid://w0x2f182syyl" path="res://ui/screens/ixel-removebg-preview.png" id="2_cf4mh"]
@@ -44,6 +45,11 @@ modulate_color = Color(0.8627451, 0.60784316, 0.4862745, 1)
 
 [node name="Node2D" type="Node2D" unique_id=834354683]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1807949611]
+stream = ExtResource("1_818ns")
+volume_db = -19.08
+autoplay = true
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1741628585]
 offset_left = -7.0
 offset_top = -2.0
@@ -55,9 +61,9 @@ expand_mode = 1
 [node name="TextureRect2" type="TextureRect" parent="TextureRect" unique_id=685914752]
 layout_mode = 0
 offset_left = 518.0
-offset_top = -97.0
+offset_top = -115.0
 offset_right = 1336.0
-offset_bottom = 403.0
+offset_bottom = 385.0
 texture = ExtResource("2_cf4mh")
 
 [node name="Control" type="Control" parent="TextureRect" unique_id=1340326939]
