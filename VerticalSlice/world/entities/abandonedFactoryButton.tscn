@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dgk7c85lpohg2"]
+
+[ext_resource type="Script" uid="uid://cqyk6te3tcv7x" path="res://world/entities/abandondedfactbutton.gd" id="1_la7om"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_126ht"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_126ht"]
+
+[node name="abandonedFactoryButton" type="Area2D" unique_id=167274323]
+scale = Vector2(2.2399974, 1.1999992)
+script = ExtResource("1_la7om")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=669439875]
+position = Vector2(0, 4.7500005)
+scale = Vector2(20, 10.500001)
+texture = SubResource("PlaceholderTexture2D_126ht")
+
+[node name="TriggerBox" type="CollisionShape2D" parent="." unique_id=1087653127]
+shape = SubResource("RectangleShape2D_126ht")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

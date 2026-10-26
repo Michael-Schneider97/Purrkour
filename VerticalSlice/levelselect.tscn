@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bu2jaq6go3x33" path="res://ui/screens/level2factselect.png" id="3_85jua"]
 [ext_resource type="Script" uid="uid://cy8t8y701edgf" path="res://treelevelselect.gd" id="4_o1bcu"]
 [ext_resource type="Texture2D" uid="uid://33cxfr5yoht3" path="res://ui/screens/level1treeselect.png" id="5_iqvyi"]
-[ext_resource type="Script" uid="uid://cqyk6te3tcv7x" path="res://abandondedfactbutton.gd" id="6_iu7gj"]
+[ext_resource type="Script" uid="uid://cqyk6te3tcv7x" path="res://world/entities/abandondedfactbutton.gd" id="6_iu7gj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xxxbe"]
 texture = ExtResource("3_85jua")

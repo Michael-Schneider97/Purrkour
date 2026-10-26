@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://btm5wh543if5f" path="res://world/levels/level_002_park_sketch.png" id="3_b1i0w"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/levels/winTrigger.tscn" id="3_xpv2q"]
 [ext_resource type="Texture2D" uid="uid://cg5krxx3qs2gv" path="res://world/levels/level_002_park_tmp_bkg.png" id="7_2hr3g"]
+[ext_resource type="PackedScene" uid="uid://dgk7c85lpohg2" path="res://world/entities/abandonedFactoryButton.tscn" id="10_ng02c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bixpq"]
 size = Vector2(2222, 1469.25)
@@ -361,3 +362,6 @@ texture_filter = 1
 position = Vector2(2979.0002, 18)
 scale = Vector2(4.2104197, 4.2104197)
 texture = ExtResource("3_b1i0w")
+
+[node name="abandonedFactoryButton" parent="." unique_id=167274323 instance=ExtResource("10_ng02c")]
+position = Vector2(4204.562, 577.7602)
