@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://ck7kqmfggx53s"]
+
+[ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player.tscn" id="1_usj60"]
+[ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win_screen.tscn" id="2_r8rw4"]
+[ext_resource type="PackedScene" uid="uid://vo3eedj6gv52" path="res://ui/components/pet_counter.tscn" id="3_jcetw"]
+[ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet.tscn" id="4_l7mhl"]
+[ext_resource type="PackedScene" uid="uid://d4f7vsqoujsjx" path="res://world/entities/factoryDoor.tscn" id="5_vqbd4"]
+[ext_resource type="PackedScene" uid="uid://dgk7c85lpohg2" path="res://world/entities/abandonedFactoryButton.tscn" id="6_vxejm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_126ht"]
+size = Vector2(5421, 717)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2rsb"]
+size = Vector2(216, 1030)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nxt1"]
+size = Vector2(349, 476.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hxoa"]
+size = Vector2(1060, 212)
+
+[node name="Level003AbFactry" type="Node2D" unique_id=77222119]
+
+[node name="Player" parent="." unique_id=1489148362 node_paths=PackedStringArray("remote_path_node") instance=ExtResource("1_usj60")]
+position = Vector2(32, -27)
+remote_path_node = NodePath("../Camera2D")
+
+[node name="WinScreen" parent="." unique_id=1651720381 instance=ExtResource("2_r8rw4")]
+
+[node name="PetCounter" parent="." unique_id=1593960988 instance=ExtResource("3_jcetw")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1299971085]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=170527969]
+position = Vector2(2347.5, 360.5)
+shape = SubResource("RectangleShape2D_126ht")
+debug_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1730237063]
+position = Vector2(-344, -514)
+shape = SubResource("RectangleShape2D_d2rsb")
+debug_color = Color(0.7, 0.7, 0.7, 1)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=2026570816]
+position = Vector2(1325, -388)
+shape = SubResource("RectangleShape2D_2nxt1")
+debug_color = Color(0.35, 0.35, 0.35, 1)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=255846191]
+position = Vector2(1315, -616)
+rotation = 0.22780383
+shape = SubResource("RectangleShape2D_2nxt1")
+debug_color = Color(0.35, 0.35, 0.35, 1)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=57961373]
+position = Vector2(987, -404.875)
+rotation = 0.19841094
+shape = SubResource("RectangleShape2D_2nxt1")
+debug_color = Color(0.35, 0.35, 0.35, 1)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1363238206]
+position = Vector2(659, -209.75)
+rotation = 0.1999432
+shape = SubResource("RectangleShape2D_2nxt1")
+debug_color = Color(0.35, 0.35, 0.35, 1)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=805555547]
+position = Vector2(747, -85)
+shape = SubResource("RectangleShape2D_8hxoa")
+debug_color = Color(0.35, 0.35, 0.35, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=630116170]
+limit_left = -305
+limit_top = -1201
+limit_bottom = 1556
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Pet" parent="." unique_id=1264480536 instance=ExtResource("4_l7mhl")]
+position = Vector2(1316, -22)
+
+[node name="StaticBody2D2" parent="." unique_id=2018419175 node_paths=PackedStringArray("target_object") instance=ExtResource("5_vqbd4")]
+position = Vector2(1488, -75)
+scale = Vector2(1, 1.6800003)
+target_object = NodePath("../abandonedFactoryButton")
+
+[node name="abandonedFactoryButton" parent="." unique_id=167274323 instance=ExtResource("6_vxejm")]
+position = Vector2(1694, -11)

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d4f7vsqoujsjx"]
+
+[ext_resource type="Script" uid="uid://dmkk4rcecy57t" path="res://world/entities/factory_door.gd" id="1_en064"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_126ht"]
+size = Vector2(20, 96)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_d2rsb"]
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=2018419175]
+script = ExtResource("1_en064")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=508320719]
+shape = SubResource("RectangleShape2D_126ht")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1648105687]
+position = Vector2(0.5000005, -3.8146973e-06)
+scale = Vector2(18.999998, 95.99999)
+texture = SubResource("PlaceholderTexture2D_d2rsb")
