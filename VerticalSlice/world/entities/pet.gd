@@ -9,6 +9,7 @@ extends RigidBody2D
 @onready var left = true
 
 
+
 func _on_hop_timer_timeout() -> void:
 	if mode == "Hop":
 		apply_central_impulse(Vector2(0, -200))
@@ -31,6 +32,13 @@ func _on_left_detector_body_entered(_body: Node2D) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
+		
+		var audio = AudioStreamPlayer.new()
+		audio.stream = load("res://world/entities/collect_pets.mp3")
+		get_parent().add_child(audio)
+		audio.play()
+		audio.finished.connect(audio.queue_free)
+		
 		# Prevent this pet from triggering twice
 		set_deferred("monitoring", false)
 
