@@ -32,6 +32,7 @@ func press_button() -> void:
 		return
 		
 	isActivated = true
+	$ButtonSound.play()
 	print("Button Pressed")
 	
 

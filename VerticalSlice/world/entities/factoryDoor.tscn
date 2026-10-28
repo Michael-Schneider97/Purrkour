@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d4f7vsqoujsjx"]
 
 [ext_resource type="Script" uid="uid://dmkk4rcecy57t" path="res://world/entities/factory_door.gd" id="1_en064"]
+[ext_resource type="AudioStream" uid="uid://boak67g53ex6l" path="res://audio/factory door audio.mp3" id="2_m3rtl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_126ht"]
 size = Vector2(20, 96)
@@ -9,6 +10,9 @@ size = Vector2(20, 96)
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=2018419175]
 script = ExtResource("1_en064")
+
+[node name="DoorSound" type="AudioStreamPlayer2D" parent="." unique_id=809177862]
+stream = ExtResource("2_m3rtl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=508320719]
 shape = SubResource("RectangleShape2D_126ht")

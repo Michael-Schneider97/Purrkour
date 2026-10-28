@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bd2hobjbnhxbw"
+path="res://.godot/imported/factory button audio.mp3-103691cd641b0b4b2b88533077d566a7.mp3str"
+
+[deps]
+
+source_file="res://audio/factory button audio.mp3"
+dest_files=["res://.godot/imported/factory button audio.mp3-103691cd641b0b4b2b88533077d566a7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

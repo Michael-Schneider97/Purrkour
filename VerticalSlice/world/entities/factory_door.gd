@@ -17,6 +17,7 @@ func _process(_delta: float) -> void:
 
 func toggle_door(open: bool) -> void:
 	if open:
+		$DoorSound.play()
 		collision_shape.set_deferred("disabled", true)
 		sprite.visible = false  
 	else:
