@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet.tscn" id="2_ivxtl"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/levels/winTrigger.tscn" id="3_15dyp"]
 [ext_resource type="PackedScene" uid="uid://cvdgnu5gjyujo" path="res://world/levels/boost_trigger.tscn" id="4_shade"]
+[ext_resource type="PackedScene" uid="uid://d4f7vsqoujsjx" path="res://world/entities/factoryDoor.tscn" id="5_ex7vt"]
+[ext_resource type="PackedScene" uid="uid://dgk7c85lpohg2" path="res://world/entities/abandonedFactoryButton.tscn" id="6_ocyrv"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjqce"]
 
@@ -129,7 +131,6 @@ one_way_collision = true
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D" unique_id=1216544963]
 position = Vector2(1256, -1587)
 shape = SubResource("RectangleShape2D_2uch8")
-one_way_collision = true
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=926345663]
 position = Vector2(1261.5, -571)
@@ -209,3 +210,14 @@ position = Vector2(1188.0001, -2434)
 
 [node name="BoostTrigger" parent="." unique_id=1037157644 instance=ExtResource("4_shade")]
 position = Vector2(1631, -1239)
+
+[node name="StaticBody2D2" parent="." unique_id=2018419175 node_paths=PackedStringArray("target_object") instance=ExtResource("5_ex7vt")]
+position = Vector2(1251, -1672)
+target_object = NodePath("../abandonedFactoryButton")
+
+[node name="StaticBody2D3" parent="." unique_id=346193455 node_paths=PackedStringArray("target_object") instance=ExtResource("5_ex7vt")]
+position = Vector2(1005, -1665)
+target_object = NodePath("../abandonedFactoryButton")
+
+[node name="abandonedFactoryButton" parent="." unique_id=167274323 instance=ExtResource("6_ocyrv")]
+position = Vector2(821, -1199.0001)
