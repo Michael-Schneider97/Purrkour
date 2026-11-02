@@ -28,3 +28,8 @@ texture = ExtResource("2_40emc")
 
 [node name="TrajectoryLine" type="Line2D" parent="." unique_id=1055988625]
 width = 5.0
+
+[node name="BoostTimer" type="Timer" parent="." unique_id=116727722]
+wait_time = 15.0
+
+[connection signal="timeout" from="BoostTimer" to="." method="_on_boost_timer_timeout"]

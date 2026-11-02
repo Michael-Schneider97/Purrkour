@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cvdgnu5gjyujo"]
+
+[ext_resource type="Script" uid="uid://bdlfgteuvve2g" path="res://world/levels/boost_trigger.gd" id="1_srkhl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf2k4"]
+
+[node name="BoostTrigger" type="Area2D" unique_id=1037157644]
+script = ExtResource("1_srkhl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1439523733]
+shape = SubResource("RectangleShape2D_pf2k4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

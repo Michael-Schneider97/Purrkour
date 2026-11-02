@@ -1,9 +1,9 @@
-extends RigidBody2D
+class_name Player extends RigidBody2D
 
-@export var remote_path_node: Node
+@export var remote_path_node: Camera2D
 @onready var remote_transform = $RemoteTransform2D
 
-@export var launch_power: float = 3
+@export var launch_power: float = 3 # Set in _process()
 @export var max_drag_distance: float = 300
 
 # trajectory line stuff
@@ -16,6 +16,8 @@ var dragging := false
 var drag_current := Vector2.ZERO
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+@onready var boost_timer: Timer = $BoostTimer
+var boost_orig_zoom := Vector2(1, 1)
 
 # Setup line visual style
 func _ready() -> void:
@@ -32,7 +34,17 @@ func _ready() -> void:
 	line_gradient.set_color(0, Color(1, 0.92, 0.01, 1.0))
 	line_gradient.set_color(1, Color(1, 0.92, 0.01, 0.0))
 	trajectory_line.gradient = line_gradient
-	
+
+func boost():
+	if boost_timer.is_stopped():
+		launch_power = 3.5
+		boost_orig_zoom = remote_path_node.zoom
+		remote_path_node.zoom = boost_orig_zoom / 1.5
+	boost_timer.start()
+
+func _on_boost_timer_timeout() -> void:
+	launch_power = 3
+	remote_path_node.zoom = boost_orig_zoom
 
 func _input(event):
 	if event is InputEventMouseButton:
