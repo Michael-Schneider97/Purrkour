@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://y1convn1nmaj"]
 
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player.tscn" id="1_q7jj7"]
+[ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win_screen.tscn" id="2_ghyti"]
+[ext_resource type="PackedScene" uid="uid://wet3f4wdgfdm" path="res://bakery_level.tscn" id="3_ghyti"]
+[ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/levels/winTrigger.tscn" id="4_w7iex"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qyg12"]
 size = Vector2(300, 32)
@@ -14,6 +17,9 @@ remote_path_node = NodePath("../CameraTarget")
 [node name="CameraTarget" type="Node2D" parent="." unique_id=915288234]
 
 [node name="Camera2D" type="Camera2D" parent="CameraTarget" unique_id=1925998719]
+
+[node name="WinScreen" parent="." unique_id=1651720381 instance=ExtResource("2_ghyti")]
+next_level = ExtResource("3_ghyti")
 
 [node name="StartingPlatform" type="StaticBody2D" parent="." unique_id=504421149]
 
@@ -202,3 +208,6 @@ offset_left = 390.0
 offset_top = -330.0
 offset_right = 446.0
 offset_bottom = -324.0
+
+[node name="winTrigger" parent="." unique_id=899574160 instance=ExtResource("4_w7iex")]
+position = Vector2(-153, -754)

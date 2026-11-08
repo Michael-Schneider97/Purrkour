@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dc3a6lf1pe3u7" path="res://ui/screens/Screenshot 2026-11-01 at 6.11.40 PM.png" id="1_0ya03"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/levels/winTrigger.tscn" id="1_jrhwj"]
+[ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win_screen.tscn" id="2_mri3j"]
+[ext_resource type="PackedScene" uid="uid://qopvbw0g3asu" path="res://world/levels/level_006_tower.tscn" id="3_mri3j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfsa0"]
 size = Vector2(307.5, 348.75)
@@ -70,6 +72,9 @@ position = Vector2(-6, -48)
 position = Vector2(1753, -37)
 scale = Vector2(1.2178751, 1.1395112)
 texture = ExtResource("1_0ya03")
+
+[node name="WinScreen" parent="." unique_id=1651720381 instance=ExtResource("2_mri3j")]
+next_level = ExtResource("3_mri3j")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=791160313]
 

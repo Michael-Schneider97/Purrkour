@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player.tscn" id="1_usj60"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win_screen.tscn" id="2_r8rw4"]
 [ext_resource type="PackedScene" uid="uid://vo3eedj6gv52" path="res://ui/components/pet_counter.tscn" id="3_jcetw"]
+[ext_resource type="PackedScene" uid="uid://y1convn1nmaj" path="res://world/levels/fire_escape_level.tscn" id="3_vxejm"]
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet.tscn" id="4_l7mhl"]
 [ext_resource type="PackedScene" uid="uid://d4f7vsqoujsjx" path="res://world/entities/factoryDoor.tscn" id="5_vqbd4"]
 [ext_resource type="PackedScene" uid="uid://dgk7c85lpohg2" path="res://world/entities/abandonedFactoryButton.tscn" id="6_vxejm"]
@@ -69,6 +70,7 @@ position = Vector2(32, -27)
 remote_path_node = NodePath("../Camera2D")
 
 [node name="WinScreen" parent="." unique_id=1651720381 instance=ExtResource("2_r8rw4")]
+next_level = ExtResource("3_vxejm")
 
 [node name="PetCounter" parent="." unique_id=1593960988 instance=ExtResource("3_jcetw")]
 
