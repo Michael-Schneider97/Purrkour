@@ -7,7 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet.tscn" id="2_muxgv"]
 [ext_resource type="AudioStream" uid="uid://gt4a85ktidlw" path="res://world/levels/main_menu_pattern1(1).wav" id="2_otbel"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/levels/winTrigger.tscn" id="3_xpv2q"]
-[ext_resource type="Texture2D" uid="uid://cgscqan7okqly" path="res://world/levels/level_002_park_bkg.png" id="10_51hfd"]
+[ext_resource type="PackedScene" uid="uid://ck7kqmfggx53s" path="res://world/levels/level_003_ab_factry.tscn" id="6_otbel"]
+[ext_resource type="Texture2D" uid="uid://bbjvtuhfydr1s" path="res://world/levels/level_002_park_bkg.png" id="10_51hfd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bixpq"]
 size = Vector2(2222, 1469.25)
@@ -120,6 +121,7 @@ autoplay = true
 [node name="PetCounter" parent="." unique_id=1593960988 instance=ExtResource("2_mi7dg")]
 
 [node name="WinScreen" parent="." unique_id=1651720381 instance=ExtResource("1_oeigx")]
+next_level = ExtResource("6_otbel")
 
 [node name="Greybox" type="StaticBody2D" parent="." unique_id=986752118]
 texture_filter = 1
