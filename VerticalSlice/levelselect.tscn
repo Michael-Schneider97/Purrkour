@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cgm33m54aetst"]
 
 [ext_resource type="Texture2D" uid="uid://dcxvdydegmqhd" path="res://ui/screens/levelselectscreen.png" id="1_68dig"]
+[ext_resource type="Script" uid="uid://cwl1jyhjptbl4" path="res://levelselect.gd" id="1_naiid"]
 [ext_resource type="Texture2D" uid="uid://c7gbihmngvi36" path="res://ui/screens/levelselect.png" id="2_xxxbe"]
-[ext_resource type="Script" uid="uid://cy8t8y701edgf" path="res://treelevelselect.gd" id="4_o1bcu"]
 [ext_resource type="Texture2D" uid="uid://33cxfr5yoht3" path="res://ui/screens/level1treeselect.png" id="5_iqvyi"]
 [ext_resource type="AudioStream" uid="uid://dbmj06rtfvhbm" path="res://ui/screens/purr_levelselectmusic_looped_22x_0.0s_to_5.6s.mp3" id="6_68dig"]
 
@@ -18,6 +18,7 @@ texture = ExtResource("5_iqvyi")
 modulate_color = Color(0.69965345, 0.6996535, 0.6996533, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1278864883]
+script = ExtResource("1_naiid")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1330464754]
 offset_left = -28.0
@@ -40,29 +41,69 @@ offset_left = -4.0
 offset_right = 36.0
 offset_bottom = 40.0
 
-[node name="Button2" type="Button" parent="Control" unique_id=787212198]
+[node name="Park" type="Button" parent="Control" unique_id=1761821218]
 layout_mode = 0
-offset_left = 1213.0
-offset_top = 229.0
-offset_right = 1494.0
-offset_bottom = 484.0
-script = ExtResource("4_o1bcu")
-
-[node name="Button" type="Button" parent="Control" unique_id=1761821218]
-layout_mode = 0
-offset_left = 168.0
-offset_top = 189.0
-offset_right = 429.0
-offset_bottom = 511.0
+offset_left = 59.0
+offset_top = 168.0
+offset_right = 206.0
+offset_bottom = 383.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_68dig")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_85jua")
 theme_override_styles/hover = SubResource("StyleBoxTexture_o1bcu")
+
+[node name="Factory" type="Button" parent="Control" unique_id=2125738123]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 195.0
+offset_right = 516.0
+offset_bottom = 378.0
+text = "2 
+
+Factory"
+
+[node name="Fire Escape" type="Button" parent="Control" unique_id=1635274325]
+layout_mode = 0
+offset_left = 628.0
+offset_top = 197.0
+offset_right = 809.0
+offset_bottom = 380.0
+text = "3
+Fire Escape"
+
+[node name="Bakery" type="Button" parent="Control" unique_id=440366032]
+layout_mode = 0
+offset_left = 881.0
+offset_top = 198.0
+offset_right = 1062.0
+offset_bottom = 381.0
+text = "4
+Bakery"
+
+[node name="Tower" type="Button" parent="Control" unique_id=1360347188]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 407.0
+offset_right = 220.0
+offset_bottom = 590.0
+text = "5
+Eiffel Tower
+"
+
+[node name="Back" type="Button" parent="Control" unique_id=2093435052]
+layout_mode = 0
+offset_left = 946.0
+offset_top = 540.0
+offset_right = 1114.0
+offset_bottom = 679.0
+text = "Main Menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=754782001]
 stream = ExtResource("6_68dig")
 autoplay = true
 
-[connection signal="pressed" from="Control/Button2" to="Control/Button2" method="_on_pressed"]
-[connection signal="mouse_entered" from="Control/Button" to="Control/Button2" method="_on_button_mouse_entered"]
-[connection signal="mouse_exited" from="Control/Button" to="Control/Button2" method="_on_button_mouse_exited"]
-[connection signal="pressed" from="Control/Button" to="Control/Button2" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Park" to="." method="_on_select_park"]
+[connection signal="pressed" from="Control/Factory" to="." method="_on_select_factory"]
+[connection signal="pressed" from="Control/Fire Escape" to="." method="_on_select_fire_escape"]
+[connection signal="pressed" from="Control/Bakery" to="." method="_on_select_bakery"]
+[connection signal="pressed" from="Control/Tower" to="." method="_on_select_tower"]
+[connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]

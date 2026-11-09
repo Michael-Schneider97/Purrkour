@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player.tscn" id="1_m66o7"]
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet.tscn" id="2_ivxtl"]
+[ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win_screen.tscn" id="2_otpuh"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/levels/winTrigger.tscn" id="3_15dyp"]
 [ext_resource type="PackedScene" uid="uid://cvdgnu5gjyujo" path="res://world/levels/boost_trigger.tscn" id="4_shade"]
 [ext_resource type="PackedScene" uid="uid://d4f7vsqoujsjx" path="res://world/entities/factoryDoor.tscn" id="5_ex7vt"]
@@ -60,6 +61,8 @@ limit_bottom = 0
 [node name="Player" parent="." unique_id=1489148362 node_paths=PackedStringArray("remote_path_node") instance=ExtResource("1_m66o7")]
 position = Vector2(434, -109)
 remote_path_node = NodePath("../Camera2D")
+
+[node name="WinScreen" parent="." unique_id=1651720381 instance=ExtResource("2_otpuh")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=489482051]
 

@@ -74,6 +74,7 @@ scale = Vector2(1.2178751, 1.1395112)
 texture = ExtResource("1_0ya03")
 
 [node name="WinScreen" parent="." unique_id=1651720381 instance=ExtResource("2_mri3j")]
+visible = false
 next_level = ExtResource("3_mri3j")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=791160313]
