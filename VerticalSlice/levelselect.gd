@@ -21,7 +21,7 @@ func _on_select_fire_escape():
 	get_tree().change_scene_to_file("res://world/levels/fire_escape_level.tscn")
 
 func _on_select_bakery():
-	get_tree().change_scene_to_file("res://bakery_level.tscn")
+	get_tree().change_scene_to_file("res://ui/screens/bakery_level.tscn")
 
 func _on_select_tower():
 	get_tree().change_scene_to_file("res://world/levels/level_006_tower.tscn")
