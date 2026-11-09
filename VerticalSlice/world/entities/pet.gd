@@ -1,5 +1,8 @@
 extends RigidBody2D
 
+func _enter_tree() -> void:
+	add_to_group("RescuePet")
+
 @export_enum("Left and Right", "Hop") var mode: String = "Hop"
 
 @onready var hop_timer = $HopTimer
