@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu2jaq6go3x33"
-path="res://.godot/imported/level2factselect.png-ddd7a4075fe94f66df82c2c5d3c6ffea.ctex"
+uid="uid://cshhknwym7fpc"
+path="res://.godot/imported/bakery_select.png-fd53aca2cf5fc7c4fe7701fd1288f58b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/screens/level2factselect.png"
-dest_files=["res://.godot/imported/level2factselect.png-ddd7a4075fe94f66df82c2c5d3c6ffea.ctex"]
+source_file="res://ui/screens/selectlevels/bakery_select.png"
+dest_files=["res://.godot/imported/bakery_select.png-fd53aca2cf5fc7c4fe7701fd1288f58b.ctex"]
 
 [params]
 
