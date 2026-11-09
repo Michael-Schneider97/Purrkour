@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://33cxfr5yoht3"
-path="res://.godot/imported/level1treeselect.png-38e1f5053eff89bd3c647119425cba5b.ctex"
+uid="uid://bl74b61u8uukd"
+path="res://.godot/imported/level_003_factory_beam.png-a723c938d234c650d0514cf1728b5517.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/screens/level1treeselect.png"
-dest_files=["res://.godot/imported/level1treeselect.png-38e1f5053eff89bd3c647119425cba5b.ctex"]
+source_file="res://world/levels/level_003_factory_beam.png"
+dest_files=["res://.godot/imported/level_003_factory_beam.png-a723c938d234c650d0514cf1728b5517.ctex"]
 
 [params]
 

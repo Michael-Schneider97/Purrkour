@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dcxvdydegmqhd" path="res://ui/screens/levelselectscreen.png" id="1_68dig"]
 [ext_resource type="Script" uid="uid://cwl1jyhjptbl4" path="res://levelselect.gd" id="1_naiid"]
 [ext_resource type="Texture2D" uid="uid://c7gbihmngvi36" path="res://ui/screens/levelselect.png" id="2_xxxbe"]
-[ext_resource type="Texture2D" uid="uid://33cxfr5yoht3" path="res://ui/screens/level1treeselect.png" id="5_iqvyi"]
+[ext_resource type="Script" uid="uid://cy8t8y701edgf" path="res://treelevelselect.gd" id="4_o1bcu"]
+[ext_resource type="Texture2D" uid="uid://33cxfr5yoht3" path="res://ui/screens/selectlevels/level1treeselect.png" id="5_iqvyi"]
 [ext_resource type="AudioStream" uid="uid://dbmj06rtfvhbm" path="res://ui/screens/purr_levelselectmusic_looped_22x_0.0s_to_5.6s.mp3" id="6_68dig"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_68dig"]
