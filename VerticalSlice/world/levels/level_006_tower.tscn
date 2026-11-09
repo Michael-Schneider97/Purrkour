@@ -55,7 +55,7 @@ size = Vector2(473.5, 53)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2129518824]
 limit_left = 0
-limit_bottom = 0
+limit_bottom = 100
 
 [node name="Player" parent="." unique_id=1489148362 node_paths=PackedStringArray("remote_path_node") instance=ExtResource("1_m66o7")]
 position = Vector2(434, -109)
