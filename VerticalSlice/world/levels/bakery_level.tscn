@@ -52,29 +52,14 @@ size = Vector2(267, 116)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_507l0"]
 size = Vector2(303, 250)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_628pn"]
-size = Vector2(192.875, 26.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iho8i"]
-size = Vector2(299, 33.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbwpe"]
-size = Vector2(304, 35)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sml4w"]
-size = Vector2(282, 28.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ccld"]
-size = Vector2(241.5, 26)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3fnsb"]
-size = Vector2(197.75, 32.25)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqgxp"]
 size = Vector2(3567, 125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7d0fe"]
 size = Vector2(216, 1455)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlcmp"]
+size = Vector2(221.1875, 30.3125)
 
 [node name="BakeryLevel" type="Node2D" unique_id=1959447030]
 script = ExtResource("1_hwx1j")
@@ -147,30 +132,6 @@ shape = SubResource("RectangleShape2D_xgbvx")
 position = Vector2(3184, 582)
 shape = SubResource("RectangleShape2D_507l0")
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D" unique_id=1368344193]
-position = Vector2(733, 379)
-shape = SubResource("RectangleShape2D_628pn")
-
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" unique_id=159554559]
-position = Vector2(1362, 36)
-shape = SubResource("RectangleShape2D_iho8i")
-
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D" unique_id=2005491389]
-position = Vector2(1773, 274)
-shape = SubResource("RectangleShape2D_gbwpe")
-
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D" unique_id=719928812]
-position = Vector2(2588, 28)
-shape = SubResource("RectangleShape2D_sml4w")
-
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D" unique_id=1433640626]
-position = Vector2(2551.75, 375)
-shape = SubResource("RectangleShape2D_7ccld")
-
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D" unique_id=817397024]
-position = Vector2(2040.125, 394)
-shape = SubResource("RectangleShape2D_3fnsb")
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=345379326]
 position = Vector2(850.9999, 529)
 scale = Vector2(0.74646825, 0.29700452)
@@ -195,6 +156,42 @@ debug_color = Color(0.7, 0.7, 0.7, 1)
 position = Vector2(-110, 97)
 shape = SubResource("RectangleShape2D_7d0fe")
 debug_color = Color(0.7, 0.7, 0.7, 1)
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="StaticBody2D" unique_id=8113375]
+position = Vector2(2583, 25)
+shape = SubResource("RectangleShape2D_hlcmp")
+one_way_collision = true
+debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="StaticBody2D" unique_id=505529811]
+position = Vector2(2563.5938, 377)
+shape = SubResource("RectangleShape2D_hlcmp")
+one_way_collision = true
+debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="StaticBody2D" unique_id=1015338847]
+position = Vector2(2041, 366)
+shape = SubResource("RectangleShape2D_hlcmp")
+one_way_collision = true
+debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="StaticBody2D" unique_id=2011380864]
+position = Vector2(1767, 272)
+shape = SubResource("RectangleShape2D_hlcmp")
+one_way_collision = true
+debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="StaticBody2D" unique_id=1718965610]
+position = Vector2(1334, 37)
+shape = SubResource("RectangleShape2D_hlcmp")
+one_way_collision = true
+debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="StaticBody2D" unique_id=1129861653]
+position = Vector2(726, 374)
+shape = SubResource("RectangleShape2D_hlcmp")
+one_way_collision = true
+debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1627106004]
 
