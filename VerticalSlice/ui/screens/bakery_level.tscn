@@ -153,7 +153,7 @@ shape = SubResource("RectangleShape2D_sqgxp")
 debug_color = Color(0.7019608, 0.7019608, 0.7019608, 1)
 
 [node name="Front Wall2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1647695945]
-position = Vector2(3445, 79.5)
+position = Vector2(3435, 79.5)
 shape = SubResource("RectangleShape2D_7d0fe")
 debug_color = Color(0.7, 0.7, 0.7, 1)
 
