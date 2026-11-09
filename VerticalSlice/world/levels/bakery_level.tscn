@@ -70,6 +70,12 @@ size = Vector2(241.5, 26)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3fnsb"]
 size = Vector2(197.75, 32.25)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqgxp"]
+size = Vector2(3567, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7d0fe"]
+size = Vector2(216, 1455)
+
 [node name="BakeryLevel" type="Node2D" unique_id=1959447030]
 script = ExtResource("1_hwx1j")
 
@@ -174,6 +180,21 @@ polygon = PackedVector2Array(3, 53, 86, 29, 153, -113, 155.39856, -111.1095, 259
 position = Vector2(2005, 494.00003)
 scale = Vector2(0.74646825, 0.29700452)
 polygon = PackedVector2Array(3, 53, 86, 29, 153, -113, 155.39856, -111.1095, 259.89063, -609.4184, 243.81494, -555.5471, 259.89063, -569.0149, 261.23035, -569.0149, 263.90955, -276.0901, 265.24927, 50.504272, 234.4375, 60.605103)
+
+[node name="Floor" type="CollisionShape2D" parent="StaticBody2D" unique_id=1236407450]
+position = Vector2(1565.5, 750)
+shape = SubResource("RectangleShape2D_sqgxp")
+debug_color = Color(0.7019608, 0.7019608, 0.7019608, 1)
+
+[node name="Front Wall2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1647695945]
+position = Vector2(3445, 79.5)
+shape = SubResource("RectangleShape2D_7d0fe")
+debug_color = Color(0.7, 0.7, 0.7, 1)
+
+[node name="Front Wall" type="CollisionShape2D" parent="StaticBody2D" unique_id=2105084335]
+position = Vector2(-110, 97)
+shape = SubResource("RectangleShape2D_7d0fe")
+debug_color = Color(0.7, 0.7, 0.7, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1627106004]
 
