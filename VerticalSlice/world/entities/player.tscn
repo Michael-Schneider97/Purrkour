@@ -66,7 +66,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_6p5kn")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -92,7 +92,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mkwve")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump fall",
 "speed": 10.0
 }, {
@@ -112,7 +112,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4cr8n")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump start",
 "speed": 10.0
 }]
@@ -130,7 +130,7 @@ shape = SubResource("CapsuleShape2D_b5ex2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=208488257]
 texture_filter = 1
 position = Vector2(-8.999996, -8.000001)
-scale = Vector2(3.452273, 3.1812496)
+scale = Vector2(2, 1.844)
 sprite_frames = SubResource("SpriteFrames_w60vo")
 animation = &"jump fall"
 
