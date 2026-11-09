@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ck7kqmfggx53s" path="res://world/levels/level_003_ab_factry.tscn" id="4_7d0fe"]
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player.tscn" id="6_hlcmp"]
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet.tscn" id="7_46s3r"]
+[ext_resource type="PackedScene" uid="uid://cvdgnu5gjyujo" path="res://world/levels/boost_trigger.tscn" id="9_sqgxp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfsa0"]
 size = Vector2(307.5, 348.75)
@@ -145,7 +146,7 @@ position = Vector2(733, 379)
 shape = SubResource("RectangleShape2D_628pn")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" unique_id=159554559]
-position = Vector2(1368.5, 171.75)
+position = Vector2(1362, 36)
 shape = SubResource("RectangleShape2D_iho8i")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D" unique_id=2005491389]
@@ -153,7 +154,7 @@ position = Vector2(1773, 274)
 shape = SubResource("RectangleShape2D_gbwpe")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D" unique_id=719928812]
-position = Vector2(2591, 137)
+position = Vector2(2588, 28)
 shape = SubResource("RectangleShape2D_sml4w")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D" unique_id=1433640626]
@@ -185,3 +186,24 @@ position = Vector2(1764, 234)
 
 [node name="winTrigger" parent="." unique_id=899574160 instance=ExtResource("2_o1u1f")]
 position = Vector2(3134.0002, 332)
+
+[node name="BoostTrigger" parent="." unique_id=1037157644 instance=ExtResource("9_sqgxp")]
+position = Vector2(728, 339)
+
+[node name="BoostTrigger2" parent="." unique_id=1087738472 instance=ExtResource("9_sqgxp")]
+position = Vector2(1292, 255)
+
+[node name="BoostTrigger3" parent="." unique_id=598746258 instance=ExtResource("9_sqgxp")]
+position = Vector2(2035, 353)
+
+[node name="Pet2" parent="." unique_id=513776971 instance=ExtResource("7_46s3r")]
+position = Vector2(2577, -17)
+
+[node name="Pet3" parent="." unique_id=721970207 instance=ExtResource("7_46s3r")]
+position = Vector2(1340, -4)
+
+[node name="Pet4" parent="." unique_id=504161179 instance=ExtResource("7_46s3r")]
+position = Vector2(322, 511)
+
+[node name="Pet5" parent="." unique_id=587168435 instance=ExtResource("7_46s3r")]
+position = Vector2(2901, 567)
