@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://qopvbw0g3asu"]
 
+[ext_resource type="Script" uid="uid://buey4nxsu11tx" path="res://world/levels/level_006_tower.gd" id="1_2uch8"]
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player.tscn" id="1_m66o7"]
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet.tscn" id="2_ivxtl"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win_screen.tscn" id="2_otpuh"]
@@ -54,6 +55,7 @@ size = Vector2(121, 20)
 size = Vector2(473.5, 53)
 
 [node name="Level003Tower" type="Node2D" unique_id=1755744633]
+script = ExtResource("1_2uch8")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2129518824]
 limit_left = 0

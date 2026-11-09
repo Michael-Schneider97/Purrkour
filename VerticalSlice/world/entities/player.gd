@@ -87,6 +87,7 @@ func boost():
 func _on_boost_timer_timeout() -> void:
 	launch_power = 3
 	remote_path_node.zoom = boost_orig_zoom
+	boost_timer.stop()
 
 
 func _input(event):
