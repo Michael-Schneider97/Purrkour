@@ -1,0 +1,255 @@
+[gd_scene format=3 uid="uid://ck7kqmfggx53s"]
+
+[ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player.tscn" id="1_usj60"]
+[ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win_screen.tscn" id="2_r8rw4"]
+[ext_resource type="PackedScene" uid="uid://vo3eedj6gv52" path="res://ui/components/pet_counter.tscn" id="3_jcetw"]
+[ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet.tscn" id="4_l7mhl"]
+[ext_resource type="PackedScene" uid="uid://d4f7vsqoujsjx" path="res://world/entities/factoryDoor.tscn" id="5_vqbd4"]
+[ext_resource type="PackedScene" uid="uid://dgk7c85lpohg2" path="res://world/entities/abandonedFactoryButton.tscn" id="6_vxejm"]
+[ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/levels/winTrigger.tscn" id="7_m6aoo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_126ht"]
+size = Vector2(5421, 717)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2rsb"]
+size = Vector2(216, 1030)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gc2mg"]
+size = Vector2(1065, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2k52m"]
+size = Vector2(19, 622.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njdfj"]
+size = Vector2(642, 234)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0v50x"]
+size = Vector2(20, 188)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6gaj"]
+size = Vector2(176, 165)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1aa5d"]
+size = Vector2(316.75, 24.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yttsx"]
+size = Vector2(808.5, 27.253906)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngkfx"]
+size = Vector2(1070.5, 36.03125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdub2"]
+size = Vector2(23.125, 178)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awl04"]
+size = Vector2(21, 1096.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkp2u"]
+size = Vector2(455.55255, 11.515606)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1yocf"]
+size = Vector2(11.53459, 2.9215946)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hggao"]
+size = Vector2(11.89821, 101.47856)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ec3le"]
+size = Vector2(11.892643, 47.021706)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvov8"]
+size = Vector2(229.7593, 8.403015)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khm8o"]
+size = Vector2(225, 15)
+
+[node name="Level003AbFactry" type="Node2D" unique_id=77222119]
+
+[node name="Player" parent="." unique_id=1489148362 node_paths=PackedStringArray("remote_path_node") instance=ExtResource("1_usj60")]
+position = Vector2(32, -27)
+remote_path_node = NodePath("../Camera2D")
+
+[node name="WinScreen" parent="." unique_id=1651720381 instance=ExtResource("2_r8rw4")]
+
+[node name="PetCounter" parent="." unique_id=1593960988 instance=ExtResource("3_jcetw")]
+
+[node name="Greybox" type="StaticBody2D" parent="." unique_id=1299971085]
+
+[node name="Floor" type="CollisionShape2D" parent="Greybox" unique_id=170527969]
+position = Vector2(2347.5, 360.5)
+shape = SubResource("RectangleShape2D_126ht")
+debug_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+
+[node name="Front Wall" type="CollisionShape2D" parent="Greybox" unique_id=1730237063]
+position = Vector2(-344, -514)
+shape = SubResource("RectangleShape2D_d2rsb")
+debug_color = Color(0.7, 0.7, 0.7, 1)
+
+[node name="Conveyor" type="CollisionShape2D" parent="Greybox" unique_id=1218498585]
+position = Vector2(629, -30)
+shape = SubResource("RectangleShape2D_gc2mg")
+
+[node name="Label" type="Label" parent="Greybox/Conveyor" unique_id=1061886569]
+offset_left = -523.0
+offset_right = -408.0
+offset_bottom = 23.0
+text = "Working (??) Conveyer Belt?"
+metadata/_edit_lock_ = true
+
+[node name="Elevator Left Wall" type="CollisionShape2D" parent="Greybox" unique_id=1252889536]
+position = Vector2(1355.5, -463.75)
+shape = SubResource("RectangleShape2D_2k52m")
+
+[node name="Elevator Right Wall" type="CollisionShape2D" parent="Greybox" unique_id=110955943]
+position = Vector2(1878, -102)
+shape = SubResource("RectangleShape2D_njdfj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Greybox" unique_id=1915127023]
+position = Vector2(1565, -458)
+shape = SubResource("RectangleShape2D_0v50x")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Greybox" unique_id=84623000]
+position = Vector2(1456, -470)
+shape = SubResource("RectangleShape2D_a6gaj")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Greybox" unique_id=459087924]
+position = Vector2(2025.625, -406)
+shape = SubResource("RectangleShape2D_1aa5d")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Greybox" unique_id=737379040]
+position = Vector2(1980.75, -926.62695)
+shape = SubResource("RectangleShape2D_yttsx")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Greybox" unique_id=1692664276]
+position = Vector2(1878.25, -1396)
+shape = SubResource("RectangleShape2D_ngkfx")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Greybox" unique_id=1052600522]
+position = Vector2(2400.5625, -1286)
+shape = SubResource("RectangleShape2D_kdub2")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Greybox" unique_id=1232991237]
+position = Vector2(2399.5, -530.875)
+shape = SubResource("RectangleShape2D_awl04")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Greybox" unique_id=1188388084]
+position = Vector2(1341.0082, -1186.503)
+rotation = 1.5703963
+scale = Vector2(0.9944029, 1.8961171)
+shape = SubResource("RectangleShape2D_qkp2u")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Greybox" unique_id=1438735840]
+position = Vector2(1260.5082, -852.9506)
+rotation = -0.0012195747
+scale = Vector2(3.5551255, 3.5551326)
+skew = -0.0011057854
+shape = SubResource("RectangleShape2D_1yocf")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Greybox" unique_id=1935418818]
+position = Vector2(1245.3282, -855.33777)
+rotation = 3.1409829
+scale = Vector2(1.8855044, 1.8855053)
+skew = -0.0005528927
+shape = SubResource("RectangleShape2D_hggao")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Greybox" unique_id=665822609]
+position = Vector2(1302.9999, -766.00006)
+rotation = 1.5703963
+scale = Vector2(0.9944029, 1.8961171)
+shape = SubResource("RectangleShape2D_ec3le")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Greybox" unique_id=1080477276]
+position = Vector2(1561.0123, -829.7666)
+rotation = 1.5703963
+scale = Vector2(0.9944024, 1.8961171)
+shape = SubResource("RectangleShape2D_mvov8")
+
+[node name="Label" type="Label" parent="Greybox" unique_id=1105118618]
+offset_left = 2424.0002
+offset_top = -225.00006
+offset_right = 2541.084
+offset_bottom = -188.0704
+rotation = -0.074627995
+text = "Trash Shute??"
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Greybox" unique_id=1608717778]
+position = Vector2(1458.5, -1122.5)
+shape = SubResource("RectangleShape2D_khm8o")
+
+[node name="Label3" type="Label" parent="Greybox" unique_id=1137627231]
+offset_left = 1264.0
+offset_top = -799.0
+offset_right = 1506.0
+offset_bottom = -534.0
+text = "
+
+Air Vent
+
+
+
+Elevator"
+
+[node name="Label2" type="Label" parent="Greybox" unique_id=1364351011]
+offset_left = 2394.0
+offset_top = -1198.0
+offset_right = 2637.0
+offset_bottom = -930.0
+text = "Broken Window"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=630116170]
+limit_left = -305
+limit_top = -1201
+limit_bottom = 1556
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="abandonedFactoryButton4" parent="." unique_id=167274323 instance=ExtResource("6_vxejm")]
+position = Vector2(1268.0001, -825)
+rotation = 1.5707964
+
+[node name="Pet" parent="." unique_id=1826379648 instance=ExtResource("4_l7mhl")]
+position = Vector2(1467, -18)
+
+[node name="Pet3" parent="." unique_id=1264480536 instance=ExtResource("4_l7mhl")]
+position = Vector2(2292, -24)
+
+[node name="Door1" parent="." unique_id=1495592487 node_paths=PackedStringArray("target_object") instance=ExtResource("5_vqbd4")]
+position = Vector2(1355, -77)
+scale = Vector2(1, 1.6800003)
+target_object = NodePath("../abandonedFactoryButton")
+
+[node name="abandonedFactoryButton" parent="." unique_id=1612653201 instance=ExtResource("6_vxejm")]
+position = Vector2(1231, -9.000001)
+
+[node name="abandonedFactoryButton2" parent="." unique_id=379400501 instance=ExtResource("6_vxejm")]
+position = Vector2(1377, -280.99997)
+rotation = 1.5621237
+
+[node name="abandonedFactoryButton3" parent="." unique_id=516173105 instance=ExtResource("6_vxejm")]
+position = Vector2(2070.0002, -381)
+rotation = 3.1322339
+scale = Vector2(2.2399971, 1.1999992)
+
+[node name="DoorTrashChute" parent="." unique_id=2018419175 node_paths=PackedStringArray("target_object") instance=ExtResource("5_vqbd4")]
+position = Vector2(2296, -208.00003)
+rotation = 1.5703963
+scale = Vector2(0.99440205, 1.8961171)
+target_object = NodePath("../abandonedFactoryButton3")
+
+[node name="Door2" parent="." unique_id=1968032060 node_paths=PackedStringArray("target_object") instance=ExtResource("5_vqbd4")]
+position = Vector2(1564.9999, -291)
+scale = Vector2(0.89623696, 1.4146273)
+target_object = NodePath("../abandonedFactoryButton2")
+
+[node name="Elevator Door 3" parent="." unique_id=65188077 node_paths=PackedStringArray("target_object") instance=ExtResource("5_vqbd4")]
+position = Vector2(1565, -1038)
+scale = Vector2(1, 1.6)
+target_object = NodePath("../abandonedFactoryButton4")
+
+[node name="winTrigger" parent="." unique_id=899574160 instance=ExtResource("7_m6aoo")]
+position = Vector2(2414, -1206)
+
+[node name="Pet2" parent="." unique_id=550450148 instance=ExtResource("4_l7mhl")]
+position = Vector2(1412, -1155)
+
+[node name="Pet4" parent="." unique_id=1786706250 instance=ExtResource("4_l7mhl")]
+position = Vector2(1309, -797)

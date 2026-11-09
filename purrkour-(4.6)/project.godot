@@ -1,0 +1,28 @@
+config_version=5
+
+[application]
+
+config/name="Purrkour (4.6)"
+run/main_scene="uid://dbkodd6qw1akp"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[debug]
+
+shapes/paths/geometry_color=Color(1, 0.8019519, 0.7190273, 0.4)
+
+[display]
+
+window/stretch/mode="canvas_items"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cvdgnu5gjyujo" path="res://world/levels/boost_trigger.tscn" id="4_shade"]
 [ext_resource type="PackedScene" uid="uid://d4f7vsqoujsjx" path="res://world/entities/factoryDoor.tscn" id="5_ex7vt"]
 [ext_resource type="PackedScene" uid="uid://dgk7c85lpohg2" path="res://world/entities/abandonedFactoryButton.tscn" id="6_ocyrv"]
+[ext_resource type="Texture2D" uid="uid://qpagq4nrvvi5" path="res://world/levels/towerbackground3.png" id="8_alg4d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjqce"]
 
@@ -224,3 +225,9 @@ target_object = NodePath("../abandonedFactoryButton")
 
 [node name="abandonedFactoryButton" parent="." unique_id=167274323 instance=ExtResource("6_ocyrv")]
 position = Vector2(821, -1199.0001)
+
+[node name="towerBackground" type="Sprite2D" parent="." unique_id=1517210791]
+z_index = -4096
+position = Vector2(1330, -1427.0001)
+scale = Vector2(3.7, 3.7)
+texture = ExtResource("8_alg4d")
