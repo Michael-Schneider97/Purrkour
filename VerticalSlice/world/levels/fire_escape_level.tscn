@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player.tscn" id="1_q7jj7"]
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet.tscn" id="2_nb1i0"]
 [ext_resource type="PackedScene" uid="uid://vo3eedj6gv52" path="res://ui/components/pet_counter.tscn" id="2_xqsx3"]
-[ext_resource type="PackedScene" uid="uid://wet3f4wdgfdm" path="res://ui/screens/bakery_level.tscn" id="3_ghyti"]
+[ext_resource type="PackedScene" uid="uid://dddrv3gm7o06c" path="res://ui/screens/bakery_level.tscn" id="3_ghyti"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win_screen.tscn" id="4_e7rg4"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/levels/winTrigger.tscn" id="5_vx25w"]
 
@@ -225,7 +225,5 @@ offset_top = -330.0
 offset_right = 446.0
 offset_bottom = -324.0
 
-[node name="WinScreen" parent="Ladders" unique_id=1783529180 instance=ExtResource("4_e7rg4")]
-
-[node name="winTrigger" parent="Ladders" unique_id=899574160 instance=ExtResource("5_vx25w")]
+[node name="winTrigger" parent="." unique_id=899574160 instance=ExtResource("5_vx25w")]
 position = Vector2(-150, -750)

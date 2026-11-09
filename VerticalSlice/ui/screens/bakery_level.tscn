@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/levels/winTrigger.tscn" id="2_o1u1f"]
 [ext_resource type="PackedScene" uid="uid://qopvbw0g3asu" path="res://world/levels/level_006_tower.tscn" id="3_mri3j"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win_screen.tscn" id="3_sqgxp"]
-[ext_resource type="PackedScene" uid="uid://ck7kqmfggx53s" path="res://world/levels/level_003_ab_factry.tscn" id="4_7d0fe"]
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player.tscn" id="6_hlcmp"]
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet.tscn" id="7_46s3r"]
 [ext_resource type="PackedScene" uid="uid://cvdgnu5gjyujo" path="res://world/levels/boost_trigger.tscn" id="9_sqgxp"]
@@ -73,10 +72,6 @@ texture = ExtResource("2_5uecl")
 [node name="PetCounter" parent="." unique_id=1593960988 instance=ExtResource("2_hwx1j")]
 
 [node name="WinScreen" parent="." unique_id=1651720381 instance=ExtResource("3_sqgxp")]
-next_level = ExtResource("4_7d0fe")
-
-[node name="WinScreen2" parent="." unique_id=851534413 instance=ExtResource("3_sqgxp")]
-visible = false
 next_level = ExtResource("3_mri3j")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=791160313]
