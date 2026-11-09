@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cvdgnu5gjyujo"]
+
+[ext_resource type="Script" uid="uid://bdlfgteuvve2g" path="res://world/objects/boost_trigger/boost_trigger.gd" id="1_srkhl"]
+[ext_resource type="Texture2D" uid="uid://cval6bg2nlfvq" path="res://world/objects/boost_trigger/boost_trigger.png" id="2_balnj"]
+[ext_resource type="AudioStream" uid="uid://ctv0nnl2qw41j" path="res://world/entities/pet/collect_pets.mp3" id="3_m231o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf2k4"]
+size = Vector2(30, 40)
+
+[node name="BoostTrigger" type="Area2D" unique_id=1037157644]
+script = ExtResource("1_srkhl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1439523733]
+shape = SubResource("RectangleShape2D_pf2k4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=147085973]
+scale = Vector2(3, 3)
+texture = ExtResource("2_balnj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=972442939]
+stream = ExtResource("3_m231o")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

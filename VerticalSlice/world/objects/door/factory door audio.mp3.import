@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://boak67g53ex6l"
+path="res://.godot/imported/factory door audio.mp3-5b4f076adcdae36fe2a0b094d3271ea4.mp3str"
+
+[deps]
+
+source_file="res://world/objects/door/factory door audio.mp3"
+dest_files=["res://.godot/imported/factory door audio.mp3-5b4f076adcdae36fe2a0b094d3271ea4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

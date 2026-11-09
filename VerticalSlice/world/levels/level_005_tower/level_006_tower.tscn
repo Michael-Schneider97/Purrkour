@@ -1,0 +1,235 @@
+[gd_scene format=3 uid="uid://qopvbw0g3asu"]
+
+[ext_resource type="Script" uid="uid://buey4nxsu11tx" path="res://world/levels/level_005_tower/level_006_tower.gd" id="1_jqx2t"]
+[ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player/player.tscn" id="2_c6jfr"]
+[ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win/win_screen.tscn" id="3_7gx4k"]
+[ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet/pet.tscn" id="4_vxgrd"]
+[ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/objects/win_trigger/winTrigger.tscn" id="5_hxgxf"]
+[ext_resource type="PackedScene" uid="uid://cvdgnu5gjyujo" path="res://world/objects/boost_trigger/boost_trigger.tscn" id="6_0ak1n"]
+[ext_resource type="PackedScene" uid="uid://d4f7vsqoujsjx" path="res://world/objects/door/factoryDoor.tscn" id="7_eok3l"]
+[ext_resource type="PackedScene" uid="uid://dgk7c85lpohg2" path="res://world/objects/button/abandonedFactoryButton.tscn" id="8_ubm74"]
+[ext_resource type="Texture2D" uid="uid://qpagq4nrvvi5" path="res://world/levels/level_005_tower/towerbackground3.png" id="9_360vn"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjqce"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_m66o7"]
+normal = Vector2(1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjqce"]
+size = Vector2(464, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m66o7"]
+size = Vector2(464, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivxtl"]
+size = Vector2(464, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ex7vt"]
+size = Vector2(464, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_alg4d"]
+size = Vector2(143, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocyrv"]
+size = Vector2(464, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otpuh"]
+size = Vector2(1418, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hviu3"]
+size = Vector2(397.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gojxw"]
+size = Vector2(242.75, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2uch8"]
+size = Vector2(464, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shade"]
+size = Vector2(1809, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15dyp"]
+size = Vector2(121, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l207n"]
+size = Vector2(473.5, 53)
+
+[node name="Level003Tower" type="Node2D" unique_id=1755744633]
+script = ExtResource("1_jqx2t")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2129518824]
+limit_left = 0
+limit_bottom = 200
+
+[node name="Player" parent="." unique_id=1489148362 node_paths=PackedStringArray("remote_path_node") instance=ExtResource("2_c6jfr")]
+position = Vector2(434, -109)
+remote_path_node = NodePath("../Camera2D")
+
+[node name="WinScreen" parent="." unique_id=1651720381 instance=ExtResource("3_7gx4k")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=489482051]
+
+[node name="LowerBound" type="CollisionShape2D" parent="StaticBody2D" unique_id=1932717531]
+shape = SubResource("WorldBoundaryShape2D_jjqce")
+
+[node name="LeftBound" type="CollisionShape2D" parent="StaticBody2D" unique_id=147674185]
+shape = SubResource("WorldBoundaryShape2D_m66o7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1901007481]
+build_mode = 1
+polygon = PackedVector2Array(200, -44, 297, -997, 608, -1164, 679, -1541, 1020, -1751, 1020, -2749, 1479, -2763, 1490, -1771, 1924, -1592, 2023, -1173, 2321, -1073, 2324, -379, 2182, -373, 2165, -572, 779, -563, 662, -50)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2140119296]
+position = Vector2(434, -58)
+shape = SubResource("RectangleShape2D_jjqce")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1550756941]
+position = Vector2(460, -217)
+shape = SubResource("RectangleShape2D_m66o7")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=951966494]
+position = Vector2(513, -360)
+shape = SubResource("RectangleShape2D_ivxtl")
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=2084946159]
+position = Vector2(1872, -771)
+shape = SubResource("RectangleShape2D_ex7vt")
+one_way_collision = true
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=579234923]
+position = Vector2(2246, -453)
+shape = SubResource("RectangleShape2D_alg4d")
+one_way_collision = true
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=1373766467]
+position = Vector2(1845, -940)
+shape = SubResource("RectangleShape2D_ocyrv")
+one_way_collision = true
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=964292155]
+position = Vector2(1308, -1173.5)
+shape = SubResource("RectangleShape2D_otpuh")
+one_way_collision = true
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=579541242]
+position = Vector2(1251, -2148)
+shape = SubResource("RectangleShape2D_hviu3")
+one_way_collision = true
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" unique_id=1392499759]
+position = Vector2(1256, -2285)
+shape = SubResource("RectangleShape2D_gojxw")
+one_way_collision = true
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" unique_id=1138423382]
+position = Vector2(1256, -2006)
+shape = SubResource("RectangleShape2D_2uch8")
+one_way_collision = true
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" unique_id=1700908840]
+position = Vector2(1256, -1758)
+shape = SubResource("RectangleShape2D_2uch8")
+one_way_collision = true
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D" unique_id=1216544963]
+position = Vector2(1256, -1587)
+shape = SubResource("RectangleShape2D_2uch8")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=926345663]
+position = Vector2(1261.5, -571)
+shape = SubResource("RectangleShape2D_shade")
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1909493445]
+position = Vector2(566.5, -856)
+shape = SubResource("RectangleShape2D_15dyp")
+one_way_collision = true
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D" unique_id=1548250126]
+position = Vector2(819, -1073.0001)
+rotation = 0.35918063
+shape = SubResource("RectangleShape2D_l207n")
+
+[node name="Pet" parent="." unique_id=1584357713 instance=ExtResource("4_vxgrd")]
+position = Vector2(563, -911)
+
+[node name="Pet2" parent="." unique_id=74219269 instance=ExtResource("4_vxgrd")]
+position = Vector2(1370, -629)
+
+[node name="Pet3" parent="." unique_id=122383775 instance=ExtResource("4_vxgrd")]
+position = Vector2(681, -411)
+
+[node name="Pet4" parent="." unique_id=1264480536 instance=ExtResource("4_vxgrd")]
+position = Vector2(2244, -505)
+
+[node name="Label" type="Label" parent="." unique_id=1689652247]
+offset_left = 738.0
+offset_top = -1025.0
+offset_right = 778.0
+offset_bottom = -1002.0
+text = "fire, path up blocked"
+
+[node name="Pet5" parent="." unique_id=1502197689 instance=ExtResource("4_vxgrd")]
+position = Vector2(1071, -2189)
+
+[node name="Pet6" parent="." unique_id=1422357523 instance=ExtResource("4_vxgrd")]
+position = Vector2(1135, -2194)
+
+[node name="Pet7" parent="." unique_id=1845996558 instance=ExtResource("4_vxgrd")]
+position = Vector2(1205, -2191)
+
+[node name="Pet8" parent="." unique_id=196972219 instance=ExtResource("4_vxgrd")]
+position = Vector2(1287, -2200)
+
+[node name="Pet9" parent="." unique_id=1304153940 instance=ExtResource("4_vxgrd")]
+position = Vector2(1368, -2196)
+
+[node name="Pet10" parent="." unique_id=2116433126 instance=ExtResource("4_vxgrd")]
+position = Vector2(1440, -2200)
+
+[node name="Pet11" parent="." unique_id=2005048488 instance=ExtResource("4_vxgrd")]
+position = Vector2(1867, -1245)
+
+[node name="Pet14" parent="." unique_id=884906763 instance=ExtResource("4_vxgrd")]
+position = Vector2(702, -1234)
+
+[node name="Pet12" parent="." unique_id=1611526761 instance=ExtResource("4_vxgrd")]
+position = Vector2(1202, -637)
+
+[node name="Pet13" parent="." unique_id=663918869 instance=ExtResource("4_vxgrd")]
+position = Vector2(1021, -646)
+
+[node name="Pet15" parent="." unique_id=1699173548 instance=ExtResource("4_vxgrd")]
+position = Vector2(1069, -1635)
+
+[node name="Pet16" parent="." unique_id=1084698984 instance=ExtResource("4_vxgrd")]
+position = Vector2(1168, -1628)
+
+[node name="Pet17" parent="." unique_id=1791779105 instance=ExtResource("4_vxgrd")]
+position = Vector2(1357, -1813)
+
+[node name="winTrigger" parent="." unique_id=899574160 instance=ExtResource("5_hxgxf")]
+position = Vector2(1188.0001, -2434)
+
+[node name="BoostTrigger" parent="." unique_id=1037157644 instance=ExtResource("6_0ak1n")]
+position = Vector2(1631, -1239)
+
+[node name="StaticBody2D2" parent="." unique_id=2018419175 node_paths=PackedStringArray("target_object") instance=ExtResource("7_eok3l")]
+position = Vector2(1251, -1672)
+target_object = NodePath("../abandonedFactoryButton")
+
+[node name="StaticBody2D3" parent="." unique_id=346193455 node_paths=PackedStringArray("target_object") instance=ExtResource("7_eok3l")]
+position = Vector2(1005, -1665)
+target_object = NodePath("../abandonedFactoryButton")
+
+[node name="abandonedFactoryButton" parent="." unique_id=167274323 instance=ExtResource("8_ubm74")]
+position = Vector2(821, -1199.0001)
+
+[node name="towerBackground" type="Sprite2D" parent="." unique_id=1517210791]
+z_index = -4096
+position = Vector2(1330, -1427.0001)
+scale = Vector2(3.7, 3.7)
+texture = ExtResource("9_360vn")
