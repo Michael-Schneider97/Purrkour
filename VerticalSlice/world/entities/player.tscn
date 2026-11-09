@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://wh63687phncq"]
 
 [ext_resource type="Script" uid="uid://b4lubmhhapdxl" path="res://world/entities/player.gd" id="1_4dfyj"]
-[ext_resource type="Texture2D" uid="uid://b2tdq6iwnh310" path="res://world/entities/player.png" id="2_40emc"]
+[ext_resource type="Texture2D" uid="uid://bq0ahqfyb8f7t" path="res://world/entities/sprints/cat full body idle.png" id="3_6p5kn"]
+[ext_resource type="Texture2D" uid="uid://ky4rp4b40jag" path="res://world/entities/sprints/cat full body jump fall.png" id="4_qrbty"]
+[ext_resource type="Texture2D" uid="uid://c8awls6aonbvq" path="res://world/entities/sprints/cat full body jump start.png" id="5_0ucat"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b5ex2"]
 bounce = 0.2
@@ -9,6 +11,111 @@ bounce = 0.2
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b5ex2"]
 radius = 22.0
 height = 44.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2otq5"]
+atlas = ExtResource("4_qrbty")
+region = Rect2(0, 0, 55, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hscel"]
+atlas = ExtResource("4_qrbty")
+region = Rect2(55, 0, 55, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knro2"]
+atlas = ExtResource("4_qrbty")
+region = Rect2(110, 0, 55, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t023h"]
+atlas = ExtResource("4_qrbty")
+region = Rect2(165, 0, 55, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqlvd"]
+atlas = ExtResource("4_qrbty")
+region = Rect2(220, 0, 55, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74ol4"]
+atlas = ExtResource("4_qrbty")
+region = Rect2(275, 0, 55, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkwve"]
+atlas = ExtResource("4_qrbty")
+region = Rect2(330, 0, 55, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o37mt"]
+atlas = ExtResource("5_0ucat")
+region = Rect2(0, 0, 45, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsjau"]
+atlas = ExtResource("5_0ucat")
+region = Rect2(45, 0, 45, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp5xd"]
+atlas = ExtResource("5_0ucat")
+region = Rect2(90, 0, 45, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxudx"]
+atlas = ExtResource("5_0ucat")
+region = Rect2(135, 0, 45, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cr8n"]
+atlas = ExtResource("5_0ucat")
+region = Rect2(180, 0, 45, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w60vo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6p5kn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2otq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hscel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knro2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t023h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqlvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74ol4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkwve")
+}],
+"loop": false,
+"name": &"jump fall",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o37mt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsjau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bp5xd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxudx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cr8n")
+}],
+"loop": false,
+"name": &"jump start",
+"speed": 10.0
+}]
 
 [node name="Player" type="RigidBody2D" unique_id=1489148362]
 physics_material_override = SubResource("PhysicsMaterial_b5ex2")
@@ -20,11 +127,15 @@ shape = SubResource("CapsuleShape2D_b5ex2")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=2144765731]
 
-[node name="Player" type="Sprite2D" parent="." unique_id=1739662661]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=208488257]
 texture_filter = 1
-position = Vector2(0, -2)
-scale = Vector2(2, 2)
-texture = ExtResource("2_40emc")
+position = Vector2(-8.999996, -8.000001)
+scale = Vector2(3.452273, 3.1812496)
+sprite_frames = SubResource("SpriteFrames_w60vo")
+animation = &"jump fall"
+
+[node name="GroundCheck" type="RayCast2D" parent="." unique_id=1177735535]
+target_position = Vector2(0, 17)
 
 [node name="TrajectoryLine" type="Line2D" parent="." unique_id=1055988625]
 width = 5.0
