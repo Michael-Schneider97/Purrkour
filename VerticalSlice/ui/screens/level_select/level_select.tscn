@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://cgm33m54aetst"]
+
+[ext_resource type="Script" uid="uid://cwl1jyhjptbl4" path="res://ui/screens/level_select/level_select.gd" id="1_dk56q"]
+[ext_resource type="Texture2D" uid="uid://dcxvdydegmqhd" path="res://ui/screens/level_select/level_select_background.png" id="2_dk56q"]
+[ext_resource type="Texture2D" uid="uid://c7gbihmngvi36" path="res://ui/screens/level_select/level_select_title.png" id="3_dk56q"]
+[ext_resource type="Texture2D" uid="uid://33cxfr5yoht3" path="res://ui/screens/level_select/level_select_button_lv1.png" id="4_ndouv"]
+[ext_resource type="Texture2D" uid="uid://bu2jaq6go3x33" path="res://ui/screens/level_select/level_select_button_lv2.png" id="5_ig1ku"]
+[ext_resource type="Texture2D" uid="uid://baldu4agtwext" path="res://ui/screens/level_select/level_select_button_lv3.png" id="6_15fdw"]
+[ext_resource type="Texture2D" uid="uid://cshhknwym7fpc" path="res://ui/screens/level_select/level_select_button_lv4.png" id="7_mygk5"]
+[ext_resource type="Texture2D" uid="uid://ce7i3f22pggym" path="res://ui/screens/level_select/level_select_button_lv5.png" id="8_fucdq"]
+[ext_resource type="AudioStream" uid="uid://dbmj06rtfvhbm" path="res://ui/screens/level_select/level_select_music.mp3" id="9_e2t06"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_68dig"]
+texture = ExtResource("4_ndouv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85jua"]
+texture = ExtResource("4_ndouv")
+modulate_color = Color(0.55295557, 0.5529556, 0.5529553, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o1bcu"]
+texture = ExtResource("4_ndouv")
+modulate_color = Color(0.69965345, 0.6996535, 0.6996533, 1)
+
+[node name="LevelSelect" type="Control" unique_id=786733657]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dk56q")
+main_menu_screen = "uid://dbkodd6qw1akp"
+level_1_scene = "uid://b40gm3hn37jt1"
+level_2_scene = "uid://ck7kqmfggx53s"
+level_3_scene = "uid://y1convn1nmaj"
+level_4_scene = "uid://dddrv3gm7o06c"
+level_5_scene = "uid://qopvbw0g3asu"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=754782001]
+stream = ExtResource("9_e2t06")
+autoplay = true
+
+[node name="BackgroundTexture" type="TextureRect" parent="." unique_id=1330464754]
+layout_mode = 0
+offset_left = -28.0
+offset_top = -32.0
+offset_right = 1160.0
+offset_bottom = 718.0
+texture = ExtResource("2_dk56q")
+
+[node name="TitleTexture" type="TextureRect" parent="." unique_id=1384180472]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 7.0
+offset_right = 1052.0
+offset_bottom = 667.0
+texture = ExtResource("3_dk56q")
+
+[node name="Level1Button" type="Button" parent="." unique_id=1761821218]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 165.0
+offset_right = 212.0
+offset_bottom = 380.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_68dig")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_85jua")
+theme_override_styles/hover = SubResource("StyleBoxTexture_o1bcu")
+
+[node name="Level2Button" type="Button" parent="." unique_id=2125738123]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 195.0
+offset_right = 512.0
+offset_bottom = 378.0
+flat = true
+
+[node name="Level2Factselect" type="Sprite2D" parent="Level2Button" unique_id=2077262714]
+position = Vector2(79.99999, 65.999985)
+scale = Vector2(1.6944443, 1.7428055)
+texture = ExtResource("5_ig1ku")
+
+[node name="Level3Button" type="Button" parent="." unique_id=1635274325]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 197.0
+offset_right = 805.0
+offset_bottom = 380.0
+flat = true
+
+[node name="FireEscapeSelect" type="Sprite2D" parent="Level3Button" unique_id=1493632376]
+position = Vector2(82.00001, 92.25)
+scale = Vector2(5.4687505, 4.4609375)
+texture = ExtResource("6_15fdw")
+
+[node name="Level4Button" type="Button" parent="." unique_id=440366032]
+layout_mode = 0
+offset_left = 877.0
+offset_top = 198.0
+offset_right = 1058.0
+offset_bottom = 381.0
+flat = true
+
+[node name="BakerySelect" type="Sprite2D" parent="Level4Button" unique_id=558351094]
+position = Vector2(101, 115.00003)
+scale = Vector2(4.6874995, 4.3828115)
+texture = ExtResource("7_mygk5")
+
+[node name="Level5Button" type="Button" parent="." unique_id=1360347188]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 407.0
+offset_right = 216.0
+offset_bottom = 590.0
+text = "
+"
+flat = true
+
+[node name="EtSelect" type="Sprite2D" parent="Level5Button" unique_id=939154121]
+position = Vector2(90.00006, 95)
+scale = Vector2(3.8125, 3.671875)
+texture = ExtResource("8_fucdq")
+
+[node name="BackButton" type="Button" parent="." unique_id=2093435052]
+layout_mode = 0
+offset_left = 942.0
+offset_top = 540.0
+offset_right = 1110.0
+offset_bottom = 679.0
+text = "Main Menu"
+
+[connection signal="pressed" from="Level1Button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="Level2Button" to="." method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="Level3Button" to="." method="_on_level_3_button_pressed"]
+[connection signal="pressed" from="Level4Button" to="." method="_on_level_4_button_pressed"]
+[connection signal="pressed" from="Level5Button" to="." method="_on_level_5_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

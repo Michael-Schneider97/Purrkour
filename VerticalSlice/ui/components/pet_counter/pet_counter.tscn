@@ -13,10 +13,13 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[node name="PetCounter" type="CanvasLayer" unique_id=1593960988]
+[node name="PetCounter" type="Control" unique_id=1461734131]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_a4og4")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1017329829]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 20.0
 offset_right = 208.0

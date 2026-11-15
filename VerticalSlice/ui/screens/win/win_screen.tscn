@@ -5,10 +5,19 @@
 [sub_resource type="LabelSettings" id="LabelSettings_d2rsb"]
 font_size = 64
 
-[node name="WinScreen" type="CanvasLayer" unique_id=1651720381]
+[node name="WinScreen" type="Control" unique_id=227396265]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_l2arl")
+main_menu_screen = "uid://dbkodd6qw1akp"
+level_select_screen = "uid://cgm33m54aetst"
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=591040750]
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=591040750]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -16,41 +25,42 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.06469653, 0.06469653, 0.06469653, 0.3529412)
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=322778643]
+[node name="MainContainer" type="CenterContainer" parent="." unique_id=322778643]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=103074438]
+[node name="ContentsContainer" type="VBoxContainer" parent="MainContainer" unique_id=103074438]
 layout_mode = 2
 theme_override_constants/separation = 100
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1515514506]
+[node name="TitleLabel" type="Label" parent="MainContainer/ContentsContainer" unique_id=1515514506]
 layout_mode = 2
 text = "You Win"
 label_settings = SubResource("LabelSettings_d2rsb")
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1060333181]
+[node name="ActionsContainer" type="HBoxContainer" parent="MainContainer/ContentsContainer" unique_id=1060333181]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Restart" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=1001317526]
+[node name="RestartButton" type="Button" parent="MainContainer/ContentsContainer/ActionsContainer" unique_id=1001317526]
 layout_mode = 2
 text = "Restart"
 
-[node name="Main Menu" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=210568580]
+[node name="MainMenuButton" type="Button" parent="MainContainer/ContentsContainer/ActionsContainer" unique_id=210568580]
 layout_mode = 2
 text = "Main Menu"
 
-[node name="Next" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=145277602]
+[node name="NextButton" type="Button" parent="MainContainer/ContentsContainer/ActionsContainer" unique_id=145277602]
 layout_mode = 2
 text = "Next"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Restart" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Main Menu" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Next" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="MainContainer/ContentsContainer/ActionsContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="MainContainer/ContentsContainer/ActionsContainer/MainMenuButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MainContainer/ContentsContainer/ActionsContainer/NextButton" to="." method="_on_next_button_pressed"]

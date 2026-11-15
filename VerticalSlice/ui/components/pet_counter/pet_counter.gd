@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 var pets_saved: int = 0
 var total_pets: int = 0
