@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://w0x2f182syyl" path="res://ui/screens/main_menu/main_menu_logo.png" id="3_xvp6o"]
 [ext_resource type="Texture2D" uid="uid://dm8l27hsd583j" path="res://ui/screens/main_menu/main_menu_button_levels.png" id="4_xvp6o"]
 [ext_resource type="Texture2D" uid="uid://cbk4d0xpw517b" path="res://ui/screens/main_menu/main_menu_button_play.png" id="6_xvp6o"]
+[ext_resource type="Texture2D" uid="uid://krsg61t44eoj" path="res://ui/screens/main_menu/export.png" id="7_uck36"]
 [ext_resource type="Texture2D" uid="uid://cuk0mr6oiaujg" path="res://ui/screens/main_menu/main_menu_button_quit.png" id="8_xvp6o"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oxpsm"]
@@ -28,6 +29,17 @@ modulate_color = Color(0.6313726, 0.3372549, 0.27058825, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cf4mh"]
 texture = ExtResource("4_xvp6o")
+modulate_color = Color(0.8627451, 0.60784316, 0.4862745, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xvp6o"]
+texture = ExtResource("7_uck36")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8facs"]
+texture = ExtResource("7_uck36")
+modulate_color = Color(0.6313726, 0.3372549, 0.27058825, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7husk"]
+texture = ExtResource("7_uck36")
 modulate_color = Color(0.8627451, 0.60784316, 0.4862745, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_60swb"]
@@ -90,16 +102,27 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_tt62d")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_6tyuv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_cf4mh")
 
+[node name="ControlsButton" type="Button" parent="." unique_id=630938425]
+layout_mode = 0
+offset_left = 752.0
+offset_top = 435.0
+offset_right = 1037.0
+offset_bottom = 557.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_xvp6o")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8facs")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7husk")
+
 [node name="QuitButton" type="Button" parent="." unique_id=1418419889]
 layout_mode = 0
 offset_left = 747.0
-offset_top = 435.0
+offset_top = 538.0
 offset_right = 1040.0
-offset_bottom = 549.0
+offset_bottom = 652.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_60swb")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ryvbe")
 theme_override_styles/hover = SubResource("StyleBoxTexture_utr3m")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="LevelsButton" to="." method="_on_levels_button_pressed"]
+[connection signal="pressed" from="ControlsButton" to="." method="_on_controls_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
