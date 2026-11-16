@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://w0x2f182syyl" path="res://ui/screens/main_menu/main_menu_logo.png" id="3_xvp6o"]
 [ext_resource type="Texture2D" uid="uid://dm8l27hsd583j" path="res://ui/screens/main_menu/main_menu_button_levels.png" id="4_xvp6o"]
 [ext_resource type="Texture2D" uid="uid://cbk4d0xpw517b" path="res://ui/screens/main_menu/main_menu_button_play.png" id="6_xvp6o"]
-[ext_resource type="Texture2D" uid="uid://krsg61t44eoj" path="res://ui/screens/main_menu/export.png" id="7_uck36"]
+[ext_resource type="Texture2D" uid="uid://8tr0l7sg8nq0" path="res://ui/screens/main_menu/CONTROLbutton.png" id="7_uck36"]
 [ext_resource type="Texture2D" uid="uid://cuk0mr6oiaujg" path="res://ui/screens/main_menu/main_menu_button_quit.png" id="8_xvp6o"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oxpsm"]
@@ -104,9 +104,9 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_cf4mh")
 
 [node name="ControlsButton" type="Button" parent="." unique_id=630938425]
 layout_mode = 0
-offset_left = 752.0
-offset_top = 435.0
-offset_right = 1037.0
+offset_left = 760.0
+offset_top = 433.0
+offset_right = 1032.0
 offset_bottom = 557.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_xvp6o")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8facs")
