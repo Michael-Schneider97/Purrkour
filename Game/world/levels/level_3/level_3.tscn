@@ -73,6 +73,7 @@ offset_left = -150.0
 offset_top = -16.0
 offset_right = 150.0
 offset_bottom = 16.0
+mouse_filter = 2
 color = Color(0.7176471, 0.6901961, 0.70980394, 1)
 
 [node name="RailingHorizontal" type="ColorRect" parent="Level/StartingPlatform" unique_id=1510464411]
@@ -82,6 +83,7 @@ offset_left = 200.0
 offset_top = -200.0
 offset_right = 500.0
 offset_bottom = -193.0
+mouse_filter = 2
 color = Color(0.7235722, 0.84637356, 0.41995367, 1)
 
 [node name="PlatformTexture" type="Sprite2D" parent="Level/StartingPlatform" unique_id=1703088482]
@@ -102,6 +104,7 @@ offset_left = -150.0
 offset_top = -16.0
 offset_right = 150.0
 offset_bottom = 16.0
+mouse_filter = 2
 color = Color(0.7176471, 0.6901961, 0.70980394, 1)
 
 [node name="RailingPost01" type="ColorRect" parent="Level/Platform02" unique_id=788890681]
@@ -109,24 +112,28 @@ visible = false
 offset_left = -145.0
 offset_top = -50.0
 offset_right = -139.0
+mouse_filter = 2
 
 [node name="RailingPost02" type="ColorRect" parent="Level/Platform02" unique_id=1583398743]
 visible = false
 offset_left = -50.0
 offset_top = -50.0
 offset_right = -44.0
+mouse_filter = 2
 
 [node name="RailingPost03" type="ColorRect" parent="Level/Platform02" unique_id=1549384042]
 visible = false
 offset_left = 50.0
 offset_top = -50.0
 offset_right = 56.0
+mouse_filter = 2
 
 [node name="RailingPost04" type="ColorRect" parent="Level/Platform02" unique_id=1631444042]
 visible = false
 offset_left = 140.0
 offset_top = -50.0
 offset_right = 146.0
+mouse_filter = 2
 
 [node name="PlatformTexture2" type="Sprite2D" parent="Level/Platform02" unique_id=959053693]
 scale = Vector2(0.2, 0.2)
@@ -145,6 +152,7 @@ offset_left = -150.0
 offset_top = -16.0
 offset_right = 150.0
 offset_bottom = 16.0
+mouse_filter = 2
 color = Color(0.7176471, 0.6901961, 0.70980394, 1)
 
 [node name="RailingPost05" type="ColorRect" parent="Level/Platform03" unique_id=484794578]
@@ -153,6 +161,7 @@ offset_left = 205.0
 offset_top = 100.0
 offset_right = 211.0
 offset_bottom = 150.0
+mouse_filter = 2
 
 [node name="PlatformTexture3" type="Sprite2D" parent="Level/Platform03" unique_id=1057944879]
 scale = Vector2(0.2, 0.2)
@@ -172,6 +181,7 @@ offset_left = -150.0
 offset_top = -16.0
 offset_right = 150.0
 offset_bottom = 16.0
+mouse_filter = 2
 color = Color(0.7176471, 0.6901961, 0.70980394, 1)
 
 [node name="PlatformTexture4" type="Sprite2D" parent="Level/Platform04" unique_id=1768439162]
@@ -192,6 +202,7 @@ offset_left = -150.0
 offset_top = -16.0
 offset_right = 150.0
 offset_bottom = 16.0
+mouse_filter = 2
 color = Color(0.7176471, 0.6901961, 0.70980394, 1)
 
 [node name="PlatformTexture5" type="Sprite2D" parent="Level/FinalPlatform" unique_id=1792053830]
@@ -207,6 +218,7 @@ offset_left = -253.0
 offset_top = -747.0
 offset_right = 597.0
 offset_bottom = 103.0
+mouse_filter = 2
 color = Color(0.3764706, 0.1882353, 0.21176471, 1)
 
 [node name="Window1" type="ColorRect" parent="Level/Building" unique_id=658664032]
@@ -215,6 +227,7 @@ offset_left = 71.0
 offset_top = -165.0
 offset_right = 151.0
 offset_bottom = -65.0
+mouse_filter = 2
 color = Color(0.6, 0.043137256, 0.03137255, 1)
 
 [node name="Window2" type="ColorRect" parent="Level/Building" unique_id=525563639]
@@ -223,6 +236,7 @@ offset_left = 214.0
 offset_top = -353.0
 offset_right = 294.0
 offset_bottom = -253.0
+mouse_filter = 2
 color = Color(0.6, 0.043137256, 0.03137255, 1)
 
 [node name="Window3" type="ColorRect" parent="Level/Building" unique_id=346195709]
@@ -231,6 +245,7 @@ offset_left = 43.0
 offset_top = -515.0
 offset_right = 123.0
 offset_bottom = -415.0
+mouse_filter = 2
 color = Color(0.6, 0.043137256, 0.03137255, 1)
 
 [node name="Window4" type="ColorRect" parent="Level/Building" unique_id=179590448]
@@ -239,6 +254,7 @@ offset_left = 218.0
 offset_top = -657.0
 offset_right = 298.0
 offset_bottom = -557.0
+mouse_filter = 2
 color = Color(0.6, 0.043137256, 0.03137255, 1)
 
 [node name="Ladders" type="Node2D" parent="Level" unique_id=1510102849]
@@ -249,6 +265,7 @@ offset_left = 390.0
 offset_top = -440.0
 offset_right = 396.0
 offset_bottom = -320.0
+mouse_filter = 2
 color = Color(0.10407617, 0.19188982, 0.28381324, 1)
 
 [node name="LadderRightRail" type="ColorRect" parent="Level/Ladders" unique_id=18332062]
@@ -256,6 +273,7 @@ offset_left = 440.0
 offset_top = -440.0
 offset_right = 446.0
 offset_bottom = -320.0
+mouse_filter = 2
 color = Color(0.10407617, 0.19188982, 0.28381324, 1)
 
 [node name="Rung01" type="ColorRect" parent="Level/Ladders" unique_id=505563534]
@@ -263,36 +281,42 @@ offset_left = 390.0
 offset_top = -430.0
 offset_right = 446.0
 offset_bottom = -424.0
+mouse_filter = 2
 
 [node name="Rung02" type="ColorRect" parent="Level/Ladders" unique_id=2029690859]
 offset_left = 390.0
 offset_top = -410.0
 offset_right = 446.0
 offset_bottom = -404.0
+mouse_filter = 2
 
 [node name="Rung03" type="ColorRect" parent="Level/Ladders" unique_id=1629599402]
 offset_left = 390.0
 offset_top = -390.0
 offset_right = 446.0
 offset_bottom = -384.0
+mouse_filter = 2
 
 [node name="Rung04" type="ColorRect" parent="Level/Ladders" unique_id=1436938204]
 offset_left = 390.0
 offset_top = -370.0
 offset_right = 446.0
 offset_bottom = -364.0
+mouse_filter = 2
 
 [node name="Rung05" type="ColorRect" parent="Level/Ladders" unique_id=100000543]
 offset_left = 390.0
 offset_top = -350.0
 offset_right = 446.0
 offset_bottom = -344.0
+mouse_filter = 2
 
 [node name="Rung06" type="ColorRect" parent="Level/Ladders" unique_id=931116552]
 offset_left = 390.0
 offset_top = -330.0
 offset_right = 446.0
 offset_bottom = -324.0
+mouse_filter = 2
 
 [node name="winTrigger" parent="Level" unique_id=899574160 instance=ExtResource("4_0glmf")]
 position = Vector2(-150, -750)

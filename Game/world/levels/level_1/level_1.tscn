@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://vo3eedj6gv52" path="res://ui/components/pet_counter/pet_counter.tscn" id="7_dunwp"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win/win_screen.tscn" id="8_gsijf"]
 [ext_resource type="PackedScene" uid="uid://m33tqdt1epjr" path="res://ui/screens/pause_overlay/pause_overlay.tscn" id="9_ue255"]
+[ext_resource type="Texture2D" uid="uid://b0wh7bi38levl" path="res://ui/screens/tutorial/image0.jpg" id="10_xiteg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bixpq"]
 size = Vector2(2222, 1469.25)
@@ -136,6 +137,12 @@ autoplay = true
 position = Vector2(2983, 18)
 scale = Vector2(2.103219, 2.1032193)
 texture = ExtResource("3_1kunq")
+
+[node name="Image0" type="Sprite2D" parent="Level" unique_id=1107950847]
+texture_filter = 1
+position = Vector2(689, 424)
+scale = Vector2(0.34716797, 0.34716797)
+texture = ExtResource("10_xiteg")
 
 [node name="Greybox" type="StaticBody2D" parent="Level" unique_id=986752118]
 texture_filter = 1
