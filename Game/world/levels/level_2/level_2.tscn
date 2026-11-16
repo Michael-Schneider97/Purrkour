@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bivvqtpbhph8i" path="res://world/levels/level.gd" id="1_5qjko"]
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player/player.tscn" id="1_usj60"]
 [ext_resource type="Texture2D" uid="uid://bl74b61u8uukd" path="res://world/levels/level_2/level_2_beam.png" id="2_m6aoo"]
+[ext_resource type="AudioStream" uid="uid://dyimm4irjf7n1" path="res://world/levels/level_2/abandonfact_looped_15x_0.0s_to_8.4s.mp3" id="2_nfnsu"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win/win_screen.tscn" id="2_r8rw4"]
 [ext_resource type="PackedScene" uid="uid://vo3eedj6gv52" path="res://ui/components/pet_counter/pet_counter.tscn" id="3_jcetw"]
 [ext_resource type="Texture2D" uid="uid://s86xjrtvv5h" path="res://world/levels/level_2/level_2_box.png" id="3_yttsx"]
@@ -99,6 +100,12 @@ pause_overlay = NodePath("UI/PauseOverlay")
 metadata/_custom_type_script = "uid://bivvqtpbhph8i"
 
 [node name="Level" type="Node2D" parent="." unique_id=92609850]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="Level" unique_id=1889912082]
+stream = ExtResource("2_nfnsu")
+volume_db = -16.039
+autoplay = true
+parameters/looping = true
 
 [node name="Node2D" type="Node2D" parent="Level" unique_id=1472034479]
 
