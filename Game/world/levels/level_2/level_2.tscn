@@ -100,7 +100,7 @@ metadata/_custom_type_script = "uid://bivvqtpbhph8i"
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="Level" unique_id=1889912082]
 stream = ExtResource("2_nfnsu")
-volume_db = -10.565
+volume_db = -5.091
 autoplay = true
 parameters/looping = true
 
