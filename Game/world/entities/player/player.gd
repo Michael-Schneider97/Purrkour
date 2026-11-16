@@ -90,7 +90,7 @@ func _on_boost_timer_timeout() -> void:
 	boost_timer.stop()
 
 
-func _input(event):
+func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 

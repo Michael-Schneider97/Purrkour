@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win/win_screen.tscn" id="3_sqgxp"]
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player/player.tscn" id="6_hlcmp"]
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet/pet.tscn" id="7_46s3r"]
+[ext_resource type="PackedScene" uid="uid://m33tqdt1epjr" path="res://ui/screens/pause_overlay/pause_overlay.tscn" id="9_gi2em"]
 [ext_resource type="PackedScene" uid="uid://cvdgnu5gjyujo" path="res://world/objects/boost_trigger/boost_trigger.tscn" id="9_sqgxp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfsa0"]
@@ -61,10 +62,24 @@ size = Vector2(216, 1455)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlcmp"]
 size = Vector2(221.1875, 30.3125)
 
-[node name="Level4" type="Node" unique_id=321084421 node_paths=PackedStringArray("win_trigger", "win_screen")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fscrj"]
+bg_color = Color(0.6784314, 0.3529412, 0.30980393, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.2509804, 0.17254902, 0.14509805, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="Level4" type="Node" unique_id=321084421 node_paths=PackedStringArray("level", "win_trigger", "win_screen", "pause_overlay")]
 script = ExtResource("1_hwx1j")
+level = NodePath("Level")
 win_trigger = NodePath("Level/winTrigger")
 win_screen = NodePath("UI/WinScreen")
+pause_overlay = NodePath("UI/PauseOverlay")
 metadata/_custom_type_script = "uid://bivvqtpbhph8i"
 
 [node name="Level" type="Node2D" parent="." unique_id=28592525]
@@ -200,6 +215,7 @@ position = Vector2(1764, 234)
 
 [node name="winTrigger" parent="Level" unique_id=899574160 instance=ExtResource("2_o1u1f")]
 position = Vector2(3121.0002, 348)
+level = 4
 
 [node name="BoostTrigger" parent="Level" unique_id=1037157644 instance=ExtResource("9_sqgxp")]
 position = Vector2(728, 339)
@@ -228,3 +244,16 @@ position = Vector2(2901, 567)
 
 [node name="WinScreen" parent="UI" unique_id=1651720381 instance=ExtResource("3_sqgxp")]
 next_level_scene = "uid://qopvbw0g3asu"
+
+[node name="PauseButton" type="Button" parent="UI" unique_id=807485553]
+custom_minimum_size = Vector2(88.899, 39.615)
+offset_left = 1051.0
+offset_top = 12.0
+offset_right = 1139.899
+offset_bottom = 51.615
+theme_override_styles/normal = SubResource("StyleBoxFlat_fscrj")
+text = "Pause"
+
+[node name="PauseOverlay" parent="UI" unique_id=1751710815 instance=ExtResource("9_gi2em")]
+
+[connection signal="pressed" from="UI/PauseButton" to="." method="_on_pause_button_pressed"]

@@ -21,6 +21,9 @@ modulate_color = Color(0.55295557, 0.5529556, 0.5529553, 1)
 texture = ExtResource("4_ndouv")
 modulate_color = Color(0.69965345, 0.6996535, 0.6996533, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dk56q"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="LevelSelect" type="Control" unique_id=786733657]
 layout_mode = 3
 anchors_preset = 0
@@ -62,6 +65,18 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_68dig")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_85jua")
 theme_override_styles/hover = SubResource("StyleBoxTexture_o1bcu")
 
+[node name="Lock" type="PanelContainer" parent="Level1Button" unique_id=465150783]
+layout_mode = 0
+offset_right = 293.89
+offset_bottom = 35.324
+rotation = 0.6422812
+theme_override_styles/panel = SubResource("StyleBoxFlat_dk56q")
+
+[node name="Label" type="Label" parent="Level1Button/Lock" unique_id=1646162386]
+layout_mode = 2
+text = "LOCKED"
+horizontal_alignment = 1
+
 [node name="Level2Button" type="Button" parent="." unique_id=2125738123]
 layout_mode = 0
 offset_left = 331.0
@@ -74,6 +89,18 @@ flat = true
 position = Vector2(79.99999, 65.999985)
 scale = Vector2(1.6944443, 1.7428055)
 texture = ExtResource("5_ig1ku")
+
+[node name="Lock" type="PanelContainer" parent="Level2Button" unique_id=1865065600]
+layout_mode = 0
+offset_right = 293.89
+offset_bottom = 35.324
+rotation = 0.6422812
+theme_override_styles/panel = SubResource("StyleBoxFlat_dk56q")
+
+[node name="Label" type="Label" parent="Level2Button/Lock" unique_id=1384143811]
+layout_mode = 2
+text = "LOCKED"
+horizontal_alignment = 1
 
 [node name="Level3Button" type="Button" parent="." unique_id=1635274325]
 layout_mode = 0
@@ -88,6 +115,18 @@ position = Vector2(82.00001, 92.25)
 scale = Vector2(5.4687505, 4.4609375)
 texture = ExtResource("6_15fdw")
 
+[node name="Lock" type="PanelContainer" parent="Level3Button" unique_id=642388269]
+layout_mode = 0
+offset_right = 293.89
+offset_bottom = 35.324
+rotation = 0.6422812
+theme_override_styles/panel = SubResource("StyleBoxFlat_dk56q")
+
+[node name="Label" type="Label" parent="Level3Button/Lock" unique_id=350799980]
+layout_mode = 2
+text = "LOCKED"
+horizontal_alignment = 1
+
 [node name="Level4Button" type="Button" parent="." unique_id=440366032]
 layout_mode = 0
 offset_left = 877.0
@@ -100,6 +139,18 @@ flat = true
 position = Vector2(101, 115.00003)
 scale = Vector2(4.6874995, 4.3828115)
 texture = ExtResource("7_mygk5")
+
+[node name="Lock" type="PanelContainer" parent="Level4Button" unique_id=100803651]
+layout_mode = 0
+offset_right = 293.89
+offset_bottom = 35.324
+rotation = 0.6422812
+theme_override_styles/panel = SubResource("StyleBoxFlat_dk56q")
+
+[node name="Label" type="Label" parent="Level4Button/Lock" unique_id=728168138]
+layout_mode = 2
+text = "LOCKED"
+horizontal_alignment = 1
 
 [node name="Level5Button" type="Button" parent="." unique_id=1360347188]
 layout_mode = 0
@@ -115,6 +166,18 @@ flat = true
 position = Vector2(90.00006, 95)
 scale = Vector2(3.8125, 3.671875)
 texture = ExtResource("8_fucdq")
+
+[node name="Lock" type="PanelContainer" parent="Level5Button" unique_id=910571098]
+layout_mode = 0
+offset_right = 293.89
+offset_bottom = 35.324
+rotation = 0.6422812
+theme_override_styles/panel = SubResource("StyleBoxFlat_dk56q")
+
+[node name="Label" type="Label" parent="Level5Button/Lock" unique_id=1332628018]
+layout_mode = 2
+text = "LOCKED"
+horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="." unique_id=2093435052]
 layout_mode = 0
