@@ -1,4 +1,6 @@
 extends RigidBody2D
+@export var rescue_sound: AudioStream = preload("res://world/entities/pet/collect_pets.mp3")
+var is_rescued = false
 
 func _enter_tree() -> void:
 	add_to_group("RescuePet")
@@ -33,22 +35,25 @@ func _on_left_detector_body_entered(_body: Node2D) -> void:
 	left = false
 
 
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		
+	if body.is_in_group("Player") and not is_rescued:
+		is_rescued = true
+
 		var audio = AudioStreamPlayer.new()
-		audio.stream = load("res://world/entities/pet/collect_pets.mp3")
+		audio.stream = rescue_sound
 		get_parent().add_child(audio)
 		audio.play()
 		audio.finished.connect(audio.queue_free)
-		
-		# Prevent this pet from triggering twice
-		set_deferred("monitoring", false)
 
-		# Find the saved-pet counter
+		# prevent this pet from triggering twice
+		$Area2D.set_deferred("monitoring", false)
+
+		# find the saved-pet counter
 		var counter = get_tree().get_first_node_in_group("PetCounter")
 
-		# Add one to the saved-pet count
+		# add one to the saved-pet count
 		if counter != null:
 			counter.save_pet()
+
 		queue_free()
