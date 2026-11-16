@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://m33tqdt1epjr"]
+
+[ext_resource type="Shader" uid="uid://ehoy22llq4be" path="res://ui/screens/pause_overlay/pause_overlay.tres" id="1_0gj2j"]
+[ext_resource type="Script" uid="uid://fas7s5cjakiy" path="res://ui/screens/pause_overlay/pause_overlay.gd" id="1_37l8v"]
+[ext_resource type="Texture2D" uid="uid://b0qggr4efa554" path="res://ui/screens/pause_overlay/pause_overlay_resume.png" id="2_16tbj"]
+[ext_resource type="Texture2D" uid="uid://be66p0r4b6njm" path="res://ui/screens/pause_overlay/pause_overlay_resume_hovered.png" id="3_wg1a4"]
+[ext_resource type="Texture2D" uid="uid://vgvpfxl5ulde" path="res://ui/screens/pause_overlay/pause_overlay_main_menu.png" id="4_h38t3"]
+[ext_resource type="Texture2D" uid="uid://ntjnowqomuio" path="res://ui/screens/pause_overlay/pause_overlay_main_menu_hovered.png" id="5_1ywgs"]
+[ext_resource type="Texture2D" uid="uid://v8gbmey54kho" path="res://ui/screens/pause_overlay/pause_overlay_restart.png" id="6_d00ls"]
+[ext_resource type="Texture2D" uid="uid://k1p7rq3lqo6q" path="res://ui/screens/pause_overlay/pause_overlay_restart_hovered.png" id="7_50tv1"]
+[ext_resource type="Texture2D" uid="uid://cwinwydntp14j" path="res://ui/screens/pause_overlay/pause_overlay_save.png" id="8_woix2"]
+[ext_resource type="Texture2D" uid="uid://c80y28db4g6ao" path="res://ui/screens/pause_overlay/pause_overlay_save_hovered.png" id="9_37l8v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0gj2j"]
+shader = ExtResource("1_0gj2j")
+shader_parameter/blur_amount = 2.000000095
+
+[node name="PauseOverlay" type="Control" unique_id=1751710815]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_37l8v")
+main_menu_screen = "uid://dbkodd6qw1akp"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1104111001]
+material = SubResource("ShaderMaterial_0gj2j")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=431037189]
+layout_mode = 0
+offset_left = 476.99997
+offset_top = 173.99998
+offset_right = 1429.0
+offset_bottom = 1222.0
+scale = Vector2(0.2, 0.2)
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="ResumeButton" type="TextureButton" parent="VBoxContainer" unique_id=1080324048]
+layout_mode = 2
+texture_normal = ExtResource("2_16tbj")
+texture_hover = ExtResource("3_wg1a4")
+stretch_mode = 3
+
+[node name="RestartButton" type="TextureButton" parent="VBoxContainer" unique_id=861920266]
+layout_mode = 2
+texture_normal = ExtResource("6_d00ls")
+texture_hover = ExtResource("7_50tv1")
+stretch_mode = 3
+
+[node name="MainMenuButton" type="TextureButton" parent="VBoxContainer" unique_id=1075399705]
+layout_mode = 2
+texture_normal = ExtResource("4_h38t3")
+texture_hover = ExtResource("5_1ywgs")
+stretch_mode = 3
+
+[node name="SaveButton" type="TextureButton" parent="VBoxContainer" unique_id=1469366525]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("8_woix2")
+texture_hover = ExtResource("9_37l8v")
+stretch_mode = 3
+
+[connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

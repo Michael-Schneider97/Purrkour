@@ -4,31 +4,55 @@
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet/pet.tscn" id="2_d834f"]
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player/player.tscn" id="3_dddgp"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/objects/win_trigger/win_trigger.tscn" id="4_0glmf"]
+[ext_resource type="Texture2D" uid="uid://dgi0p6wiob6de" path="res://world/levels/level_3/textures/platform_texture.png" id="4_d834f"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win/win_screen.tscn" id="5_wfc6t"]
 [ext_resource type="PackedScene" uid="uid://vo3eedj6gv52" path="res://ui/components/pet_counter/pet_counter.tscn" id="6_2u33g"]
+[ext_resource type="PackedScene" uid="uid://m33tqdt1epjr" path="res://ui/screens/pause_overlay/pause_overlay.tscn" id="7_d834f"]
+[ext_resource type="Texture2D" uid="uid://dj7eh8alxuxr8" path="res://world/levels/level_3/textures/ladder_texture.png" id="8_dddgp"]
+[ext_resource type="Texture2D" uid="uid://tsfbrfy0cq88" path="res://world/levels/level_3/textures/window.png" id="9_wfc6t"]
+[ext_resource type="Texture2D" uid="uid://dl3m6ixo4vimo" path="res://world/levels/level_3/textures/brick_wall.png" id="10_2u33g"]
+[ext_resource type="AudioStream" uid="uid://cgm3qvncwt4ej" path="res://world/levels/level_3/audio/pet_rescue.mp3" id="11_2u33g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qyg12"]
 size = Vector2(300, 32)
 
-[node name="FireEscapeLevel" type="Node" unique_id=1434237175 node_paths=PackedStringArray("win_trigger", "win_screen")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dddgp"]
+bg_color = Color(0.6784314, 0.3529412, 0.30980393, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.2509804, 0.17254902, 0.14509805, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="FireEscapeLevel" type="Node" unique_id=1434237175 node_paths=PackedStringArray("level", "win_trigger", "win_screen", "pause_overlay")]
 script = ExtResource("1_qfdr4")
+level = NodePath("Level")
 win_trigger = NodePath("Level/winTrigger")
 win_screen = NodePath("UI/WinScreen")
+pause_overlay = NodePath("UI/PauseOverlay")
 metadata/_custom_type_script = "uid://bivvqtpbhph8i"
 
 [node name="Level" type="Node2D" parent="." unique_id=1977627048]
 
 [node name="Pet1" parent="Level" unique_id=1264480536 instance=ExtResource("2_d834f")]
 position = Vector2(400, -190)
+rescue_sound = ExtResource("11_2u33g")
 
 [node name="Pet2" parent="Level" unique_id=1384146370 instance=ExtResource("2_d834f")]
 position = Vector2(-50, -340)
+rescue_sound = ExtResource("11_2u33g")
 
 [node name="Pet3" parent="Level" unique_id=666016255 instance=ExtResource("2_d834f")]
 position = Vector2(450, -495)
+rescue_sound = ExtResource("11_2u33g")
 
 [node name="Pet4" parent="Level" unique_id=714213986 instance=ExtResource("2_d834f")]
 position = Vector2(-100, -645)
+rescue_sound = ExtResource("11_2u33g")
 
 [node name="Player" parent="Level" unique_id=1489148362 node_paths=PackedStringArray("remote_path_node") instance=ExtResource("3_dddgp")]
 position = Vector2(0, -70)
@@ -44,97 +68,147 @@ remote_path_node = NodePath("../CameraTarget/Camera2D")
 shape = SubResource("RectangleShape2D_qyg12")
 
 [node name="ColorRect" type="ColorRect" parent="Level/StartingPlatform" unique_id=155097476]
+visible = false
 offset_left = -150.0
 offset_top = -16.0
 offset_right = 150.0
 offset_bottom = 16.0
+mouse_filter = 2
 color = Color(0.7176471, 0.6901961, 0.70980394, 1)
 
 [node name="RailingHorizontal" type="ColorRect" parent="Level/StartingPlatform" unique_id=1510464411]
+visible = false
 z_index = -1
 offset_left = 200.0
 offset_top = -200.0
 offset_right = 500.0
 offset_bottom = -193.0
+mouse_filter = 2
 color = Color(0.7235722, 0.84637356, 0.41995367, 1)
+
+[node name="PlatformTexture" type="Sprite2D" parent="Level/StartingPlatform" unique_id=1703088482]
+position = Vector2(0, -10)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_d834f")
 
 [node name="Platform02" type="StaticBody2D" parent="Level" unique_id=525003978]
 position = Vector2(350, -150)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform02" unique_id=1726807438]
+visible = false
 shape = SubResource("RectangleShape2D_qyg12")
 
 [node name="ColorRect" type="ColorRect" parent="Level/Platform02" unique_id=485074082]
+visible = false
 offset_left = -150.0
 offset_top = -16.0
 offset_right = 150.0
 offset_bottom = 16.0
+mouse_filter = 2
 color = Color(0.7176471, 0.6901961, 0.70980394, 1)
 
 [node name="RailingPost01" type="ColorRect" parent="Level/Platform02" unique_id=788890681]
+visible = false
 offset_left = -145.0
 offset_top = -50.0
 offset_right = -139.0
+mouse_filter = 2
 
 [node name="RailingPost02" type="ColorRect" parent="Level/Platform02" unique_id=1583398743]
+visible = false
 offset_left = -50.0
 offset_top = -50.0
 offset_right = -44.0
+mouse_filter = 2
 
 [node name="RailingPost03" type="ColorRect" parent="Level/Platform02" unique_id=1549384042]
+visible = false
 offset_left = 50.0
 offset_top = -50.0
 offset_right = 56.0
+mouse_filter = 2
 
 [node name="RailingPost04" type="ColorRect" parent="Level/Platform02" unique_id=1631444042]
+visible = false
 offset_left = 140.0
 offset_top = -50.0
 offset_right = 146.0
+mouse_filter = 2
+
+[node name="PlatformTexture2" type="Sprite2D" parent="Level/Platform02" unique_id=959053693]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_d834f")
 
 [node name="Platform03" type="StaticBody2D" parent="Level" unique_id=1343547539]
 position = Vector2(0, -300)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform03" unique_id=427468227]
+visible = false
 shape = SubResource("RectangleShape2D_qyg12")
 
 [node name="ColorRect" type="ColorRect" parent="Level/Platform03" unique_id=573524176]
+visible = false
 offset_left = -150.0
 offset_top = -16.0
 offset_right = 150.0
 offset_bottom = 16.0
+mouse_filter = 2
 color = Color(0.7176471, 0.6901961, 0.70980394, 1)
 
 [node name="RailingPost05" type="ColorRect" parent="Level/Platform03" unique_id=484794578]
+visible = false
 offset_left = 205.0
 offset_top = 100.0
 offset_right = 211.0
 offset_bottom = 150.0
+mouse_filter = 2
+
+[node name="PlatformTexture3" type="Sprite2D" parent="Level/Platform03" unique_id=1057944879]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_d834f")
+offset = Vector2(-200, 0)
 
 [node name="Platform04" type="StaticBody2D" parent="Level" unique_id=1655677848]
 position = Vector2(350, -450)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform04" unique_id=224761949]
+visible = false
 shape = SubResource("RectangleShape2D_qyg12")
 
 [node name="ColorRect" type="ColorRect" parent="Level/Platform04" unique_id=472805045]
+visible = false
 offset_left = -150.0
 offset_top = -16.0
 offset_right = 150.0
 offset_bottom = 16.0
+mouse_filter = 2
 color = Color(0.7176471, 0.6901961, 0.70980394, 1)
+
+[node name="PlatformTexture4" type="Sprite2D" parent="Level/Platform04" unique_id=1768439162]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_d834f")
+offset = Vector2(400, 0)
 
 [node name="FinalPlatform" type="StaticBody2D" parent="Level" unique_id=728837624]
 position = Vector2(0, -600)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/FinalPlatform" unique_id=1859051087]
+visible = false
 shape = SubResource("RectangleShape2D_qyg12")
 
 [node name="ColorRect" type="ColorRect" parent="Level/FinalPlatform" unique_id=1949570661]
+visible = false
 offset_left = -150.0
 offset_top = -16.0
 offset_right = 150.0
 offset_bottom = 16.0
+mouse_filter = 2
 color = Color(0.7176471, 0.6901961, 0.70980394, 1)
+
+[node name="PlatformTexture5" type="Sprite2D" parent="Level/FinalPlatform" unique_id=1792053830]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_d834f")
+offset = Vector2(-300, 0)
 
 [node name="Building" type="Node2D" parent="Level" unique_id=2099600319]
 
@@ -144,43 +218,54 @@ offset_left = -253.0
 offset_top = -747.0
 offset_right = 597.0
 offset_bottom = 103.0
+mouse_filter = 2
 color = Color(0.3764706, 0.1882353, 0.21176471, 1)
 
 [node name="Window1" type="ColorRect" parent="Level/Building" unique_id=658664032]
+visible = false
 offset_left = 71.0
 offset_top = -165.0
 offset_right = 151.0
 offset_bottom = -65.0
+mouse_filter = 2
 color = Color(0.6, 0.043137256, 0.03137255, 1)
 
 [node name="Window2" type="ColorRect" parent="Level/Building" unique_id=525563639]
+visible = false
 offset_left = 214.0
 offset_top = -353.0
 offset_right = 294.0
 offset_bottom = -253.0
+mouse_filter = 2
 color = Color(0.6, 0.043137256, 0.03137255, 1)
 
 [node name="Window3" type="ColorRect" parent="Level/Building" unique_id=346195709]
+visible = false
 offset_left = 43.0
 offset_top = -515.0
 offset_right = 123.0
 offset_bottom = -415.0
+mouse_filter = 2
 color = Color(0.6, 0.043137256, 0.03137255, 1)
 
 [node name="Window4" type="ColorRect" parent="Level/Building" unique_id=179590448]
+visible = false
 offset_left = 218.0
 offset_top = -657.0
 offset_right = 298.0
 offset_bottom = -557.0
+mouse_filter = 2
 color = Color(0.6, 0.043137256, 0.03137255, 1)
 
 [node name="Ladders" type="Node2D" parent="Level" unique_id=1510102849]
+visible = false
 
 [node name="LadderLeftRail" type="ColorRect" parent="Level/Ladders" unique_id=1374550129]
 offset_left = 390.0
 offset_top = -440.0
 offset_right = 396.0
 offset_bottom = -320.0
+mouse_filter = 2
 color = Color(0.10407617, 0.19188982, 0.28381324, 1)
 
 [node name="LadderRightRail" type="ColorRect" parent="Level/Ladders" unique_id=18332062]
@@ -188,6 +273,7 @@ offset_left = 440.0
 offset_top = -440.0
 offset_right = 446.0
 offset_bottom = -320.0
+mouse_filter = 2
 color = Color(0.10407617, 0.19188982, 0.28381324, 1)
 
 [node name="Rung01" type="ColorRect" parent="Level/Ladders" unique_id=505563534]
@@ -195,39 +281,79 @@ offset_left = 390.0
 offset_top = -430.0
 offset_right = 446.0
 offset_bottom = -424.0
+mouse_filter = 2
 
 [node name="Rung02" type="ColorRect" parent="Level/Ladders" unique_id=2029690859]
 offset_left = 390.0
 offset_top = -410.0
 offset_right = 446.0
 offset_bottom = -404.0
+mouse_filter = 2
 
 [node name="Rung03" type="ColorRect" parent="Level/Ladders" unique_id=1629599402]
 offset_left = 390.0
 offset_top = -390.0
 offset_right = 446.0
 offset_bottom = -384.0
+mouse_filter = 2
 
 [node name="Rung04" type="ColorRect" parent="Level/Ladders" unique_id=1436938204]
 offset_left = 390.0
 offset_top = -370.0
 offset_right = 446.0
 offset_bottom = -364.0
+mouse_filter = 2
 
 [node name="Rung05" type="ColorRect" parent="Level/Ladders" unique_id=100000543]
 offset_left = 390.0
 offset_top = -350.0
 offset_right = 446.0
 offset_bottom = -344.0
+mouse_filter = 2
 
 [node name="Rung06" type="ColorRect" parent="Level/Ladders" unique_id=931116552]
 offset_left = 390.0
 offset_top = -330.0
 offset_right = 446.0
 offset_bottom = -324.0
+mouse_filter = 2
 
 [node name="winTrigger" parent="Level" unique_id=899574160 instance=ExtResource("4_0glmf")]
 position = Vector2(-150, -750)
+level = 3
+
+[node name="LadderTexture01" type="Sprite2D" parent="Level" unique_id=237473633]
+position = Vector2(472, -237)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_dddgp")
+
+[node name="LadderTexture02" type="Sprite2D" parent="Level" unique_id=1541832104]
+position = Vector2(311, -538)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_dddgp")
+
+[node name="LadderTexture03" type="Sprite2D" parent="Level" unique_id=824000867]
+position = Vector2(-112, -98)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_dddgp")
+
+[node name="Window1" type="Sprite2D" parent="Level" unique_id=1634827438]
+position = Vector2(-325, -699)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_wfc6t")
+
+[node name="Window2" type="Sprite2D" parent="Level" unique_id=821262279]
+position = Vector2(667, -125)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_wfc6t")
+
+[node name="BrickWallBackground" type="Sprite2D" parent="Level" unique_id=1384946157]
+z_index = -10
+position = Vector2(199, -446)
+texture = ExtResource("10_2u33g")
+
+[node name="PetRescueSound" type="AudioStreamPlayer" parent="Level" unique_id=467004198]
+stream = ExtResource("11_2u33g")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1350907718]
 
@@ -235,3 +361,16 @@ position = Vector2(-150, -750)
 next_level_scene = "uid://dddrv3gm7o06c"
 
 [node name="PetCounter" parent="UI" unique_id=1593960988 instance=ExtResource("6_2u33g")]
+
+[node name="PauseButton" type="Button" parent="UI" unique_id=974195004]
+custom_minimum_size = Vector2(88.899, 39.615)
+offset_left = 1051.0
+offset_top = 12.0
+offset_right = 1139.899
+offset_bottom = 51.615
+theme_override_styles/normal = SubResource("StyleBoxFlat_dddgp")
+text = "Pause"
+
+[node name="PauseOverlay" parent="UI" unique_id=1751710815 instance=ExtResource("7_d834f")]
+
+[connection signal="pressed" from="UI/PauseButton" to="." method="_on_pause_button_pressed"]

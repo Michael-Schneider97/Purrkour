@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cxcd7x0b0ihuf"]
+
+[ext_resource type="Script" uid="uid://bixucbh4o3o7i" path="res://ui/screens/Controls/controls.gd" id="1_ul4yy"]
+[ext_resource type="Texture2D" uid="uid://nu38my1nk6vg" path="res://ui/screens/Controls/IMG_2993.jpg" id="2_uadjn"]
+
+[node name="Controls" type="Node2D" unique_id=1547266142]
+script = ExtResource("1_ul4yy")
+
+[node name="Img2993" type="Sprite2D" parent="." unique_id=96601934]
+position = Vector2(583.00006, 320)
+scale = Vector2(0.6790393, 0.57297295)
+texture = ExtResource("2_uadjn")
+
+[node name="Button" type="Button" parent="." unique_id=1917677476]
+offset_right = 151.0
+offset_bottom = 112.0
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
