@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c15v0ec8w764c"]
+
+[ext_resource type="Texture2D" uid="uid://c01aigiqjvd6f" path="res://ui/screens/tutorial/export.png" id="1_4ojun"]
+[ext_resource type="Script" uid="uid://cq2guvleaml60" path="res://ui/screens/tutorial/save_pet.gd" id="1_qov64"]
+
+[node name="SavePet" type="Node2D" unique_id=238870259]
+script = ExtResource("1_qov64")
+
+[node name="Export" type="Sprite2D" parent="." unique_id=365584761]
+position = Vector2(418, 316)
+texture = ExtResource("1_4ojun")

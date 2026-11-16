@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dstpdnqjvylpi"]
+
+[ext_resource type="Script" uid="uid://cvmlfj1mh0cgl" path="res://ui/screens/tutorial/traversalTutorial.gd" id="1_lvxnk"]
+[ext_resource type="Texture2D" uid="uid://b0wh7bi38levl" path="res://ui/screens/tutorial/image0.jpg" id="1_rqwm1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_126ht"]
+radius = 537.8197
+
+[node name="Traversal" type="Node2D" unique_id=1977348601]
+script = ExtResource("1_lvxnk")
+
+[node name="Image0" type="Sprite2D" parent="." unique_id=1837164786]
+position = Vector2(418, 316)
+texture = ExtResource("1_rqwm1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=396301820]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=707348111]
+position = Vector2(418, 316)
+shape = SubResource("CircleShape2D_126ht")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
