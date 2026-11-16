@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dddrv3gm7o06c"]
 
 [ext_resource type="Script" uid="uid://pa3s08qhprh4" path="res://world/levels/level_4/level_4.gd" id="1_hwx1j"]
+[ext_resource type="AudioStream" uid="uid://do46bl5tduin8" path="res://world/levels/level_4/bakery (mp3cut.net).mp3" id="2_gi2em"]
 [ext_resource type="PackedScene" uid="uid://vo3eedj6gv52" path="res://ui/components/pet_counter/pet_counter.tscn" id="2_hwx1j"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/objects/win_trigger/win_trigger.tscn" id="2_o1u1f"]
 [ext_resource type="Texture2D" uid="uid://bmh6prkiuewb6" path="res://world/levels/level_4/level_4_background.png" id="2_sqgxp"]
@@ -68,6 +69,12 @@ metadata/_custom_type_script = "uid://bivvqtpbhph8i"
 
 [node name="Level" type="Node2D" parent="." unique_id=28592525]
 
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="Level" unique_id=1979881175]
+stream = ExtResource("2_gi2em")
+volume_db = -6.804
+autoplay = true
+parameters/looping = true
+
 [node name="Sprite2D" type="Sprite2D" parent="Level" unique_id=1265147473]
 position = Vector2(1665.5, 197.1115)
 scale = Vector2(1.4596138, 1.2484156)
@@ -131,16 +138,6 @@ shape = SubResource("RectangleShape2D_xgbvx")
 position = Vector2(3167.75, 603)
 shape = SubResource("RectangleShape2D_507l0")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level/StaticBody2D" unique_id=345379326]
-position = Vector2(850.9999, 529)
-scale = Vector2(0.74646825, 0.29700452)
-polygon = PackedVector2Array(3, 53, 86, 29, 153, -113, 155.39856, -111.1095, 259.89063, -609.4184, 243.81494, -555.5471, 259.89063, -569.0149, 261.23035, -569.0149, 263.90955, -276.0901, 265.24927, 50.504272, 234.4375, 60.605103)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Level/StaticBody2D" unique_id=122587981]
-position = Vector2(2005, 494.00003)
-scale = Vector2(0.74646825, 0.29700452)
-polygon = PackedVector2Array(3, 53, 86, 29, 153, -113, 155.39856, -111.1095, 259.89063, -609.4184, 243.81494, -555.5471, 259.89063, -569.0149, 261.23035, -569.0149, 263.90955, -276.0901, 265.24927, 50.504272, 234.4375, 60.605103)
-
 [node name="Floor" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1236407450]
 position = Vector2(1565.5, 750)
 shape = SubResource("RectangleShape2D_sqgxp")
@@ -181,7 +178,7 @@ one_way_collision = true
 debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1718965610]
-position = Vector2(1334, 37)
+position = Vector2(1328, -66)
 shape = SubResource("RectangleShape2D_hlcmp")
 one_way_collision = true
 debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
@@ -217,7 +214,7 @@ position = Vector2(2035, 353)
 position = Vector2(2577, -17)
 
 [node name="Pet3" parent="Level" unique_id=721970207 instance=ExtResource("7_46s3r")]
-position = Vector2(1340, -4)
+position = Vector2(1335, -107)
 
 [node name="Pet4" parent="Level" unique_id=504161179 instance=ExtResource("7_46s3r")]
 position = Vector2(322, 511)
