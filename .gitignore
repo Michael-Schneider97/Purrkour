@@ -21,6 +21,8 @@ mono_crash.*.json
 
 # Export outputs
 *.exe
+/VerticalSlice/android/
+/VerticalSlice/Builds/
 # Uncomment if your project does not version PCK files as runtime dependencies.
 # *.pck
 
