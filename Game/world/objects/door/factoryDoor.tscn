@@ -12,6 +12,7 @@ script = ExtResource("1_en064")
 
 [node name="DoorSound" type="AudioStreamPlayer2D" parent="." unique_id=809177862]
 stream = ExtResource("2_m3rtl")
+volume_db = -17.495
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=508320719]
 shape = SubResource("RectangleShape2D_126ht")
