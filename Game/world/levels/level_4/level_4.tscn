@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://do46bl5tduin8" path="res://world/levels/level_4/bakery (mp3cut.net).mp3" id="2_gi2em"]
 [ext_resource type="PackedScene" uid="uid://vo3eedj6gv52" path="res://ui/components/pet_counter/pet_counter.tscn" id="2_hwx1j"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/objects/win_trigger/win_trigger.tscn" id="2_o1u1f"]
-[ext_resource type="Texture2D" uid="uid://bmh6prkiuewb6" path="res://world/levels/level_4/level_4_background.png" id="2_sqgxp"]
+[ext_resource type="Texture2D" uid="uid://orsxxjbbro14" path="res://world/levels/level_4/bakerybackground.png" id="3_fscrj"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win/win_screen.tscn" id="3_sqgxp"]
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player/player.tscn" id="6_hlcmp"]
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet/pet.tscn" id="7_46s3r"]
@@ -12,10 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://cvdgnu5gjyujo" path="res://world/objects/boost_trigger/boost_trigger.tscn" id="9_sqgxp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfsa0"]
-size = Vector2(307.5, 348.75)
+size = Vector2(165.75, 348.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jrhwj"]
-size = Vector2(280, 431.5)
+size = Vector2(223, 431.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ya03"]
 size = Vector2(427, 174)
@@ -24,25 +24,25 @@ size = Vector2(427, 174)
 size = Vector2(165, 98)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mri3j"]
-size = Vector2(226.25, 173.5)
+size = Vector2(172.125, 173.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crxyt"]
 size = Vector2(119, 119)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3uef1"]
-size = Vector2(231.5, 185.5)
+size = Vector2(707.75, 185.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cclsf"]
 size = Vector2(153.5, 151.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fee8x"]
-size = Vector2(579.5, 204.25)
+size = Vector2(437.75, 204.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g73m6"]
 size = Vector2(292, 138)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2qsar"]
-size = Vector2(224, 324)
+size = Vector2(176, 324)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_go8n7"]
 size = Vector2(116, 215)
@@ -51,16 +51,16 @@ size = Vector2(116, 215)
 size = Vector2(267, 116)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_507l0"]
-size = Vector2(329.5, 250)
+size = Vector2(1029.75, 250)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqgxp"]
-size = Vector2(3567, 125)
+size = Vector2(3860.5, 74.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7d0fe"]
-size = Vector2(216, 1455)
+size = Vector2(1, 1516.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlcmp"]
-size = Vector2(221.1875, 30.3125)
+size = Vector2(285.59375, 30.3125)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fscrj"]
 bg_color = Color(0.6784314, 0.3529412, 0.30980393, 1)
@@ -91,152 +91,180 @@ autoplay = true
 parameters/looping = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Level" unique_id=1265147473]
-position = Vector2(1665.5, 197.1115)
-scale = Vector2(1.4596138, 1.2484156)
-texture = ExtResource("2_sqgxp")
+position = Vector2(1665.0001, 121)
+scale = Vector2(0.30759588, 0.28732273)
+texture = ExtResource("3_fscrj")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Level" unique_id=791160313]
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1972369137]
-position = Vector2(1471, 573)
+visible = false
+position = Vector2(1435.125, 541)
 shape = SubResource("RectangleShape2D_tfsa0")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=573337565]
-position = Vector2(1248, 544)
+visible = false
+position = Vector2(1242, 518)
 shape = SubResource("RectangleShape2D_jrhwj")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1194474030]
-position = Vector2(1015.5, 625)
+visible = false
+position = Vector2(1120, 549)
 shape = SubResource("RectangleShape2D_0ya03")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=254019580]
-position = Vector2(775, 651)
+visible = false
+position = Vector2(909, 539)
 shape = SubResource("RectangleShape2D_5eo4o")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=861589012]
-position = Vector2(577.875, 630)
+visible = false
+position = Vector2(747.9375, 552)
 shape = SubResource("RectangleShape2D_mri3j")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1566884064]
-position = Vector2(428, 648)
+visible = false
+position = Vector2(630, 551)
 shape = SubResource("RectangleShape2D_crxyt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1138233111]
-position = Vector2(113.25, 607.75)
+visible = false
+position = Vector2(125.125, 533)
 shape = SubResource("RectangleShape2D_3uef1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1398616216]
-position = Vector2(302, 624.75)
+visible = false
+position = Vector2(528, 538)
 shape = SubResource("RectangleShape2D_cclsf")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1816080723]
-position = Vector2(1893, 619)
+visible = false
+position = Vector2(1719.125, 544)
 shape = SubResource("RectangleShape2D_fee8x")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1483126442]
-position = Vector2(2332, 645)
+visible = false
+position = Vector2(2051, 561)
 shape = SubResource("RectangleShape2D_g73m6")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=6489030]
-position = Vector2(2551, 578)
+visible = false
+position = Vector2(2211, 528)
 shape = SubResource("RectangleShape2D_2qsar")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1273941172]
-position = Vector2(2721, 603.5)
+visible = false
+position = Vector2(2338, 528)
 shape = SubResource("RectangleShape2D_go8n7")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1336186727]
-position = Vector2(2908.5, 652)
+visible = false
+position = Vector2(2507, 560)
 shape = SubResource("RectangleShape2D_xgbvx")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=762119697]
-position = Vector2(3167.75, 603)
+visible = false
+position = Vector2(3078.125, 545)
 shape = SubResource("RectangleShape2D_507l0")
 
 [node name="Floor" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1236407450]
-position = Vector2(1565.5, 750)
+position = Vector2(1663.75, 924.5)
 shape = SubResource("RectangleShape2D_sqgxp")
-debug_color = Color(0.7019608, 0.7019608, 0.7019608, 1)
+debug_color = Color(0.26666668, 0.13333334, 0, 1)
 
 [node name="Front Wall2" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1647695945]
-position = Vector2(3435, 79.5)
+position = Vector2(3595, 79.5)
 shape = SubResource("RectangleShape2D_7d0fe")
-debug_color = Color(0.7, 0.7, 0.7, 1)
+debug_color = Color(0.26666668, 0.13333334, 0, 1)
+
+[node name="Floor2" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=466340425]
+position = Vector2(1654, -722)
+shape = SubResource("RectangleShape2D_sqgxp")
+debug_color = Color(0.26666668, 0.13333334, 0, 1)
 
 [node name="Front Wall" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=2105084335]
-position = Vector2(-110, 97)
+position = Vector2(-267.5, 66.25)
 shape = SubResource("RectangleShape2D_7d0fe")
-debug_color = Color(0.7, 0.7, 0.7, 1)
+debug_color = Color(0.26666668, 0.13333334, 0, 1)
 
-[node name="CollisionShape2D21" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=8113375]
-position = Vector2(2583, 25)
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=981905442]
+position = Vector2(2117, -71)
 shape = SubResource("RectangleShape2D_hlcmp")
 one_way_collision = true
-debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
+debug_color = Color(0.26666668, 0.13333334, 0, 1)
 
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=505529811]
-position = Vector2(2563.5938, 377)
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=549479205]
+position = Vector2(1609, 94)
 shape = SubResource("RectangleShape2D_hlcmp")
 one_way_collision = true
-debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
+debug_color = Color(0.26666668, 0.13333334, 0, 1)
 
-[node name="CollisionShape2D23" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1015338847]
-position = Vector2(2041, 366)
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1380002766]
+position = Vector2(2560, 252)
 shape = SubResource("RectangleShape2D_hlcmp")
 one_way_collision = true
-debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
+debug_color = Color(0.26666668, 0.13333334, 0, 1)
 
-[node name="CollisionShape2D24" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=2011380864]
-position = Vector2(1767, 272)
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=477728341]
+position = Vector2(2566, -192)
 shape = SubResource("RectangleShape2D_hlcmp")
 one_way_collision = true
-debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
+debug_color = Color(0.26666668, 0.13333334, 0, 1)
 
-[node name="CollisionShape2D25" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1718965610]
-position = Vector2(1328, -66)
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1537961501]
+position = Vector2(1652, -244)
 shape = SubResource("RectangleShape2D_hlcmp")
 one_way_collision = true
-debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
+debug_color = Color(0.26666668, 0.13333334, 0, 1)
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1175138778]
+position = Vector2(1181, -163)
+shape = SubResource("RectangleShape2D_hlcmp")
+one_way_collision = true
+debug_color = Color(0.26666668, 0.13333334, 0, 1)
 
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1129861653]
-position = Vector2(726, 374)
+position = Vector2(720.7969, 301)
 shape = SubResource("RectangleShape2D_hlcmp")
 one_way_collision = true
-debug_color = Color(0.36862746, 0.15294118, 0.16078432, 0.8)
+debug_color = Color(0.26666668, 0.13333334, 0, 1)
 
 [node name="Camera2D" type="Camera2D" parent="Level" unique_id=1627106004]
 
 [node name="Player" parent="Level" unique_id=1489148362 node_paths=PackedStringArray("remote_path_node") instance=ExtResource("6_hlcmp")]
-position = Vector2(111, 449)
+position = Vector2(322, 416)
 remote_path_node = NodePath("../Camera2D")
 
 [node name="Pet" parent="Level" unique_id=1264480536 instance=ExtResource("7_46s3r")]
-position = Vector2(1764, 234)
+position = Vector2(1641, -295)
 
 [node name="winTrigger" parent="Level" unique_id=899574160 instance=ExtResource("2_o1u1f")]
-position = Vector2(3121.0002, 348)
+position = Vector2(3181, 280)
 level = 4
 
 [node name="BoostTrigger" parent="Level" unique_id=1037157644 instance=ExtResource("9_sqgxp")]
-position = Vector2(728, 339)
+position = Vector2(749, 254)
+
+[node name="BoostTrigger4" parent="Level" unique_id=1082246528 instance=ExtResource("9_sqgxp")]
+position = Vector2(2114, -119)
 
 [node name="BoostTrigger2" parent="Level" unique_id=1087738472 instance=ExtResource("9_sqgxp")]
-position = Vector2(1292, 255)
+position = Vector2(1235, 261)
 
 [node name="BoostTrigger3" parent="Level" unique_id=598746258 instance=ExtResource("9_sqgxp")]
-position = Vector2(2035, 353)
+position = Vector2(2032, 400)
 
 [node name="Pet2" parent="Level" unique_id=513776971 instance=ExtResource("7_46s3r")]
-position = Vector2(2577, -17)
+position = Vector2(2572, -237)
 
 [node name="Pet3" parent="Level" unique_id=721970207 instance=ExtResource("7_46s3r")]
-position = Vector2(1335, -107)
+position = Vector2(1168, -214)
 
 [node name="Pet4" parent="Level" unique_id=504161179 instance=ExtResource("7_46s3r")]
-position = Vector2(322, 511)
+position = Vector2(682, 256)
 
 [node name="Pet5" parent="Level" unique_id=587168435 instance=ExtResource("7_46s3r")]
-position = Vector2(2901, 567)
+position = Vector2(2566, 204)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1080480967]
 
