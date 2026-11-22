@@ -28,6 +28,9 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6dapk"]
+size = Vector2(1266.0781, 40)
+
 [node name="FireEscapeLevel" type="Node" unique_id=1434237175 node_paths=PackedStringArray("level", "win_trigger", "win_screen", "pause_overlay")]
 script = ExtResource("1_qfdr4")
 level = NodePath("Level")
@@ -349,7 +352,7 @@ texture = ExtResource("9_wfc6t")
 
 [node name="BrickWallBackground" type="Sprite2D" parent="Level" unique_id=1384946157]
 z_index = -10
-position = Vector2(199, -446)
+position = Vector2(199, -447)
 texture = ExtResource("10_2u33g")
 
 [node name="PetRescueSound" type="AudioStreamPlayer" parent="Level" unique_id=467004198]
@@ -372,5 +375,26 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_dddgp")
 text = "Pause"
 
 [node name="PauseOverlay" parent="UI" unique_id=1751710815 instance=ExtResource("7_d834f")]
+
+[node name="LevelBoundaries" type="StaticBody2D" parent="." unique_id=54676429]
+
+[node name="BottomBoundary" type="CollisionShape2D" parent="LevelBoundaries" unique_id=1294043857]
+position = Vector2(197, 180)
+shape = SubResource("RectangleShape2D_6dapk")
+debug_color = Color(0.1764706, 0.23529412, 0.1254902, 0.9647059)
+
+[node name="LeftBoundary" type="CollisionShape2D" parent="LevelBoundaries" unique_id=583904426]
+position = Vector2(-445, -439)
+rotation = -1.5707964
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_6dapk")
+debug_color = Color(0.1764706, 0.23529412, 0.1254902, 0.9647059)
+
+[node name="RightBoundary" type="CollisionShape2D" parent="LevelBoundaries" unique_id=1186693322]
+position = Vector2(842, -438)
+rotation = -1.5707964
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_6dapk")
+debug_color = Color(0.1764706, 0.23529412, 0.1254902, 0.9647059)
 
 [connection signal="pressed" from="UI/PauseButton" to="." method="_on_pause_button_pressed"]
