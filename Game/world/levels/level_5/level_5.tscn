@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/objects/win_trigger/win_trigger.tscn" id="5_hxgxf"]
 [ext_resource type="PackedScene" uid="uid://cvdgnu5gjyujo" path="res://world/objects/boost_trigger/boost_trigger.tscn" id="6_0ak1n"]
 [ext_resource type="PackedScene" uid="uid://d4f7vsqoujsjx" path="res://world/objects/door/factoryDoor.tscn" id="7_eok3l"]
+[ext_resource type="Texture2D" uid="uid://ce2u8sj55dq82" path="res://world/levels/level_5/towerbgupdate.png" id="8_5pjy0"]
 [ext_resource type="PackedScene" uid="uid://dgk7c85lpohg2" path="res://world/objects/button/abandonedFactoryButton.tscn" id="8_ubm74"]
-[ext_resource type="Texture2D" uid="uid://qpagq4nrvvi5" path="res://world/levels/level_5/towerbackground3.png" id="9_360vn"]
 [ext_resource type="PackedScene" uid="uid://m33tqdt1epjr" path="res://ui/screens/pause_overlay/pause_overlay.tscn" id="11_5pjy0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjqce"]
@@ -252,7 +252,7 @@ position = Vector2(821, -1199.0001)
 z_index = -4096
 position = Vector2(1330, -1427.0001)
 scale = Vector2(3.7, 3.7)
-texture = ExtResource("9_360vn")
+texture = ExtResource("8_5pjy0")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1916851165]
 
