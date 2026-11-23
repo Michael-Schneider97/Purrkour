@@ -6,6 +6,8 @@ class_name Level extends Node
 @export var win_screen: Control
 @export var pause_overlay: Control
 
+@onready var player := $Level/Player
+
 
 func _ready() -> void:
 	win_screen.hide()
@@ -26,3 +28,7 @@ func _on_pause_button_pressed() -> void:
 func _on_pause_overlay_resume() -> void:
 	level.process_mode = Node.PROCESS_MODE_INHERIT
 	pause_overlay.hide()
+
+func _physics_process(delta: float) -> void:
+	if player.position.y > 2000:
+		get_tree().reload_current_scene()
