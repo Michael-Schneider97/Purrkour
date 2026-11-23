@@ -1,6 +1,6 @@
 
 class_name Player
-extends RigidBody2D
+extends CharacterBody2D
 
 @export var remote_path_node: Camera2D
 @onready var remote_transform = $RemoteTransform2D
@@ -24,6 +24,8 @@ var boost_orig_zoom := Vector2(1, 1)
 # Cat animations
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ground_check: RayCast2D = $GroundCheck
+
+var _stored_dx: float = 0.0
 
 
 func _ready() -> void:
@@ -49,7 +51,28 @@ func _ready() -> void:
 
 
 # Update cat animation based on movement
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
+
+	# Apply gravity to character
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Apply horizontal stored velocity while still moving up
+	if velocity.y < 0.0:
+		velocity.x = _stored_dx
+
+	# Otherwise, reset stored velocity and apply friction on ground
+	elif is_on_floor():
+		velocity.x = move_toward(velocity.x, 0.0, 3000.0 * delta)
+		_stored_dx = 0.0
+
+	move_and_slide()
+
+	# Slowly remove stored velocity when sliding against walls
+	if is_on_wall() and velocity.y < 0.0:
+		var retain := 0.98
+		velocity.y *= retain
+		_stored_dx *= retain
 
 	# Stay idle while preparing a launch
 	if dragging:
@@ -57,15 +80,15 @@ func _physics_process(_delta: float) -> void:
 		return
 
 	# Cat is standing on a platform
-	if ground_check.is_colliding() and linear_velocity.y >= -20.0 and linear_velocity.y <= 35.0:
+	if ground_check.is_colliding() and velocity.y >= -20.0 and velocity.y <= 35.0:
 		play_cat_animation("idle")
 
 	# Cat is moving upward
-	elif linear_velocity.y < -20.0:
+	elif velocity.y < -20.0:
 		play_cat_animation("jump start")
 
 	# Cat is falling downward
-	elif linear_velocity.y > 20.0:
+	elif velocity.y > 20.0:
 		play_cat_animation("jump fall")
 
 
@@ -94,11 +117,11 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 
-			if event.pressed and linear_velocity.y <= 0.01 and linear_velocity.y >= -0.01:
+			if event.pressed and velocity.y <= 0.01 and velocity.y >= -0.01:
 				dragging = true
 				drag_current = get_global_mouse_position()
 
-				freeze = true
+				set_physics_process(false)
 				trajectory_line.show()
 
 				# Idle while aiming
@@ -131,7 +154,7 @@ func launch():
 	var launch_vector = cat_position - drag_current
 
 	dragging = false
-	freeze = false
+	set_physics_process(true)
 
 	# Start jump animation
 	animated_sprite.play("jump start")
@@ -140,7 +163,9 @@ func launch():
 	if abs(launch_vector.x) > 1.0:
 		animated_sprite.flip_h = launch_vector.x < 0.0
 
-	apply_central_impulse(launch_vector * launch_power)
+	var impulse = launch_vector * launch_power
+	velocity += impulse
+	_stored_dx = velocity.x
 
 	_update_trajectory()
 	queue_redraw()
@@ -169,8 +194,8 @@ func _update_trajectory() -> void:
 	var cat_position = global_position
 	var launch_vect = cat_position - drag_current
 
-	var initial_velocity = (launch_vect * launch_power) / mass
-	var grav_fixed = gravity * gravity_scale
+	var initial_velocity = (launch_vect * launch_power) / 1.0
+	var grav_fixed = gravity
 
 	for i in range(max_points):
 		var t = i * time_step
