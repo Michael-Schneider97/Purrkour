@@ -4,12 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player/player.tscn" id="2_c6jfr"]
 [ext_resource type="PackedScene" uid="uid://vo3eedj6gv52" path="res://ui/components/pet_counter/pet_counter.tscn" id="2_h2f1w"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win/win_screen.tscn" id="3_7gx4k"]
+[ext_resource type="Texture2D" uid="uid://rshkpqcasln4" path="res://world/entities/pet/birbx2.png" id="4_6ibt2"]
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet/pet.tscn" id="4_vxgrd"]
+[ext_resource type="Texture2D" uid="uid://dk3xpk6g5vdkr" path="res://world/entities/pet/lizardx2.png" id="5_4xtmx"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/objects/win_trigger/win_trigger.tscn" id="5_hxgxf"]
 [ext_resource type="PackedScene" uid="uid://cvdgnu5gjyujo" path="res://world/objects/boost_trigger/boost_trigger.tscn" id="6_0ak1n"]
+[ext_resource type="Texture2D" uid="uid://2477mcjr2gpm" path="res://world/entities/pet/blob dogx2.png" id="6_dt0bj"]
+[ext_resource type="Texture2D" uid="uid://bx8gr03d1j5ff" path="res://world/entities/pet/fihx2.png" id="7_bp3b7"]
 [ext_resource type="PackedScene" uid="uid://d4f7vsqoujsjx" path="res://world/objects/door/factoryDoor.tscn" id="7_eok3l"]
 [ext_resource type="Texture2D" uid="uid://ce2u8sj55dq82" path="res://world/levels/level_5/towerbgupdate.png" id="8_5pjy0"]
 [ext_resource type="PackedScene" uid="uid://dgk7c85lpohg2" path="res://world/objects/button/abandonedFactoryButton.tscn" id="8_ubm74"]
+[ext_resource type="Texture2D" uid="uid://b4vqnp8kk4w7j" path="res://world/objects/door/doorx2.png" id="11_4xtmx"]
 [ext_resource type="PackedScene" uid="uid://m33tqdt1epjr" path="res://ui/screens/pause_overlay/pause_overlay.tscn" id="11_5pjy0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjqce"]
@@ -175,14 +180,26 @@ shape = SubResource("RectangleShape2D_l207n")
 [node name="Pet" parent="Level" unique_id=1584357713 instance=ExtResource("4_vxgrd")]
 position = Vector2(563, -911)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet" unique_id=1800787864]
+texture = ExtResource("4_6ibt2")
+
 [node name="Pet2" parent="Level" unique_id=74219269 instance=ExtResource("4_vxgrd")]
 position = Vector2(1370, -629)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet2" unique_id=667950487]
+texture = ExtResource("5_4xtmx")
 
 [node name="Pet3" parent="Level" unique_id=122383775 instance=ExtResource("4_vxgrd")]
 position = Vector2(681, -411)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet3" unique_id=1539042480]
+texture = ExtResource("6_dt0bj")
+
 [node name="Pet4" parent="Level" unique_id=1264480536 instance=ExtResource("4_vxgrd")]
 position = Vector2(2244, -505)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet4" unique_id=893660099]
+texture = ExtResource("6_dt0bj")
 
 [node name="Label" type="Label" parent="Level" unique_id=1689652247]
 offset_left = 738.0
@@ -194,41 +211,80 @@ text = "fire, path up blocked"
 [node name="Pet5" parent="Level" unique_id=1502197689 instance=ExtResource("4_vxgrd")]
 position = Vector2(1071, -2189)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet5" unique_id=647086671]
+texture = ExtResource("7_bp3b7")
+
 [node name="Pet6" parent="Level" unique_id=1422357523 instance=ExtResource("4_vxgrd")]
 position = Vector2(1135, -2194)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet6" unique_id=645016582]
+texture = ExtResource("5_4xtmx")
 
 [node name="Pet7" parent="Level" unique_id=1845996558 instance=ExtResource("4_vxgrd")]
 position = Vector2(1205, -2191)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet7" unique_id=679039874]
+texture = ExtResource("6_dt0bj")
+
 [node name="Pet8" parent="Level" unique_id=196972219 instance=ExtResource("4_vxgrd")]
 position = Vector2(1287, -2200)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet8" unique_id=103597002]
+texture = ExtResource("4_6ibt2")
 
 [node name="Pet9" parent="Level" unique_id=1304153940 instance=ExtResource("4_vxgrd")]
 position = Vector2(1368, -2196)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet9" unique_id=2045403920]
+texture = ExtResource("7_bp3b7")
+
 [node name="Pet10" parent="Level" unique_id=2116433126 instance=ExtResource("4_vxgrd")]
 position = Vector2(1440, -2200)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet10" unique_id=1320010109]
+texture = ExtResource("6_dt0bj")
 
 [node name="Pet11" parent="Level" unique_id=2005048488 instance=ExtResource("4_vxgrd")]
 position = Vector2(1867, -1245)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet11" unique_id=1446185770]
+texture = ExtResource("4_6ibt2")
+
 [node name="Pet14" parent="Level" unique_id=884906763 instance=ExtResource("4_vxgrd")]
 position = Vector2(702, -1234)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet14" unique_id=1105822924]
+texture = ExtResource("5_4xtmx")
 
 [node name="Pet12" parent="Level" unique_id=1611526761 instance=ExtResource("4_vxgrd")]
 position = Vector2(1202, -637)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet12" unique_id=28536540]
+texture = ExtResource("4_6ibt2")
+
 [node name="Pet13" parent="Level" unique_id=663918869 instance=ExtResource("4_vxgrd")]
 position = Vector2(1021, -646)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet13" unique_id=846232471]
+texture = ExtResource("7_bp3b7")
 
 [node name="Pet15" parent="Level" unique_id=1699173548 instance=ExtResource("4_vxgrd")]
 position = Vector2(1069, -1635)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet15" unique_id=348656971]
+texture = ExtResource("7_bp3b7")
+
 [node name="Pet16" parent="Level" unique_id=1084698984 instance=ExtResource("4_vxgrd")]
 position = Vector2(1168, -1628)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet16" unique_id=1156151109]
+texture = ExtResource("4_6ibt2")
+
 [node name="Pet17" parent="Level" unique_id=1791779105 instance=ExtResource("4_vxgrd")]
 position = Vector2(1357, -1813)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet17" unique_id=954239584]
+texture = ExtResource("5_4xtmx")
 
 [node name="winTrigger" parent="Level" unique_id=899574160 instance=ExtResource("5_hxgxf")]
 position = Vector2(1188.0001, -2434)
@@ -241,9 +297,15 @@ position = Vector2(1631, -1239)
 position = Vector2(1251, -1672)
 target_object = NodePath("../abandonedFactoryButton")
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/StaticBody2D2" unique_id=588177147]
+texture = ExtResource("11_4xtmx")
+
 [node name="StaticBody2D3" parent="Level" unique_id=346193455 node_paths=PackedStringArray("target_object") instance=ExtResource("7_eok3l")]
 position = Vector2(1005, -1665)
 target_object = NodePath("../abandonedFactoryButton")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/StaticBody2D3" unique_id=956355574]
+texture = ExtResource("11_4xtmx")
 
 [node name="abandonedFactoryButton" parent="Level" unique_id=167274323 instance=ExtResource("8_ubm74")]
 position = Vector2(821, -1199.0001)

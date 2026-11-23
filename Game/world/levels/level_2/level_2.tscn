@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://d4f7vsqoujsjx" path="res://world/objects/door/factoryDoor.tscn" id="5_vqbd4"]
 [ext_resource type="PackedScene" uid="uid://dgk7c85lpohg2" path="res://world/objects/button/abandonedFactoryButton.tscn" id="6_vxejm"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/objects/win_trigger/win_trigger.tscn" id="7_m6aoo"]
+[ext_resource type="Texture2D" uid="uid://bx8gr03d1j5ff" path="res://world/entities/pet/fihx2.png" id="10_oehme"]
+[ext_resource type="Texture2D" uid="uid://b4vqnp8kk4w7j" path="res://world/objects/door/doorx2.png" id="12_21xr8"]
 [ext_resource type="PackedScene" uid="uid://m33tqdt1epjr" path="res://ui/screens/pause_overlay/pause_overlay.tscn" id="13_do6r2"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_7b8gp"]
@@ -3212,13 +3214,22 @@ rotation = 1.5707964
 [node name="Pet" parent="Level" unique_id=1826379648 instance=ExtResource("4_l7mhl")]
 position = Vector2(1467, -18)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet" unique_id=543824962]
+texture = ExtResource("10_oehme")
+
 [node name="Pet3" parent="Level" unique_id=1264480536 instance=ExtResource("4_l7mhl")]
 position = Vector2(2292, -24)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet3" unique_id=313702817]
+texture = ExtResource("10_oehme")
 
 [node name="Door1" parent="Level" unique_id=1495592487 node_paths=PackedStringArray("target_object") instance=ExtResource("5_vqbd4")]
 position = Vector2(1355, -77)
 scale = Vector2(1, 1.6800003)
 target_object = NodePath("../abandonedFactoryButton")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Door1" unique_id=782157287]
+texture = ExtResource("12_21xr8")
 
 [node name="abandonedFactoryButton" parent="Level" unique_id=1612653201 instance=ExtResource("6_vxejm")]
 position = Vector2(1231, -9.000001)
@@ -3238,15 +3249,24 @@ rotation = 1.5703963
 scale = Vector2(0.9944021, 1.8961171)
 target_object = NodePath("../abandonedFactoryButton3")
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/DoorTrashChute" unique_id=2095987428]
+texture = ExtResource("12_21xr8")
+
 [node name="Door2" parent="Level" unique_id=1968032060 node_paths=PackedStringArray("target_object") instance=ExtResource("5_vqbd4")]
 position = Vector2(1564.9999, -291)
 scale = Vector2(0.89623696, 1.4146273)
 target_object = NodePath("../abandonedFactoryButton2")
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Door2" unique_id=2136348334]
+texture = ExtResource("12_21xr8")
+
 [node name="Elevator Door 3" parent="Level" unique_id=65188077 node_paths=PackedStringArray("target_object") instance=ExtResource("5_vqbd4")]
 position = Vector2(1565, -1038)
 scale = Vector2(1, 1.6)
 target_object = NodePath("../abandonedFactoryButton4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Elevator Door 3" unique_id=1117864224]
+texture = ExtResource("12_21xr8")
 
 [node name="winTrigger" parent="Level" unique_id=899574160 instance=ExtResource("7_m6aoo")]
 position = Vector2(2414, -1206)
@@ -3255,8 +3275,15 @@ level = 2
 [node name="Pet2" parent="Level" unique_id=550450148 instance=ExtResource("4_l7mhl")]
 position = Vector2(1412, -1155)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet2" unique_id=1078989508]
+texture = ExtResource("10_oehme")
+
 [node name="Pet4" parent="Level" unique_id=1786706250 instance=ExtResource("4_l7mhl")]
 position = Vector2(1309, -797)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet4" unique_id=453549584]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_oehme")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1559883579]
 

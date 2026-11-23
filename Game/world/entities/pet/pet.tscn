@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://blggbgvx603mf"]
 
 [ext_resource type="Script" uid="uid://c6jbkmcjq2c4a" path="res://world/entities/pet/pet.gd" id="1_cfnt1"]
-[ext_resource type="Texture2D" uid="uid://bgbrkkdcrodwv" path="res://world/entities/pet/pet.png" id="2_7yu28"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s6i07"]
 radius = 22.0
@@ -46,7 +45,6 @@ shape = SubResource("CapsuleShape2D_s6i07")
 texture_filter = 1
 position = Vector2(0, -4)
 scale = Vector2(2, 2)
-texture = ExtResource("2_7yu28")
 
 [connection signal="timeout" from="HopTimer" to="." method="_on_hop_timer_timeout"]
 [connection signal="body_entered" from="RightDetector" to="." method="_on_right_detector_2_body_entered"]

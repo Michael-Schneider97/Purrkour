@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://orsxxjbbro14" path="res://world/levels/level_4/bakerybackground.png" id="3_fscrj"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win/win_screen.tscn" id="3_sqgxp"]
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player/player.tscn" id="6_hlcmp"]
+[ext_resource type="Texture2D" uid="uid://rshkpqcasln4" path="res://world/entities/pet/birbx2.png" id="6_undhv"]
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet/pet.tscn" id="7_46s3r"]
 [ext_resource type="PackedScene" uid="uid://m33tqdt1epjr" path="res://ui/screens/pause_overlay/pause_overlay.tscn" id="9_gi2em"]
 [ext_resource type="PackedScene" uid="uid://cvdgnu5gjyujo" path="res://world/objects/boost_trigger/boost_trigger.tscn" id="9_sqgxp"]
@@ -238,6 +239,9 @@ remote_path_node = NodePath("../Camera2D")
 [node name="Pet" parent="Level" unique_id=1264480536 instance=ExtResource("7_46s3r")]
 position = Vector2(1641, -295)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet" unique_id=858789835]
+texture = ExtResource("6_undhv")
+
 [node name="winTrigger" parent="Level" unique_id=899574160 instance=ExtResource("2_o1u1f")]
 position = Vector2(3181, 280)
 level = 4
@@ -257,14 +261,26 @@ position = Vector2(2032, 400)
 [node name="Pet2" parent="Level" unique_id=513776971 instance=ExtResource("7_46s3r")]
 position = Vector2(2572, -237)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet2" unique_id=2078132331]
+texture = ExtResource("6_undhv")
+
 [node name="Pet3" parent="Level" unique_id=721970207 instance=ExtResource("7_46s3r")]
 position = Vector2(1168, -214)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet3" unique_id=1168768653]
+texture = ExtResource("6_undhv")
 
 [node name="Pet4" parent="Level" unique_id=504161179 instance=ExtResource("7_46s3r")]
 position = Vector2(682, 256)
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet4" unique_id=1526612960]
+texture = ExtResource("6_undhv")
+
 [node name="Pet5" parent="Level" unique_id=587168435 instance=ExtResource("7_46s3r")]
 position = Vector2(2566, 204)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet5" unique_id=556338456]
+texture = ExtResource("6_undhv")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1080480967]
 

@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dmkk4rcecy57t" path="res://world/objects/door/factory_door.gd" id="1_en064"]
 [ext_resource type="AudioStream" uid="uid://boak67g53ex6l" path="res://world/objects/door/factory door audio.mp3" id="2_m3rtl"]
-[ext_resource type="Texture2D" uid="uid://ctfxe28x0dbrc" path="res://world/objects/door/door.png" id="4_oqddw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_126ht"]
 size = Vector2(20, 96)
@@ -20,4 +19,3 @@ shape = SubResource("RectangleShape2D_126ht")
 [node name="Door" type="Sprite2D" parent="." unique_id=1393198091]
 position = Vector2(0, 1)
 scale = Vector2(1.971, 1.971)
-texture = ExtResource("4_oqddw")

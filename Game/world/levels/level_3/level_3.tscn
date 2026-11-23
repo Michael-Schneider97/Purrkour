@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://blggbgvx603mf" path="res://world/entities/pet/pet.tscn" id="2_d834f"]
 [ext_resource type="PackedScene" uid="uid://wh63687phncq" path="res://world/entities/player/player.tscn" id="3_dddgp"]
 [ext_resource type="PackedScene" uid="uid://b5v0vevyfx3me" path="res://world/objects/win_trigger/win_trigger.tscn" id="4_0glmf"]
+[ext_resource type="Texture2D" uid="uid://dk3xpk6g5vdkr" path="res://world/entities/pet/lizardx2.png" id="4_28oow"]
 [ext_resource type="Texture2D" uid="uid://dgi0p6wiob6de" path="res://world/levels/level_3/textures/platform_texture.png" id="4_d834f"]
 [ext_resource type="PackedScene" uid="uid://kig5uc50uhbs" path="res://ui/screens/win/win_screen.tscn" id="5_wfc6t"]
 [ext_resource type="PackedScene" uid="uid://vo3eedj6gv52" path="res://ui/components/pet_counter/pet_counter.tscn" id="6_2u33g"]
@@ -45,17 +46,29 @@ metadata/_custom_type_script = "uid://bivvqtpbhph8i"
 position = Vector2(400, -190)
 rescue_sound = ExtResource("11_2u33g")
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet1" unique_id=1766869878]
+texture = ExtResource("4_28oow")
+
 [node name="Pet2" parent="Level" unique_id=1384146370 instance=ExtResource("2_d834f")]
 position = Vector2(-50, -340)
 rescue_sound = ExtResource("11_2u33g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet2" unique_id=452995960]
+texture = ExtResource("4_28oow")
 
 [node name="Pet3" parent="Level" unique_id=666016255 instance=ExtResource("2_d834f")]
 position = Vector2(450, -495)
 rescue_sound = ExtResource("11_2u33g")
 
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet3" unique_id=1627588348]
+texture = ExtResource("4_28oow")
+
 [node name="Pet4" parent="Level" unique_id=714213986 instance=ExtResource("2_d834f")]
 position = Vector2(-100, -645)
 rescue_sound = ExtResource("11_2u33g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Pet4" unique_id=282019396]
+texture = ExtResource("4_28oow")
 
 [node name="Player" parent="Level" unique_id=1489148362 node_paths=PackedStringArray("remote_path_node") instance=ExtResource("3_dddgp")]
 position = Vector2(0, -70)
